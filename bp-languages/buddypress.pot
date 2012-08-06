@@ -1800,11 +1800,11 @@ msgstr ""
 msgid "Random Site"
 msgstr ""
 
-#: bp-core/bp-core-catchuri.php:281
+#: bp-core/bp-core-catchuri.php:278
 msgid "This user has been marked as a spammer. Only site admins can view this profile."
 msgstr ""
 
-#: bp-core/bp-core-catchuri.php:455 bp-core/bp-core-catchuri.php:514
+#: bp-core/bp-core-catchuri.php:452 bp-core/bp-core-catchuri.php:511
 msgid "You must log in to access the page you requested."
 msgstr ""
 
