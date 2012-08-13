@@ -132,7 +132,8 @@ class BP_Activity_Template {
 				9 => 'exclude',
 				10 => 'in',
 				11 => 'spam',
-				12 => 'page_arg'
+				12 => 'page_arg',
+				13 => 'following'
 			);
 
 			$func_args = func_get_args();
@@ -153,6 +154,7 @@ class BP_Activity_Template {
 			'display_comments' => 'threaded',
 			'show_hidden'      => false,
 			'spam'             => 'ham_only',
+			'following'        => false,
 		);
 		$r = wp_parse_args( $args, $defaults );
 		extract( $r );
@@ -168,11 +170,11 @@ class BP_Activity_Template {
 
 		// Fetch specific activity items based on ID's
 		if ( !empty( $include ) )
-			$this->activities = bp_activity_get_specific( array( 'activity_ids' => explode( ',', $include ), 'max' => $max, 'page' => $this->pag_page, 'per_page' => $this->pag_num, 'sort' => $sort, 'display_comments' => $display_comments, 'show_hidden' => $show_hidden, 'spam' => $spam ) );
+			$this->activities = bp_activity_get_specific( array( 'activity_ids' => explode( ',', $include ), 'max' => $max, 'page' => $this->pag_page, 'per_page' => $this->pag_num, 'sort' => $sort, 'display_comments' => $display_comments, 'show_hidden' => $show_hidden, 'spam' => $spam, 'following' => $following ) );
 
 		// Fetch all activity items
 		else
-			$this->activities = bp_activity_get( array( 'display_comments' => $display_comments, 'max' => $max, 'per_page' => $this->pag_num, 'page' => $this->pag_page, 'sort' => $sort, 'search_terms' => $search_terms, 'filter' => $filter, 'show_hidden' => $show_hidden, 'exclude' => $exclude, 'in' => $in, 'spam' => $spam ) );
+			$this->activities = bp_activity_get( array( 'display_comments' => $display_comments, 'max' => $max, 'per_page' => $this->pag_num, 'page' => $this->pag_page, 'sort' => $sort, 'search_terms' => $search_terms, 'filter' => $filter, 'show_hidden' => $show_hidden, 'exclude' => $exclude, 'in' => $in, 'spam' => $spam, 'following' => $following ) );
 
 		if ( !$max || $max >= (int) $this->activities['total'] )
 			$this->total_activity_count = (int) $this->activities['total'];
@@ -311,6 +313,7 @@ function bp_has_activities( $args = '' ) {
 	$show_hidden = false;
 	$object      = false;
 	$primary_id  = false;
+	$following   = false;
 
 	// User filtering
 	if ( bp_displayed_user_id() )
@@ -344,7 +347,7 @@ function bp_has_activities( $args = '' ) {
 		'in'               => $in,          // comma-separated list or array of activity IDs among which to search
 		'sort'             => 'DESC',       // sort DESC or ASC
 		'page'             => 1,            // which page to load
-		'per_page'         => 20,           // number of items per page
+		'per_page'         => 10,           // number of items per page
 		'max'              => false,        // max number to return
 		'show_hidden'      => $show_hidden, // Show activity items that are hidden site-wide?
 		'spam'             => 'ham_only',   // Hide spammed items
@@ -376,6 +379,12 @@ function bp_has_activities( $args = '' ) {
 		// determine which user_id applies
 		if ( empty( $user_id ) )
 			$user_id = bp_displayed_user_id() ? bp_displayed_user_id() : bp_loggedin_user_id();
+
+		if ( function_exists( 'bp_follow_is_following' ) ) {
+			if ( $user_id != bp_loggedin_user_id() &&
+					!bp_follow_is_following( array( 'leader_id' => $bp->displayed_user->id, 'follower_id' => bp_loggedin_user_id() ) ) )
+				return false;
+		}
 
 		// are we displaying user specific activity?
 		if ( is_numeric( $user_id ) ) {
@@ -419,6 +428,29 @@ function bp_has_activities( $args = '' ) {
 					break;
 			}
 		}
+	} else {
+		if ( 'following' == $scope ) {
+			if ( $bp->displayed_user->id != 0)
+				if ( !bp_follow_is_following( array( 'leader_id' => $bp->displayed_user->id, 'follower_id' => bp_loggedin_user_id() ) ) )
+					return false;
+
+			$user_id = $user_id . ',' . bp_loggedin_user_id();
+			$following = true;
+		} else if ( 'home' != $scope ) {
+			$user_id = bp_loggedin_user_id();
+			if ( !empty( $user_id ) ) {
+				$show_hidden = ( $user_id == $bp->loggedin_user->id && $scope != 'friends' ) ? 1 : 0;
+				if ( bp_is_active( 'groups' ) ) {
+					$groups = groups_get_user_groups( $user_id );
+					if ( empty( $groups['groups'] ) )
+						return false;
+
+					$object = $bp->groups->id;
+					$primary_id = implode( ',', (array)$groups['groups'] );
+				}
+				$user_id = 0;
+			}
+		}
 	}
 
 	// Do not exceed the maximum per page
@@ -452,7 +484,8 @@ function bp_has_activities( $args = '' ) {
 		'search_terms'     => $search_terms,
 		'display_comments' => $display_comments,
 		'show_hidden'      => $show_hidden,
-		'spam'             => $spam
+		'spam'             => $spam,
+		'following'        => $following
 	);
 
 	$activities_template = new BP_Activity_Template( $template_args );
