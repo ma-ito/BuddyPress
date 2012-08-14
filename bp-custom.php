@@ -1,11 +1,9 @@
 <?php
-function remove_footer_admin_bar() {
-	define( 'BP_DISABLE_ADMIN_BAR', true );
-}
-add_action('wp_footer', 'remove_footer_admin_bar', 0);
-define('BP_DISABLE_ADMIN_BAR', true);
 
-function cac_email_activity_checkbox() {
+/* disable admin bar */
+add_filter( 'show_admin_bar', '__return_false' );
+
+function cc_email_activity_checkbox() {
 	global $bp;
 	global $current_user;
 
@@ -17,16 +15,16 @@ function cac_email_activity_checkbox() {
 	?>
 
 	<div id="activity_mail">
-		<label for="cac_activity_mail">
+		<label for="cc_activity_mail">
 			グループメンバーに投稿内容をメールする
-			<input type="checkbox" name="cac_activity_mail" id="cac_activity_mail" value="mailme" />
+			<input type="checkbox" name="cc_activity_mail" id="cc_activity_mail" value="mailme" />
 		</label>
 	</div>
 	<?php
 }
-add_action( 'bp_activity_post_form_options', 'cac_email_activity_checkbox' );
+add_action( 'bp_activity_post_form_options', 'cc_email_activity_checkbox' );
 
-function cac_email_activity_handler( $activity ) {
+function cc_email_activity_handler( $activity ) {
 	global $bp;
 
 	if ( $_POST['mailme'] == 'mailme' ) {
@@ -57,9 +55,9 @@ function cac_email_activity_handler( $activity ) {
 
 	remove_action( 'bp_activity_after_save' , 'ass_group_notification_activity' , 50 );
 }
-add_action( 'bp_activity_after_save', 'cac_email_activity_handler', 1 );
+add_action( 'bp_activity_after_save', 'cc_email_activity_handler', 1 );
 
-function cac_email_activity_js() {
+function cc_email_activity_js() {
 	if ( !bp_is_groups_component() )
 		return;
 	?>
@@ -88,7 +86,7 @@ function cac_email_activity_js() {
 				var object = '';
 				var item_id = jq("#whats-new-post-in").val();
 				var content = jq("textarea#whats-new").val();
-				var mailme = jq("#cac_activity_mail:checked").val();
+				var mailme = jq("#cc_activity_mail:checked").val();
 
 				/* Set object for non-profile posts */
 				if ( item_id > 0 ) {
@@ -130,7 +128,7 @@ function cac_email_activity_js() {
 						jq("li.new-update").hide().slideDown( 300 );
 						jq("li.new-update").removeClass( 'new-update' );
 						jq("textarea#whats-new").val('');
-						jq("#cac_activity_mail").removeAttr('checked');
+						jq("#cc_activity_mail").removeAttr('checked');
 
 						/* Re-enable the submit button after 8 seconds. */
 						setTimeout( function() { button.attr("disabled", ''); }, 8000 );
@@ -144,6 +142,6 @@ function cac_email_activity_js() {
 	</script>
 <?php
 }
-add_action( 'bp_activity_post_form_options', 'cac_email_activity_js', 999 );
+add_action( 'bp_activity_post_form_options', 'cc_email_activity_js', 999 );
 
 ?>
