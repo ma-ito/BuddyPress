@@ -455,7 +455,7 @@ function bp_core_time_since( $older_date, $newer_date = false ) {
 				$count2   = floor( ( $since - ( $seconds * $count ) ) / $seconds2 );
 
 				// Add to output var
-				if ( 0 != $count2 ) {
+				if ( 0 != $count2 && $name2 !== "時間" ) {
 					$output .= ( 1 == $count2 ) ? _x( ',', 'Separator in time since', 'buddypress' ) . ' 1 '. $name2 : _x( ',', 'Separator in time since', 'buddypress' ) . ' ' . $count2 . ' ' . $chunks[$i + 1][2];
 				}
 			}
