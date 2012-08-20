@@ -645,19 +645,7 @@ class BP_Groups_Group {
 		if ( 'unreplied' == $type )
 			$bp->groups->filter_sql = ' AND t.topic_posts = 1';
 
-		/**
-		 * Provide backward-compatibility for the groups_total_public_forum_topic_count SQL filter. 
-		 * Developers: DO NOT use this filter. It will be removed in BP 1.7. Instead, use
-		 * get_global_forum_topic_count_extra_sql. See https://buddypress.trac.wordpress.org/ticket/4306
-		 */
-		$maybe_extra_sql = apply_filters( 'groups_total_public_forum_topic_count', $bp->groups->filter_sql, $type );
-
-		if ( is_int( $maybe_extra_sql ) )
-			$extra_sql = $bp->groups->filter_sql;
-		else
-			$extra_sql = $maybe_extra_sql;
-
-		// Developers: use this filter instead
+		// https://buddypress.trac.wordpress.org/ticket/4306
 		$extra_sql = apply_filters( 'get_global_forum_topic_count_extra_sql', $bp->groups->filter_sql, $type );
 
 		// Make sure the $extra_sql begins with an AND
@@ -1109,7 +1097,7 @@ class BP_Groups_Member {
 	 * @global wpdb $wpdb WordPress database object
 	 * @param int $user_id
 	 * @param int $group_id
-	 * @since 1.2.6
+	 * @since BuddyPress (1.2.6)
 	 */
 	function check_is_creator( $user_id, $group_id ) {
 		global $bp, $wpdb;
@@ -1228,7 +1216,7 @@ class BP_Groups_Member {
 	 * @global object $bp BuddyPress global settings
 	 * @global wpdb $wpdb WordPress database object
 	 * @param int $user_id
-	 * @since 1.0
+	 * @since BuddyPress (1.0)
 	 * @uses BP_Groups_Member
 	 */
 	function delete_all_for_user( $user_id ) {
@@ -1260,7 +1248,7 @@ class BP_Groups_Member {
  *
  * @package BuddyPress
  * @subpackage Groups
- * @since 1.1
+ * @since BuddyPress (1.1)
  */
 class BP_Group_Extension {
 	var $name = false;
