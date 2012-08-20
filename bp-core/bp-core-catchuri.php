@@ -523,7 +523,7 @@ add_action( 'login_form_bpnoaccess', 'bp_core_no_access_wp_login_error' );
  * general possible versions of the URL - eg, example.com/groups/mygroup/ instead of
  * example.com/groups/mygroup/home/
  *
- * @since 1.6
+ * @since BuddyPress (1.6)
  * @see BP_Members_Component::setup_globals() where $bp->canonical_stack['base_url'] and
  *   ['component'] may be set
  * @see bp_core_new_nav_item() where $bp->canonical_stack['action'] may be set
@@ -576,7 +576,7 @@ function bp_redirect_canonical() {
 /**
  * Output rel=canonical header tag for BuddyPress content
  *
- * @since 1.6
+ * @since BuddyPress (1.6)
  */
 function bp_rel_canonical() {
 	$canonical_url = bp_get_canonical_url();
@@ -681,13 +681,48 @@ function _bp_maybe_remove_redirect_canonical() {
 add_action( 'bp_init', '_bp_maybe_remove_redirect_canonical' );
 
 /**
+ * Rehook maybe_redirect_404() to run later than the default
+ *
+ * WordPress's maybe_redirect_404() allows admins on a multisite installation
+ * to define 'NOBLOGREDIRECT', a URL to which 404 requests will be redirected.
+ * maybe_redirect_404() is hooked to template_redirect at priority 10, which
+ * creates a race condition with bp_template_redirect(), our piggyback hook.
+ * Due to a legacy bug in BuddyPress, internal BP content (such as members and
+ * groups) is marked 404 in $wp_query until bp_core_load_template(), when BP
+ * manually overrides the automatic 404. However, the race condition with
+ * maybe_redirect_404() means that this manual un-404-ing doesn't happen in
+ * time, with the results that maybe_redirect_404() thinks that the page is
+ * a legitimate 404, and redirects incorrectly to NOBLOGREDIRECT.
+ *
+ * By switching maybe_redirect_404() to catch at a higher priority, we avoid
+ * the race condition. If bp_core_load_template() runs, it dies before reaching
+ * maybe_redirect_404(). If bp_core_load_template() does not run, it means that
+ * the 404 is legitimate, and maybe_redirect_404() can proceed as expected.
+ *
+ * This function will be removed in a later version of BuddyPress. Plugins
+ * (and plugin authors!) should ignore it.
+ *
+ * @since BuddyPress (1.6.1)
+ *
+ * @link http://buddypress.trac.wordpress.org/ticket/4329
+ * @link http://buddypress.trac.wordpress.org/ticket/4415
+ */
+function _bp_rehook_maybe_redirect_404() {
+	if ( defined( 'NOBLOGREDIRECT' ) ) {
+		remove_action( 'template_redirect', 'maybe_redirect_404' );
+		add_action( 'template_redirect', 'maybe_redirect_404', 100 );
+	}
+}
+add_action( 'template_redirect', '_bp_rehook_maybe_redirect_404', 1 );
+
+/**
  * Remove WordPress's rel=canonical HTML tag if we are trying to load BuddyPress
  * specific content.
  *
  * This function should be considered temporary, and may be removed without
  * notice in future versions of BuddyPress.
  *
- * @since 1.6
+ * @since BuddyPress (1.6)
  */
 function _bp_maybe_remove_rel_canonical() {
 	if ( ! bp_is_blog_page() && ! is_404() ) {
