@@ -340,8 +340,13 @@ function bp_the_profile_field_edit_value() {
 		 * Check to see if the posted value is different, if it is re-display this
 		 * value as long as it's not empty and a required field.
 		 */
-		if ( !isset( $field->data->value ) )
+		if ( !isset( $field->data ) ) {
+			$field->data = new stdClass;
+		}
+
+		if ( !isset( $field->data->value ) ) {
 			$field->data->value = '';
+		}
 
 		if ( isset( $_POST['field_' . $field->id] ) && $field->data->value != $_POST['field_' . $field->id] ) {
 			if ( !empty( $_POST['field_' . $field->id] ) )
@@ -393,7 +398,7 @@ function bp_the_profile_field_input_name() {
  * 'radio', 'checkbox', and 'datebox'.
  *
  * @package BuddyPress Xprofile
- * @since 1.1
+ * @since BuddyPress (1.1)
  *
  * @uses bp_get_the_profile_field_options()
  *
@@ -409,7 +414,7 @@ function bp_the_profile_field_options( $args = '' ) {
 	 * 'radio', 'checkbox', and 'datebox'.
 	 *
 	 * @package BuddyPress Xprofile
-	 * @since 1.1
+	 * @since BuddyPress (1.1)
 	 *
 	 * @uses BP_XProfile_Field::get_children()
 	 * @uses BP_XProfile_ProfileData::get_value_byid()
