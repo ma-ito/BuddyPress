@@ -702,7 +702,7 @@ add_action( 'bp_init', '_bp_maybe_remove_redirect_canonical' );
  * This function will be removed in a later version of BuddyPress. Plugins
  * (and plugin authors!) should ignore it.
  *
- * @since BuddyPress (1.6.1)
+ * @since 1.6.1
  *
  * @link http://buddypress.trac.wordpress.org/ticket/4329
  * @link http://buddypress.trac.wordpress.org/ticket/4415
