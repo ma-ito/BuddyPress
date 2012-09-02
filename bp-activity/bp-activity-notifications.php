@@ -71,7 +71,7 @@ function bp_activity_at_message_notification( $activity_id, $receiver_user_id ) 
 		$ud       = bp_core_get_core_userdata( $receiver_user_id );
 		$to       = $ud->user_email;
 		$sitename = wp_specialchars_decode( get_blog_option( bp_get_root_blog_id(), 'blogname' ), ENT_QUOTES );
-		$subject  = '[' . $sitename . '] ' . sprintf( __( '%s mentioned you in an update', 'buddypress' ), $poster_name );
+		$subject  = sprintf( __( '%s mentioned you in an update', 'buddypress' ), $poster_name );
 
 		if ( bp_is_active( 'groups' ) && bp_is_group() ) {
 			$message = sprintf( __(
@@ -95,7 +95,7 @@ To view and respond to the message, log in and visit: %3$s
 ', 'buddypress' ), $poster_name, $content, $message_link );
 		}
 
-		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
+//		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 
 		/* Send the message */
 		$to 	 = apply_filters( 'bp_activity_at_message_notification_to', $to );
@@ -160,7 +160,7 @@ function bp_activity_new_comment_notification( $comment_id, $commenter_id, $para
 		$ud       = bp_core_get_core_userdata( $original_activity->user_id );
 		$to       = $ud->user_email;
 		$sitename = wp_specialchars_decode( get_blog_option( bp_get_root_blog_id(), 'blogname' ), ENT_QUOTES );
-		$subject = '[' . $sitename . '] ' . sprintf( __( '%s replied to one of your updates', 'buddypress' ), $poster_name );
+		$subject = sprintf( __( '%s replied to one of your updates', 'buddypress' ), $poster_name );
 
 $message = sprintf( __(
 '%1$s replied to one of your updates:
@@ -203,7 +203,7 @@ To view your original update and all comments, log in and visit: %3$s
 		$ud       = bp_core_get_core_userdata( $parent_comment->user_id );
 		$to       = $ud->user_email;
 		$sitename = wp_specialchars_decode( get_blog_option( bp_get_root_blog_id(), 'blogname' ), ENT_QUOTES );
-		$subject = '[' . $sitename . '] ' . sprintf( __( '%s replied to one of your comments', 'buddypress' ), $poster_name );
+		$subject = sprintf( __( '%s replied to one of your comments', 'buddypress' ), $poster_name );
 
 		$poster_name = stripslashes( $poster_name );
 		$content = bp_activity_filter_kses( stripslashes( $content ) );
