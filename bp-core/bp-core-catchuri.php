@@ -443,6 +443,7 @@ add_action( 'bp_template_redirect', 'bp_core_catch_no_access', 1 );
  */
 function bp_core_no_access( $args = '' ) {
 
+/*
  	// Build the redirect URL
  	$redirect_url  = is_ssl() ? 'https://' : 'http://';
  	$redirect_url .= $_SERVER['HTTP_HOST'];
@@ -458,10 +459,12 @@ function bp_core_no_access( $args = '' ) {
 	$r = wp_parse_args( $args, $defaults );
 	$r = apply_filters( 'bp_core_no_access', $r );
 	extract( $r, EXTR_SKIP );
+*/
 
 	/**
 	 * @ignore Ignore these filters and use 'bp_core_no_access' above
 	 */
+/*
 	$mode		= apply_filters( 'bp_no_access_mode',     $mode,     $root,     $redirect, $message );
 	$redirect	= apply_filters( 'bp_no_access_redirect', $redirect, $root,     $message,  $mode    );
 	$root		= apply_filters( 'bp_no_access_root',     $root,     $redirect, $message,  $mode    );
@@ -500,6 +503,7 @@ function bp_core_no_access( $args = '' ) {
 			break;
 		*/
 	}
+*/
 }
 
 /**
