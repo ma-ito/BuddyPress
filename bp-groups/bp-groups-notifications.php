@@ -232,7 +232,7 @@ function groups_notification_group_invites( &$group, &$member, $inviter_user_id 
 		// Set up and send the message
 		$to       = $invited_ud->user_email;
 		$sitename = wp_specialchars_decode( get_blog_option( bp_get_root_blog_id(), 'blogname' ), ENT_QUOTES );
-		$subject  = '[' . $sitename . '] ' . sprintf( __( 'You have an invitation to the group: "%s"', 'buddypress' ), $group->name );
+		$subject  = sprintf( __( 'You have an invitation to the group: "%s"', 'buddypress' ), $group->name );
 
 		$message = sprintf( __(
 'One of your friends %1$s has invited you to the group: "%2$s".
@@ -246,7 +246,7 @@ To view %5$s\'s profile visit: %6$s
 ---------------------
 ', 'buddypress' ), $inviter_name, $group->name, $invites_link, $group_link, $inviter_name, $inviter_link );
 
-		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
+		//$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 
 		/* Send the message */
 		$to      = apply_filters( 'groups_notification_group_invites_to', $to );
