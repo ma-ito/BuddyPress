@@ -1528,6 +1528,10 @@ function bp_group_join_button( $group = false ) {
 		 	if ( 1 == count( $group_admins ) && $group_admins[0]->user_id == bp_loggedin_user_id() )
 				return false;
 
+			// Hide a leave button where name is 社員会
+			if ( '社員会' === $group->name )
+				return false;
+
 			$button = array(
 				'id'                => 'leave_group',
 				'component'         => 'groups',
