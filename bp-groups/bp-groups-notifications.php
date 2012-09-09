@@ -17,7 +17,7 @@ function groups_notification_group_updated( $group_id ) {
 
 	$group    = groups_get_group( array( 'group_id' => $group_id ) );
 	$sitename = wp_specialchars_decode( get_blog_option( bp_get_root_blog_id(), 'blogname' ), ENT_QUOTES );
-	$subject  = '[' . $sitename . '] ' . __( 'Group Details Updated', 'buddypress' );
+	$subject  = __( 'Group Details Updated', 'buddypress' );
 
 	$user_ids = BP_Groups_Member::get_group_member_ids( $group->id );
 	foreach ( (array) $user_ids as $user_id ) {
@@ -40,7 +40,7 @@ To view the group: %2$s
 ---------------------
 ', 'buddypress' ), $group->name, $group_link );
 
-		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
+		//$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 
 		/* Send the message */
 		$to      = apply_filters( 'groups_notification_group_updated_to', $to );
@@ -74,7 +74,7 @@ function groups_notification_new_membership_request( $requesting_user_id, $admin
 	// Set up and send the message
 	$to       = $ud->user_email;
 	$sitename = wp_specialchars_decode( bp_get_option( 'blogname' ), ENT_QUOTES );
-	$subject  = '[' . $sitename . '] ' . sprintf( __( 'Membership request for group: %s', 'buddypress' ), $group->name );
+	$subject  = sprintf( __( 'Membership request for group: %s', 'buddypress' ), $group->name );
 
 $message = sprintf( __(
 '%1$s wants to join the group "%2$s".
@@ -89,7 +89,7 @@ To view %4$s\'s profile: %5$s
 ---------------------
 ', 'buddypress' ), $requesting_user_name, $group->name, $group_requests, $requesting_user_name, $profile_link );
 
-	$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
+	//$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 
 	/* Send the message */
 	$to      = apply_filters( 'groups_notification_new_membership_request_to', $to );
@@ -125,7 +125,7 @@ function groups_notification_membership_request_completed( $requesting_user_id, 
 	$sitename = wp_specialchars_decode( get_blog_option( bp_get_root_blog_id(), 'blogname' ), ENT_QUOTES );
 
 	if ( $accepted ) {
-		$subject = '[' . $sitename . '] ' . sprintf( __( 'Membership request for group "%s" accepted', 'buddypress' ), $group->name );
+		$subject = sprintf( __( 'Membership request for group "%s" accepted', 'buddypress' ), $group->name );
 		$message = sprintf( __(
 'Your membership request for the group "%1$s" has been accepted.
 
@@ -135,7 +135,7 @@ To view the group please login and visit: %2$s
 ', 'buddypress' ), $group->name, $group_link );
 
 	} else {
-		$subject = '[' . $sitename . '] ' . sprintf( __( 'Membership request for group "%s" rejected', 'buddypress' ), $group->name );
+		$subject = sprintf( __( 'Membership request for group "%s" rejected', 'buddypress' ), $group->name );
 		$message = sprintf( __(
 'Your membership request for the group "%1$s" has been rejected.
 
@@ -145,7 +145,7 @@ To submit another request please log in and visit: %2$s
 ', 'buddypress' ), $group->name, $group_link );
 	}
 
-	$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
+	//$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 
 	/* Send the message */
 	$to      = apply_filters( 'groups_notification_membership_request_completed_to', $to );
@@ -182,7 +182,7 @@ function groups_notification_promoted_member( $user_id, $group_id ) {
 	// Set up and send the message
 	$to       = $ud->user_email;
 	$sitename = wp_specialchars_decode( get_blog_option( bp_get_root_blog_id(), 'blogname' ), ENT_QUOTES );
-	$subject  = '[' . $sitename . '] ' . sprintf( __( 'You have been promoted in the group: "%s"', 'buddypress' ), $group->name );
+	$subject  = sprintf( __( 'You have been promoted in the group: "%s"', 'buddypress' ), $group->name );
 
 	$message = sprintf( __(
 'You have been promoted to %1$s for the group: "%2$s".
@@ -192,7 +192,7 @@ To view the group please visit: %3$s
 ---------------------
 ', 'buddypress' ), $promoted_to, $group->name, $group_link );
 
-	$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
+	//$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 
 	/* Send the message */
 	$to      = apply_filters( 'groups_notification_promoted_member_to', $to );
