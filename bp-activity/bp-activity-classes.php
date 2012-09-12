@@ -209,7 +209,10 @@ class BP_Activity_Activity {
 		if ( false === $display_comments || 'threaded' === $display_comments )
 			$where_conditions[] = "a.type != 'activity_comment'";
 
+		// Add 'created_group' activities to MyGroup Stream
 		$where_sql = 'WHERE ' . join( ' AND ', $where_conditions );
+		if ( $filter['user_id'] !== false && $filter['object'])
+			$where_sql .= " OR a.type = 'created_group'";
 
 		// Define the preferred order for indexes
 		$indexes = apply_filters( 'bp_activity_preferred_index_order', array( 'user_id', 'item_id', 'secondary_item_id', 'date_recorded', 'component', 'type', 'hide_sitewide', 'is_spam' ) );
