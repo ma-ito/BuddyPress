@@ -458,8 +458,6 @@ function bp_has_activities( $args = '' ) {
 				}
 				$user_id = 0;
 			}
-
-			$action = 'activity_update, activity_comment, created_group, joined_group';
 		}
 	}
 
