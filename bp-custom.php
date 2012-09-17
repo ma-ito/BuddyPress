@@ -3,6 +3,7 @@
 /* disable admin bar */
 add_filter( 'show_admin_bar', '__return_false' );
 
+if ( !function_exists('wp_new_user_notification') ) :
 /**
  * Notify the blog admin of a new user, normally via email.
  *
@@ -41,5 +42,6 @@ function wp_new_user_notification($user_id, $plaintext_pass = '') {
 	wp_mail($user_email, 'アカウント登録のお知らせ', $message);
 
 }
+endif;
 
 ?>
