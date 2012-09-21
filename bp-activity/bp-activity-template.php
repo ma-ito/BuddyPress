@@ -373,8 +373,8 @@ function bp_has_activities( $args = '' ) {
 
 	// If you have passed a "scope" then this will override any filters you have passed.
 	if ( 'just-me' == $scope || 'friends' == $scope || 'groups' == $scope || 'favorites' == $scope || 'mentions' == $scope ) {
-		if ( 'just-me' == $scope )
-			$display_comments = 'stream';
+		if ( 'just-me' == $scope)
+			$following = true;
 
 		// determine which user_id applies
 		if ( empty( $user_id ) )
