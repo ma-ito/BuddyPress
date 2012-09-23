@@ -435,12 +435,15 @@ function bp_has_activities( $args = '' ) {
 		}
 	} else {
 		if ( 'following' == $scope ) {
-			if ( !empty ($bp->displayed_user->id ) )
+			if ( !empty( $bp->displayed_user->id ) && !bp_is_my_profile() )
 				if ( !bp_follow_is_following( array( 'leader_id' => $bp->displayed_user->id, 'follower_id' => bp_loggedin_user_id() ) ) )
 					return false;
 
-			$user_id = $user_id . ',' . bp_loggedin_user_id();
+			if ( !bp_is_my_profile())
+				$user_id = $user_id . ',' . bp_loggedin_user_id();
+
 			$following = true;
+
 		} else if ( 'home' != $scope ) {
 			$user_id = bp_loggedin_user_id();
 			if ( !empty( $user_id ) ) {
