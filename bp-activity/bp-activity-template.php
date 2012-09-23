@@ -420,6 +420,8 @@ function bp_has_activities( $args = '' ) {
 					$display_comments = true;
 					break;
 				case 'mentions':
+					if ( !empty( $bp->displayed_user->id ) && !bp_is_my_profile() )
+						return;
 
 					// Start search at @ symbol and stop search at closing tag delimiter.
 					$search_terms     = '@' . bp_core_get_username( $user_id ) . '<';
@@ -430,7 +432,7 @@ function bp_has_activities( $args = '' ) {
 		}
 	} else {
 		if ( 'following' == $scope ) {
-			if ( $bp->displayed_user->id != 0)
+			if ( !empty ($bp->displayed_user->id ) )
 				if ( !bp_follow_is_following( array( 'leader_id' => $bp->displayed_user->id, 'follower_id' => bp_loggedin_user_id() ) ) )
 					return false;
 
