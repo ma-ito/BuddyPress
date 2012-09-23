@@ -412,6 +412,9 @@ function bp_has_activities( $args = '' ) {
 					}
 					break;
 				case 'favorites':
+					if ( !empty( $bp->displayed_user->id ) && !bp_is_my_profile() )
+						return false;
+
 					$favs = bp_activity_get_user_favorites( $user_id );
 					if ( empty( $favs ) )
 						return false;
@@ -421,7 +424,7 @@ function bp_has_activities( $args = '' ) {
 					break;
 				case 'mentions':
 					if ( !empty( $bp->displayed_user->id ) && !bp_is_my_profile() )
-						return;
+						return false;
 
 					// Start search at @ symbol and stop search at closing tag delimiter.
 					$search_terms     = '@' . bp_core_get_username( $user_id ) . '<';
