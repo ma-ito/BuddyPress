@@ -758,7 +758,6 @@ function bp_get_displayed_user_nav() {
 			$link = trailingslashit( bp_displayed_user_domain() . $user_nav_item['link'] );
 		}
 
-echo $user_nav_item['css_id'];
 		echo apply_filters_ref_array( 'bp_get_displayed_user_nav_' . $user_nav_item['css_id'], array( '<li id="' . $user_nav_item['css_id'] . '-personal-li" ' . $selected . '><a id="user-' . $user_nav_item['css_id'] . '" href="' . $link . '">' . $user_nav_item['name'] . '</a></li>', &$user_nav_item ) );
 	}
 }
