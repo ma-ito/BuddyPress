@@ -1,5 +1,8 @@
 <?php
 
+/* Change the default tab opened when looking at a user’s profile */
+define( 'BP_DEFAULT_COMPONENT', 'profile' );
+
 /* disable admin bar */
 add_filter( 'show_admin_bar', '__return_false' );
 
