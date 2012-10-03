@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-09-23 02:44:56+0000\n"
+"PO-Revision-Date: 2012-10-03 15:11:10+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -426,7 +426,7 @@ msgstr "%s グループのロゴ"
 #: bp-activity/bp-activity-template.php:1303
 #@ buddypress
 msgid "View Discussion"
-msgstr ""
+msgstr "この投稿を表示する"
 
 #: bp-activity/bp-activity-template.php:2098
 #: bp-forums/bp-forums-template.php:1271
@@ -4490,7 +4490,7 @@ msgstr "コメント <span>%s</span>"
 #: bp-themes/bp-default/activity/entry.php:68
 #@ buddypress
 msgid "Mark as Favorite"
-msgstr "お気に入りに追加"
+msgstr "お気に入りに追加する"
 
 #: bp-themes/bp-clover-cafe/activity/entry.php:104
 #: bp-themes/bp-default/activity/entry.php:104
@@ -4508,7 +4508,7 @@ msgstr "または、ESC キーを押してキャンセル"
 #: bp-themes/bp-default/activity/index.php:39
 #@ buddypress
 msgid "The public activity for everyone on this site."
-msgstr "このサイト全員の公開アクティビティ"
+msgstr "参加しているグルームの近況"
 
 #: bp-themes/bp-clover-cafe/members/index.php:33
 #: bp-themes/bp-default/activity/index.php:39
@@ -4550,7 +4550,7 @@ msgstr "参加中のグループ <span>%s</span>"
 #: bp-themes/bp-default/activity/index.php:71
 #@ buddypress
 msgid "The activity I've marked as a favorite."
-msgstr "お気に入りのアクティビティ"
+msgstr "お気に入りの投稿"
 
 #: bp-themes/bp-clover-cafe/activity/index.php:71
 #: bp-themes/bp-default/activity/index.php:71
@@ -4563,7 +4563,7 @@ msgstr "お気に入り <span>%s</span>"
 #: bp-themes/bp-default/activity/index.php:77
 #@ buddypress
 msgid "Activity that I have been mentioned in."
-msgstr ""
+msgstr "呼びかけられた投稿"
 
 #: bp-themes/bp-clover-cafe/activity/index.php:77
 #: bp-themes/bp-default/activity/index.php:77
@@ -5853,7 +5853,7 @@ msgstr "依頼する"
 #@ buddypress
 msgctxt "Home page banner link title"
 msgid "Home"
-msgstr ""
+msgstr "ホーム"
 
 #: bp-themes/bp-default/header.php:25
 #@ buddypress
