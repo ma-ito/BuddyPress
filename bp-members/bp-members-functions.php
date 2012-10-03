@@ -372,7 +372,7 @@ function bp_core_get_userlink( $user_id, $no_anchor = false, $just_link = false 
 	if ( $just_link )
 		return $url;
 
-	return apply_filters( 'bp_core_get_userlink', '<a href="' . $url . '" title="' . $display_name . '">' . $display_name . '</a>', $user_id );
+	return apply_filters( 'bp_core_get_userlink', '<a href="' . $url . '">' . $display_name . '</a>', $user_id );
 }
 
 
