@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-10-03 15:11:10+0000\n"
+"PO-Revision-Date: 2012-10-03 22:55:49+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -4508,7 +4508,7 @@ msgstr "または、ESC キーを押してキャンセル"
 #: bp-themes/bp-default/activity/index.php:39
 #@ buddypress
 msgid "The public activity for everyone on this site."
-msgstr "参加しているグルームの近況"
+msgstr "参加しているグループの近況"
 
 #: bp-themes/bp-clover-cafe/members/index.php:33
 #: bp-themes/bp-default/activity/index.php:39
