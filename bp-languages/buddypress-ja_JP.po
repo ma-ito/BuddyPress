@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-10-03 22:55:49+0000\n"
+"PO-Revision-Date: 2012-10-05 16:26:48+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -5545,7 +5545,7 @@ msgstr "次のステップに進む"
 #: bp-themes/bp-default/groups/create.php:282
 #@ buddypress
 msgid "Create Group and Continue"
-msgstr "グループを作成して続行"
+msgstr "グループを作成して続行する"
 
 #: bp-themes/bp-clover-cafe/groups/groups-loop.php:95
 #: bp-themes/bp-default/groups/groups-loop.php:95
@@ -5773,7 +5773,7 @@ msgstr "%1$s さんは言いました: %2$s"
 #: bp-themes/bp-default/groups/single/forum/topic.php:95
 #@ buddypress
 msgid "Permanent link to this post"
-msgstr "この投稿へのパーマリンク"
+msgstr "この投稿へのリンク"
 
 #: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:134
 #: bp-themes/bp-default/groups/single/forum/topic.php:134
