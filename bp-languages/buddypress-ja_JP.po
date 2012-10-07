@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-10-06 01:35:52+0000\n"
+"PO-Revision-Date: 2012-10-07 14:41:54+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -2422,7 +2422,7 @@ msgstr ""
 #: bp-groups/bp-groups-template.php:1288
 #@ buddypress
 msgid "Requests"
-msgstr "依頼"
+msgstr "加入依頼"
 
 #: bp-friends/bp-friends-loader.php:152
 #, php-format
@@ -2706,7 +2706,7 @@ msgstr "メンバー加入依頼を%d件承認しました"
 #, php-format
 #@ buddypress
 msgid "Membership for group \"%s\" accepted"
-msgstr "「%s」グループへの加入は承認されました"
+msgstr "%s グループへの参加が承認されました"
 
 #: bp-groups/bp-groups-activity.php:174
 #, php-format
@@ -3027,7 +3027,7 @@ msgstr ""
 #, php-format
 #@ buddypress
 msgid "Membership request for group \"%s\" accepted"
-msgstr "「%s」への加入依頼が承認されました"
+msgstr "%s グループへの加入依頼が承認されました"
 
 #: bp-groups/bp-groups-notifications.php:130
 #, php-format
@@ -3039,7 +3039,7 @@ msgid ""
 "\n"
 "---------------------\n"
 msgstr ""
-"「%1$s」グループへの加入依頼が承認されました。\n"
+"%1$s グループへの参加が承認されました。\n"
 "\n"
 "グループの情報を表示する:\n"
 "%2$s"
@@ -5044,7 +5044,7 @@ msgstr "グループの選択:"
 
 #. translators: no option picked in select box
 #. translators: no option picked in select box
-#. translators: no option picked in select box 
+#. translators: no option picked in select box
 #: bp-themes/bp-clover-cafe/forums/index.php:115
 #: bp-themes/bp-default/forums/index.php:116
 #: bp-xprofile/bp-xprofile-template.php:463
@@ -7153,7 +7153,7 @@ msgstr ""
 #, php-format
 #@ buddypress
 msgid "You have %1$d new mentions"
-msgstr ""
+msgstr "あなたへの呼びかけが %1$d 件あります"
 
 #: bp-activity/bp-activity-functions.php:156
 #, php-format
