@@ -3,9 +3,9 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-10-05 16:26:48+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2012-10-06 01:35:52+0000\n"
+"Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,7 +154,7 @@ msgstr "個人"
 #: bp-activity/bp-activity-loader.php:153
 #: bp-activity/bp-activity-loader.php:234
 #: bp-activity/feeds/bp-activity-mentions-feed.php:28
-#: bp-themes/bp-clover-cafe/activity/index.php:77
+#: bp-themes/bp-clover-cafe/activity/index.php:65
 #: bp-themes/bp-default/activity/index.php:77
 #@ buddypress
 msgid "Mentions"
@@ -252,11 +252,6 @@ msgstr ""
 #: bp-core/deprecated/1.5.php:347
 #: bp-friends/bp-friends-notifications.php:44
 #: bp-friends/bp-friends-notifications.php:81
-#: bp-groups/bp-groups-notifications.php:43
-#: bp-groups/bp-groups-notifications.php:92
-#: bp-groups/bp-groups-notifications.php:148
-#: bp-groups/bp-groups-notifications.php:195
-#: bp-groups/bp-groups-notifications.php:249
 #, php-format
 #@ buddypress
 msgid "To disable these notifications please log in and go to: %s"
@@ -372,16 +367,16 @@ msgctxt "Activity pagination next text"
 msgid "&rarr;"
 msgstr ""
 
-#: bp-activity/bp-activity-template.php:556
+#: bp-activity/bp-activity-template.php:564
 #, php-format
 #@ buddypress
 msgid "Viewing item %1$s to %2$s (of %3$s items)"
 msgstr "%1$s件目から%2$s件目の項目を表示中 (%3$s件中)"
 
 #: bp-activity/bp-activity-loader.php:314
-#: bp-activity/bp-activity-template.php:1001
-#: bp-activity/bp-activity-template.php:1122
-#: bp-activity/bp-activity-template.php:1132
+#: bp-activity/bp-activity-template.php:1009
+#: bp-activity/bp-activity-template.php:1130
+#: bp-activity/bp-activity-template.php:1140
 #: bp-blogs/bp-blogs-loader.php:200
 #: bp-forums/bp-forums-loader.php:238
 #: bp-forums/bp-forums-template.php:487
@@ -395,10 +390,10 @@ msgstr "%1$s件目から%2$s件目の項目を表示中 (%3$s件中)"
 #: bp-groups/bp-groups-template.php:1046
 #: bp-groups/bp-groups-template.php:1095
 #: bp-groups/bp-groups-template.php:1111
-#: bp-groups/bp-groups-template.php:1801
-#: bp-groups/bp-groups-template.php:1810
-#: bp-groups/bp-groups-template.php:1819
-#: bp-groups/bp-groups-template.php:2567
+#: bp-groups/bp-groups-template.php:1800
+#: bp-groups/bp-groups-template.php:1809
+#: bp-groups/bp-groups-template.php:1818
+#: bp-groups/bp-groups-template.php:2566
 #: bp-members/bp-members-buddybar.php:90
 #: bp-members/bp-members-loader.php:197
 #: bp-members/bp-members-template.php:478
@@ -406,8 +401,8 @@ msgstr "%1$s件目から%2$s件目の項目を表示中 (%3$s件中)"
 #: bp-members/bp-members-template.php:796
 #: bp-messages/bp-messages-loader.php:255
 #: bp-messages/bp-messages-template.php:326
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:185
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:212
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:164
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:191
 #: bp-themes/bp-default/groups/single/admin.php:185
 #: bp-themes/bp-default/groups/single/admin.php:212
 #: bp-xprofile/bp-xprofile-loader.php:262
@@ -416,19 +411,19 @@ msgstr "%1$s件目から%2$s件目の項目を表示中 (%3$s件中)"
 msgid "Profile picture of %s"
 msgstr "%s さんのプロフィール写真"
 
-#: bp-activity/bp-activity-template.php:1103
+#: bp-activity/bp-activity-template.php:1111
 #: bp-groups/bp-groups-template.php:391
 #, php-format
 #@ buddypress
 msgid "Group logo of %s"
 msgstr "%s グループのロゴ"
 
-#: bp-activity/bp-activity-template.php:1303
+#: bp-activity/bp-activity-template.php:1311
 #@ buddypress
 msgid "View Discussion"
 msgstr "この投稿を表示する"
 
-#: bp-activity/bp-activity-template.php:2098
+#: bp-activity/bp-activity-template.php:2106
 #: bp-forums/bp-forums-template.php:1271
 #: bp-groups/bp-groups-template.php:1294
 #: bp-themes/bp-clover-cafe/activity/comment.php:43
@@ -442,7 +437,7 @@ msgstr "この投稿を表示する"
 msgid "Delete"
 msgstr "削除"
 
-#: bp-activity/bp-activity-template.php:2145
+#: bp-activity/bp-activity-template.php:2153
 #: bp-core/admin/bp-core-slugs.php:112
 #: bp-core/admin/bp-core-slugs.php:173
 #: bp-members/bp-members-template.php:582
@@ -460,27 +455,22 @@ msgstr "表示"
 msgid "groups"
 msgstr "グループ"
 
-#: bp-activity/bp-activity-template.php:2239
+#: bp-activity/bp-activity-template.php:2247
 #@ buddypress
 msgid "Clear Filter"
 msgstr "条件を消去"
 
-#: bp-activity/bp-activity-template.php:2422
+#: bp-activity/bp-activity-template.php:2430
 #@ buddypress
 msgid "a user"
 msgstr "ユーザ"
 
-#: bp-activity/bp-activity-template.php:2462
-#@ buddypress
-msgid "Send a public message on your activity stream."
-msgstr ""
-
-#: bp-activity/bp-activity-template.php:2463
+#: bp-activity/bp-activity-template.php:2470
 #@ buddypress
 msgid "Public Message"
 msgstr "呼びかける"
 
-#: bp-activity/bp-activity-template.php:2770
+#: bp-activity/bp-activity-template.php:2777
 #@ buddypress
 msgid "Site Wide Activity RSS Feed"
 msgstr "サイト全体の活動 RSS フィード"
@@ -810,7 +800,7 @@ msgstr "%s の最新のコメント"
 #: bp-blogs/bp-blogs-template.php:617
 #: bp-core/deprecated/1.5.php:397
 #: bp-forums/bp-forums-template.php:1321
-#: bp-groups/bp-groups-template.php:2292
+#: bp-groups/bp-groups-template.php:2291
 #: bp-members/bp-members-template.php:667
 #: bp-messages/bp-messages-template.php:373
 #: bp-themes/bp-clover-cafe/searchform.php:5
@@ -1081,7 +1071,7 @@ msgstr "テーマ"
 #: bp-core/admin/bp-core-update.php:80
 #: bp-core/admin/bp-core-update.php:181
 #: bp-core/admin/bp-core-update.php:224
-#: bp-themes/bp-clover-cafe/groups/create.php:289
+#: bp-themes/bp-clover-cafe/groups/create.php:272
 #: bp-themes/bp-default/groups/create.php:289
 #@ buddypress
 msgid "Finish"
@@ -1190,7 +1180,7 @@ msgstr "有効化"
 #: bp-core/bp-core-widgets.php:111
 #: bp-groups/bp-groups-template.php:1284
 #: bp-members/bp-members-loader.php:24
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:231
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:210
 #: bp-themes/bp-default/groups/single/admin.php:231
 #@ buddypress
 msgid "Members"
@@ -1201,7 +1191,7 @@ msgstr "メンバー"
 msgid "Displays member profiles, and a directory of all site members."
 msgstr "メンバーのプロフィールと全員のディレクトリを表示する。"
 
-#: bp-themes/bp-clover-cafe/activity/index.php:33
+#: bp-themes/bp-clover-cafe/activity/index.php:21
 #: bp-themes/bp-default/activity/index.php:21
 #@ buddypress
 msgid "Site Activity"
@@ -1489,7 +1479,7 @@ msgid "This user has been marked as a spammer. Only site admins can view this pr
 msgstr "このユーザーはスパマーとしてマークされています。サイト管理者だけがプロフィールを見ることができます。"
 
 #: bp-core/bp-core-catchuri.php:452
-#: bp-core/bp-core-catchuri.php:511
+#: bp-core/bp-core-catchuri.php:513
 #@ buddypress
 msgid "You must log in to access the page you requested."
 msgstr ""
@@ -1735,7 +1725,6 @@ msgstr "ブログ"
 
 #: bp-core/bp-core-template.php:268
 #: bp-themes/bp-clover-cafe/forums/forums-loop.php:42
-#: bp-themes/bp-clover-cafe/members/single/activity.php:27
 #: bp-themes/bp-default/activity/index.php:99
 #: bp-themes/bp-default/forums/forums-loop.php:40
 #: bp-themes/bp-default/members/single/activity.php:27
@@ -1802,9 +1791,9 @@ msgstr "誰もまだ登録していません !"
 #: bp-core/bp-core-widgets.php:201
 #: bp-core/bp-core-widgets.php:265
 #: bp-groups/bp-groups-widgets.php:132
-#: bp-themes/bp-clover-cafe/forums/index.php:104
-#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:47
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:75
+#: bp-themes/bp-clover-cafe/forums/index.php:103
+#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:30
+#: bp-themes/bp-clover-cafe/groups/single/forum.php:66
 #: bp-themes/bp-default/forums/index.php:104
 #: bp-themes/bp-default/groups/single/forum/edit.php:47
 #: bp-themes/bp-default/groups/single/forum.php:75
@@ -2233,7 +2222,7 @@ msgstr ""
 #: bp-forums/bp-forums-template.php:567
 #: bp-forums/bp-forums-template.php:1216
 #: bp-messages/bp-messages-classes.php:269
-#: bp-messages/bp-messages-template.php:847
+#: bp-messages/bp-messages-template.php:846
 #@ buddypress
 msgid "Deleted User"
 msgstr "削除されたユーザー"
@@ -2423,7 +2412,6 @@ msgstr "友達 <span>%d</span>"
 #: bp-friends/bp-friends-loader.php:109
 #: bp-friends/bp-friends-loader.php:171
 #: bp-friends/bp-friends-loader.php:198
-#: bp-themes/bp-clover-cafe/members/single/activity.php:35
 #: bp-themes/bp-default/activity/index.php:120
 #: bp-themes/bp-default/members/single/activity.php:35
 #@ buddypress
@@ -2530,16 +2518,16 @@ msgstr "あるメンバーがあなたの交友依頼を了承した"
 
 #: bp-core/deprecated/1.6.php:110
 #: bp-core/deprecated/1.6.php:131
-#: bp-groups/bp-groups-template.php:2307
-#: bp-groups/bp-groups-template.php:2329
+#: bp-groups/bp-groups-template.php:2306
+#: bp-groups/bp-groups-template.php:2328
 #@ buddypress
 msgid "Recently Active"
 msgstr "最近活発"
 
 #: bp-core/deprecated/1.6.php:112
 #: bp-core/deprecated/1.6.php:137
-#: bp-groups/bp-groups-template.php:2312
-#: bp-groups/bp-groups-template.php:2344
+#: bp-groups/bp-groups-template.php:2311
+#: bp-groups/bp-groups-template.php:2343
 #@ buddypress
 msgid "Alphabetically"
 msgstr "アルファベット順"
@@ -2816,7 +2804,7 @@ msgstr "メンバーの加入依頼"
 
 #: bp-groups/bp-groups-adminbar.php:102
 #: bp-groups/bp-groups-buddybar.php:58
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:360
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:341
 #: bp-themes/bp-default/groups/single/admin.php:360
 #: bp-xprofile/bp-xprofile-admin.php:118
 #@ buddypress
@@ -2836,7 +2824,7 @@ msgstr "グループ設定"
 
 #: bp-groups/bp-groups-buddybar.php:40
 #: bp-groups/bp-groups-loader.php:570
-#: bp-groups/bp-groups-template.php:2395
+#: bp-groups/bp-groups-template.php:2394
 #@ buddypress
 msgid "Group Avatar"
 msgstr "グループ画像"
@@ -2942,7 +2930,6 @@ msgid "Admin"
 msgstr "管理"
 
 #: bp-groups/bp-groups-loader.php:412
-#: bp-groups/bp-groups-template.php:1580
 #: bp-groups/bp-groups-template.php:1581
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:708
 #: bp-themes/bp-default/_inc/ajax.php:708
@@ -3509,8 +3496,8 @@ msgstr "%d件のトピック"
 
 #: bp-groups/bp-groups-template.php:1037
 #: bp-groups/bp-groups-template.php:1102
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:190
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:217
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:169
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:196
 #: bp-themes/bp-default/groups/single/admin.php:190
 #: bp-themes/bp-default/groups/single/admin.php:217
 #@ buddypress
@@ -3519,7 +3506,7 @@ msgstr "一般メンバーに降格"
 
 #: bp-groups/bp-groups-template.php:1050
 #: bp-groups/bp-groups-template.php:1115
-#: bp-groups/bp-groups-template.php:1894
+#: bp-groups/bp-groups-template.php:1893
 #, php-format
 #@ buddypress
 msgid "joined %s"
@@ -3531,8 +3518,8 @@ msgid "This group has no administrators"
 msgstr "このグループには管理者がいません"
 
 #: bp-groups/bp-groups-template.php:1101
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:216
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:272
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:195
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:253
 #: bp-themes/bp-default/groups/single/admin.php:216
 #: bp-themes/bp-default/groups/single/admin.php:272
 #@ buddypress
@@ -3545,7 +3532,6 @@ msgid "This group has no moderators"
 msgstr "このグループにはモデレータがいません"
 
 #: bp-groups/bp-groups-template.php:1499
-#: bp-groups/bp-groups-template.php:1500
 #: bp-themes/bp-clover-cafe/forums/index.php:23
 #: bp-themes/bp-clover-cafe/groups/single/forum.php:19
 #: bp-themes/bp-default/forums/index.php:23
@@ -3554,16 +3540,14 @@ msgstr "このグループにはモデレータがいません"
 msgid "New Topic"
 msgstr "トピックの作成"
 
-#: bp-groups/bp-groups-template.php:1539
-#: bp-groups/bp-groups-template.php:1540
+#: bp-groups/bp-groups-template.php:1542
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:689
 #: bp-themes/bp-default/_inc/ajax.php:689
 #@ buddypress
 msgid "Leave Group"
 msgstr "グループを脱退"
 
-#: bp-groups/bp-groups-template.php:1562
-#: bp-groups/bp-groups-template.php:1563
+#: bp-groups/bp-groups-template.php:1564
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:706
 #: bp-themes/bp-default/_inc/ajax.php:706
 #@ buddypress
@@ -3571,78 +3555,77 @@ msgid "Join Group"
 msgstr "グループに参加"
 
 #: bp-groups/bp-groups-template.php:1595
-#: bp-groups/bp-groups-template.php:1596
 #@ buddypress
 msgid "Request Sent"
 msgstr "依頼を送りました"
 
-#: bp-groups/bp-groups-template.php:1626
+#: bp-groups/bp-groups-template.php:1625
 #@ buddypress
 msgid "This is a private group and you must request group membership in order to join."
 msgstr "これは非公開グループです。参加するには加入依頼を送る必要があります。"
 
-#: bp-groups/bp-groups-template.php:1628
+#: bp-groups/bp-groups-template.php:1627
 #@ buddypress
 msgid "This is a private group. To join you must be a registered site member and request group membership."
 msgstr "これは非公開グループです。参加するにはサイトに登録して加入依頼を送る必要があります。"
 
-#: bp-groups/bp-groups-template.php:1631
+#: bp-groups/bp-groups-template.php:1630
 #@ buddypress
 msgid "This is a private group. Your membership request is awaiting approval from the group administrator."
 msgstr "これは非公開グループです。あなたの加入依頼は管理者の承認待ちです。"
 
-#: bp-groups/bp-groups-template.php:1635
+#: bp-groups/bp-groups-template.php:1634
 #@ buddypress
 msgid "This is a hidden group and only invited members can join."
 msgstr "これは隠しグループです。招待されたメンバーのみが加入できます。"
 
-#: bp-groups/bp-groups-template.php:1942
+#: bp-groups/bp-groups-template.php:1941
 #, php-format
 #@ buddypress
 msgid "Viewing members %1$s to %2$s (of %3$s members)"
 msgstr "%1$s人目から%2$s人目のメンバーを表示中 (メンバー%3$s人中)"
 
-#: bp-groups/bp-groups-template.php:2168
+#: bp-groups/bp-groups-template.php:2167
 #@ buddypress
 msgid "Group avatar"
 msgstr "グループ画像"
 
-#: bp-groups/bp-groups-template.php:2308
-#: bp-groups/bp-groups-template.php:2332
+#: bp-groups/bp-groups-template.php:2307
+#: bp-groups/bp-groups-template.php:2331
 #@ buddypress
 msgid "Recently Joined"
 msgstr "最近加入"
 
-#: bp-groups/bp-groups-template.php:2309
-#: bp-groups/bp-groups-template.php:2335
+#: bp-groups/bp-groups-template.php:2308
+#: bp-groups/bp-groups-template.php:2334
 #@ buddypress
 msgid "Most Popular"
 msgstr "人気上位"
 
-#: bp-groups/bp-groups-template.php:2310
-#: bp-groups/bp-groups-template.php:2338
+#: bp-groups/bp-groups-template.php:2309
+#: bp-groups/bp-groups-template.php:2337
 #@ buddypress
 msgid "Administrator Of"
 msgstr "管理中"
 
-#: bp-groups/bp-groups-template.php:2311
-#: bp-groups/bp-groups-template.php:2341
+#: bp-groups/bp-groups-template.php:2310
+#: bp-groups/bp-groups-template.php:2340
 #@ buddypress
 msgid "Moderator Of"
 msgstr "モデレート中"
 
-#: bp-groups/bp-groups-template.php:2399
+#: bp-groups/bp-groups-template.php:2398
 #@ buddypress
 msgid "No Group Avatar"
 msgstr "グループ画像なし"
 
-#: bp-groups/bp-groups-template.php:2600
+#: bp-groups/bp-groups-template.php:2599
 #, php-format
 #@ buddypress
 msgid "requested %s"
 msgstr "申請日: %s"
 
-#: bp-groups/bp-groups-template.php:2775
+#: bp-groups/bp-groups-template.php:2774
 #@ buddypress
 msgid "Group Activity RSS Feed"
 msgstr "グループの活動 RSS フィード"
@@ -4210,7 +4193,7 @@ msgstr "停止"
 
 #: bp-messages/bp-messages-template.php:613
 #: bp-themes/bp-clover-cafe/functions.php:167
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:128
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:132
 #: bp-themes/bp-clover-cafe/registration/register.php:169
 #: bp-themes/bp-default/functions.php:164
 #: bp-themes/bp-default/members/single/profile/edit.php:128
@@ -4221,21 +4204,16 @@ msgstr "閉じる"
 
 #: bp-messages/bp-messages-template.php:656
 #@ buddypress
-msgid "Send a private message to this user."
-msgstr "このユーザーに非公開メッセージを送る"
-
-#: bp-messages/bp-messages-template.php:657
-#@ buddypress
 msgid "Private Message"
 msgstr "メッセージを送る"
 
-#: bp-messages/bp-messages-template.php:840
+#: bp-messages/bp-messages-template.php:839
 #, php-format
 #@ buddypress
 msgid "%d Recipients"
 msgstr "%d人の受信者"
 
-#: bp-messages/bp-messages-template.php:922
+#: bp-messages/bp-messages-template.php:921
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:760
 #: bp-themes/bp-default/_inc/ajax.php:760
 #, php-format
@@ -4332,7 +4310,7 @@ msgstr "削除する際にエラーが発生しました。もう一度お試し
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:478
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:499
-#: bp-themes/bp-clover-cafe/activity/entry.php:72
+#: bp-themes/bp-clover-cafe/activity/entry.php:84
 #: bp-themes/bp-clover-cafe/functions.php:170
 #: bp-themes/bp-default/_inc/ajax.php:478
 #: bp-themes/bp-default/_inc/ajax.php:499
@@ -4344,7 +4322,7 @@ msgstr "お気に入りから削除"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:480
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:497
-#: bp-themes/bp-clover-cafe/activity/entry.php:68
+#: bp-themes/bp-clover-cafe/activity/entry.php:80
 #: bp-themes/bp-clover-cafe/functions.php:169
 #: bp-themes/bp-default/_inc/ajax.php:480
 #: bp-themes/bp-default/_inc/ajax.php:497
@@ -4355,7 +4333,7 @@ msgid "Favorite"
 msgstr "お気に入り"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:569
-#: bp-themes/bp-clover-cafe/groups/create.php:229
+#: bp-themes/bp-clover-cafe/groups/create.php:212
 #: bp-themes/bp-clover-cafe/groups/single/send-invites.php:42
 #: bp-themes/bp-default/_inc/ajax.php:569
 #: bp-themes/bp-default/groups/create.php:229
@@ -4460,7 +4438,6 @@ msgstr "<a href=\"%1$s\">%2$s</a> さんからの返信: <a href=\"%3$s\" class=
 #: bp-activity/bp-activity-admin.php:868
 #: bp-activity/bp-activity-admin.php:1273
 #: bp-themes/bp-clover-cafe/activity/comment.php:37
-#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:10
 #: bp-themes/bp-default/activity/comment.php:37
 #: bp-themes/bp-default/groups/single/forum/edit.php:10
 #@ buddypress
@@ -4479,32 +4456,30 @@ msgstr ""
 msgid "View Thread / Permalink"
 msgstr "スレッドを表示 / パーマリンク"
 
-#: bp-themes/bp-clover-cafe/activity/entry.php:60
+#: bp-themes/bp-clover-cafe/activity/entry.php:72
 #: bp-themes/bp-default/activity/entry.php:60
 #, php-format
 #@ buddypress
 msgid "Comment <span>%s</span>"
 msgstr "コメント <span>%s</span>"
 
-#: bp-themes/bp-clover-cafe/activity/entry.php:68
 #: bp-themes/bp-default/activity/entry.php:68
 #@ buddypress
 msgid "Mark as Favorite"
 msgstr "お気に入りに追加する"
 
-#: bp-themes/bp-clover-cafe/activity/entry.php:104
+#: bp-themes/bp-clover-cafe/activity/entry.php:118
 #: bp-themes/bp-default/activity/entry.php:104
 #@ buddypress
 msgid "Post"
 msgstr "投稿"
 
-#: bp-themes/bp-clover-cafe/activity/entry.php:104
+#: bp-themes/bp-clover-cafe/activity/entry.php:118
 #: bp-themes/bp-default/activity/entry.php:104
 #@ buddypress
 msgid "or press esc to cancel."
 msgstr "または、ESC キーを押してキャンセル"
 
-#: bp-themes/bp-clover-cafe/activity/index.php:51
 #: bp-themes/bp-default/activity/index.php:39
 #@ buddypress
 msgid "The public activity for everyone on this site."
@@ -4518,13 +4493,12 @@ msgstr "参加しているグループの近況"
 msgid "All Members <span>%s</span>"
 msgstr "すべてのメンバー <span>%s</span>"
 
-#: bp-themes/bp-clover-cafe/activity/index.php:61
 #: bp-themes/bp-default/activity/index.php:49
 #@ buddypress
 msgid "The activity of my friends only."
 msgstr "友達のアクティビティに限る。"
 
-#: bp-themes/bp-clover-cafe/activity/index.php:61
+#: bp-themes/bp-clover-cafe/activity/index.php:49
 #: bp-themes/bp-clover-cafe/members/index.php:37
 #: bp-themes/bp-default/activity/index.php:49
 #: bp-themes/bp-default/members/index.php:37
@@ -4546,48 +4520,42 @@ msgstr "参加しているグループのアクティビティ。"
 msgid "My Groups <span>%s</span>"
 msgstr "参加中のグループ <span>%s</span>"
 
-#: bp-themes/bp-clover-cafe/activity/index.php:71
 #: bp-themes/bp-default/activity/index.php:71
 #@ buddypress
 msgid "The activity I've marked as a favorite."
 msgstr "お気に入りの投稿"
 
-#: bp-themes/bp-clover-cafe/activity/index.php:71
+#: bp-themes/bp-clover-cafe/activity/index.php:59
 #: bp-themes/bp-default/activity/index.php:71
 #, php-format
 #@ buddypress
 msgid "My Favorites <span>%s</span>"
 msgstr "お気に入り <span>%s</span>"
 
-#: bp-themes/bp-clover-cafe/activity/index.php:77
 #: bp-themes/bp-default/activity/index.php:77
 #@ buddypress
 msgid "Activity that I have been mentioned in."
 msgstr "呼びかけられた投稿"
 
-#: bp-themes/bp-clover-cafe/activity/index.php:77
+#: bp-themes/bp-clover-cafe/activity/index.php:65
 #: bp-themes/bp-default/activity/index.php:77
 #, php-format
 #@ buddypress
 msgid "<span>%s new</span>"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/groups/single/activity.php:3
 #: bp-themes/bp-default/activity/index.php:87
 #: bp-themes/bp-default/groups/single/activity.php:3
 #@ buddypress
 msgid "RSS Feed"
 msgstr "RSSフィード"
 
-#: bp-themes/bp-clover-cafe/groups/single/activity.php:3
 #: bp-themes/bp-default/activity/index.php:87
 #: bp-themes/bp-default/groups/single/activity.php:3
 #@ buddypress
 msgid "RSS"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/groups/single/activity.php:8
-#: bp-themes/bp-clover-cafe/members/single/activity.php:18
 #: bp-themes/bp-default/activity/index.php:92
 #: bp-themes/bp-default/groups/single/activity.php:8
 #: bp-themes/bp-default/members/single/activity.php:18
@@ -4595,8 +4563,6 @@ msgstr ""
 msgid "Show:"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/groups/single/activity.php:10
-#: bp-themes/bp-clover-cafe/members/single/activity.php:20
 #: bp-themes/bp-default/activity/index.php:94
 #: bp-themes/bp-default/groups/single/activity.php:10
 #: bp-themes/bp-default/members/single/activity.php:20
@@ -4604,8 +4570,6 @@ msgstr ""
 msgid "Everything"
 msgstr "すべて"
 
-#: bp-themes/bp-clover-cafe/groups/single/activity.php:11
-#: bp-themes/bp-clover-cafe/members/single/activity.php:21
 #: bp-themes/bp-default/activity/index.php:95
 #: bp-themes/bp-default/groups/single/activity.php:11
 #: bp-themes/bp-default/members/single/activity.php:21
@@ -4613,15 +4577,12 @@ msgstr "すべて"
 msgid "Updates"
 msgstr "更新"
 
-#: bp-themes/bp-clover-cafe/members/single/activity.php:28
 #: bp-themes/bp-default/activity/index.php:100
 #: bp-themes/bp-default/members/single/activity.php:28
 #@ buddypress
 msgid "Comments"
 msgstr "コメント"
 
-#: bp-themes/bp-clover-cafe/groups/single/activity.php:14
-#: bp-themes/bp-clover-cafe/members/single/activity.php:43
 #: bp-themes/bp-default/activity/index.php:106
 #: bp-themes/bp-default/groups/single/activity.php:14
 #: bp-themes/bp-default/members/single/activity.php:43
@@ -4629,8 +4590,6 @@ msgstr "コメント"
 msgid "Forum Topics"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/groups/single/activity.php:15
-#: bp-themes/bp-clover-cafe/members/single/activity.php:44
 #: bp-themes/bp-default/activity/index.php:107
 #: bp-themes/bp-default/groups/single/activity.php:15
 #: bp-themes/bp-default/members/single/activity.php:44
@@ -4638,15 +4597,12 @@ msgstr ""
 msgid "Forum Replies"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/members/single/activity.php:50
 #: bp-themes/bp-default/activity/index.php:113
 #: bp-themes/bp-default/members/single/activity.php:50
 #@ buddypress
 msgid "New Groups"
 msgstr "新規グループ"
 
-#: bp-themes/bp-clover-cafe/groups/single/activity.php:18
-#: bp-themes/bp-clover-cafe/members/single/activity.php:51
 #: bp-themes/bp-default/activity/index.php:114
 #: bp-themes/bp-default/groups/single/activity.php:18
 #: bp-themes/bp-default/members/single/activity.php:51
@@ -4873,10 +4829,10 @@ msgstr "自分のサイト <span>%s</span>"
 #: bp-themes/bp-clover-cafe/blogs/index.php:53
 #: bp-themes/bp-clover-cafe/forums/index.php:60
 #: bp-themes/bp-clover-cafe/groups/index.php:55
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:36
+#: bp-themes/bp-clover-cafe/groups/single/forum.php:28
 #: bp-themes/bp-clover-cafe/members/index.php:53
 #: bp-themes/bp-clover-cafe/members/single/blogs.php:19
-#: bp-themes/bp-clover-cafe/members/single/forums.php:18
+#: bp-themes/bp-clover-cafe/members/single/forums.php:19
 #: bp-themes/bp-clover-cafe/members/single/friends.php:20
 #: bp-themes/bp-clover-cafe/members/single/groups.php:20
 #: bp-themes/bp-default/blogs/index.php:53
@@ -4896,10 +4852,10 @@ msgstr "並び順:"
 #: bp-themes/bp-clover-cafe/blogs/index.php:55
 #: bp-themes/bp-clover-cafe/forums/index.php:62
 #: bp-themes/bp-clover-cafe/groups/index.php:57
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:38
+#: bp-themes/bp-clover-cafe/groups/single/forum.php:30
 #: bp-themes/bp-clover-cafe/members/index.php:55
 #: bp-themes/bp-clover-cafe/members/single/blogs.php:21
-#: bp-themes/bp-clover-cafe/members/single/forums.php:20
+#: bp-themes/bp-clover-cafe/members/single/forums.php:21
 #: bp-themes/bp-clover-cafe/members/single/friends.php:22
 #: bp-themes/bp-clover-cafe/members/single/groups.php:22
 #: bp-themes/bp-default/blogs/index.php:55
@@ -4992,7 +4948,6 @@ msgstr "トピック"
 msgid "Freshness"
 msgstr "経過時間"
 
-#: bp-themes/bp-clover-cafe/forums/forums-loop.php:56
 #: bp-themes/bp-default/forums/forums-loop.php:54
 #@ buddypress
 msgid "Permalink"
@@ -5039,8 +4994,8 @@ msgid "My Topics <span>%s</span>"
 msgstr "マイトピック <span>%s</span>"
 
 #: bp-themes/bp-clover-cafe/forums/index.php:63
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:39
-#: bp-themes/bp-clover-cafe/members/single/forums.php:21
+#: bp-themes/bp-clover-cafe/groups/single/forum.php:31
+#: bp-themes/bp-clover-cafe/members/single/forums.php:22
 #: bp-themes/bp-default/forums/index.php:63
 #: bp-themes/bp-default/groups/single/forum.php:39
 #: bp-themes/bp-default/members/single/forums.php:21
@@ -5048,9 +5003,6 @@ msgstr "マイトピック <span>%s</span>"
 msgid "Most Posts"
 msgstr "投稿数順"
 
-#: bp-themes/bp-clover-cafe/forums/index.php:64
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:40
-#: bp-themes/bp-clover-cafe/members/single/forums.php:22
 #: bp-themes/bp-default/forums/index.php:64
 #: bp-themes/bp-default/groups/single/forum.php:40
 #: bp-themes/bp-default/members/single/forums.php:22
@@ -5058,15 +5010,15 @@ msgstr "投稿数順"
 msgid "Unreplied"
 msgstr "返答なし"
 
-#: bp-themes/bp-clover-cafe/forums/index.php:100
+#: bp-themes/bp-clover-cafe/forums/index.php:99
 #: bp-themes/bp-default/forums/index.php:100
 #@ buddypress
 msgid "Create New Topic:"
 msgstr "新規トピックを作成:"
 
-#: bp-themes/bp-clover-cafe/forums/index.php:107
-#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:50
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:78
+#: bp-themes/bp-clover-cafe/forums/index.php:106
+#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:33
+#: bp-themes/bp-clover-cafe/groups/single/forum.php:69
 #: bp-themes/bp-default/forums/index.php:107
 #: bp-themes/bp-default/groups/single/forum/edit.php:50
 #: bp-themes/bp-default/groups/single/forum.php:78
@@ -5074,9 +5026,9 @@ msgstr "新規トピックを作成:"
 msgid "Content:"
 msgstr "内容:"
 
-#: bp-themes/bp-clover-cafe/forums/index.php:110
-#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:53
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:81
+#: bp-themes/bp-clover-cafe/forums/index.php:109
+#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:36
+#: bp-themes/bp-clover-cafe/groups/single/forum.php:72
 #: bp-themes/bp-default/forums/index.php:110
 #: bp-themes/bp-default/groups/single/forum/edit.php:53
 #: bp-themes/bp-default/groups/single/forum.php:81
@@ -5084,7 +5036,7 @@ msgstr "内容:"
 msgid "Tags (comma separated):"
 msgstr "タグ (コンマ区切り):"
 
-#: bp-themes/bp-clover-cafe/forums/index.php:113
+#: bp-themes/bp-clover-cafe/forums/index.php:112
 #: bp-themes/bp-default/forums/index.php:113
 #@ buddypress
 msgid "Post In Group Forum:"
@@ -5092,16 +5044,16 @@ msgstr "グループの選択:"
 
 #. translators: no option picked in select box
 #. translators: no option picked in select box
-#. translators: no option picked in select box
-#: bp-themes/bp-clover-cafe/forums/index.php:116
+#. translators: no option picked in select box 
+#: bp-themes/bp-clover-cafe/forums/index.php:115
 #: bp-themes/bp-default/forums/index.php:116
 #: bp-xprofile/bp-xprofile-template.php:463
 #@ buddypress
 msgid "----"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/forums/index.php:133
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:87
+#: bp-themes/bp-clover-cafe/forums/index.php:132
+#: bp-themes/bp-clover-cafe/groups/single/forum.php:78
 #: bp-themes/bp-default/forums/index.php:133
 #: bp-themes/bp-default/groups/single/forum.php:87
 #@ buddypress
@@ -5109,7 +5061,7 @@ msgid "Post Topic"
 msgstr "トピックを作成する"
 
 #: bp-activity/bp-activity-admin.php:867
-#: bp-themes/bp-clover-cafe/forums/index.php:134
+#: bp-themes/bp-clover-cafe/forums/index.php:133
 #: bp-themes/bp-default/forums/index.php:134
 #: bp-xprofile/bp-xprofile-classes.php:405
 #: bp-xprofile/bp-xprofile-classes.php:913
@@ -5117,7 +5069,7 @@ msgstr "トピックを作成する"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: bp-themes/bp-clover-cafe/forums/index.php:145
+#: bp-themes/bp-clover-cafe/forums/index.php:144
 #: bp-themes/bp-default/forums/index.php:145
 #, php-format
 #@ buddypress
@@ -5302,7 +5254,7 @@ msgstr "グループ名 (必須)"
 msgid "Group Description (required)"
 msgstr "グループの説明 (必須)"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:119
+#: bp-themes/bp-clover-cafe/groups/create.php:102
 #: bp-themes/bp-clover-cafe/groups/single/admin.php:47
 #: bp-themes/bp-default/groups/create.php:119
 #: bp-themes/bp-default/groups/single/admin.php:47
@@ -5310,7 +5262,7 @@ msgstr "グループの説明 (必須)"
 msgid "Enable discussion forum"
 msgstr "フォーラムを有効にする"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:123
+#: bp-themes/bp-clover-cafe/groups/create.php:106
 #: bp-themes/bp-default/groups/create.php:123
 #, php-format
 #@ buddypress
@@ -5378,9 +5330,9 @@ msgid "Only users who request membership and are accepted can join the group."
 msgstr "グループへの加入依頼が受理されたユーザーのみがグループに加われます。"
 
 #: bp-themes/bp-clover-cafe/groups/create.php:75
-#: bp-themes/bp-clover-cafe/groups/create.php:84
+#: bp-themes/bp-clover-cafe/groups/create.php:85
 #: bp-themes/bp-clover-cafe/groups/single/admin.php:75
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:85
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:86
 #: bp-themes/bp-default/groups/create.php:75
 #: bp-themes/bp-default/groups/create.php:84
 #: bp-themes/bp-default/groups/single/admin.php:75
@@ -5389,80 +5341,70 @@ msgstr "グループへの加入依頼が受理されたユーザーのみがグ
 msgid "Group content and activity will only be visible to members of the group."
 msgstr "グループの情報やストリームの内容は、グループのメンバーのみが閲覧できます。"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:80
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:81
+#: bp-themes/bp-clover-cafe/groups/create.php:81
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:82
 #: bp-themes/bp-default/groups/create.php:80
 #: bp-themes/bp-default/groups/single/admin.php:81
 #@ buddypress
 msgid "This is a hidden group"
 msgstr "隠しグループ"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:82
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:83
+#: bp-themes/bp-clover-cafe/groups/create.php:83
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:84
 #: bp-themes/bp-default/groups/create.php:82
 #: bp-themes/bp-default/groups/single/admin.php:83
 #@ buddypress
 msgid "Only users who are invited can join the group."
 msgstr "招待されたメンバーのみが加われます。"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:83
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:84
+#: bp-themes/bp-clover-cafe/groups/create.php:84
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:85
 #: bp-themes/bp-default/groups/create.php:83
 #: bp-themes/bp-default/groups/single/admin.php:84
 #@ buddypress
 msgid "This group will not be listed in the groups directory or search results."
 msgstr "このグループは、グループディレクトリおよび検索結果には掲載されません。"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:89
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:92
 #: bp-themes/bp-default/groups/create.php:89
 #: bp-themes/bp-default/groups/single/admin.php:92
 #@ buddypress
 msgid "Group Invitations"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/groups/create.php:91
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:94
 #: bp-themes/bp-default/groups/create.php:91
 #: bp-themes/bp-default/groups/single/admin.php:94
 #@ buddypress
 msgid "Which members of this group are allowed to invite others?"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/groups/create.php:96
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:99
 #: bp-themes/bp-default/groups/create.php:96
 #: bp-themes/bp-default/groups/single/admin.php:99
 #@ buddypress
 msgid "All group members"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/groups/create.php:101
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:104
 #: bp-themes/bp-default/groups/create.php:101
 #: bp-themes/bp-default/groups/single/admin.php:104
 #@ buddypress
 msgid "Group admins and mods only"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/groups/create.php:106
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:109
 #: bp-themes/bp-default/groups/create.php:106
 #: bp-themes/bp-default/groups/single/admin.php:109
 #@ buddypress
 msgid "Group admins only"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/groups/create.php:149
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:127
+#: bp-themes/bp-clover-cafe/groups/create.php:132
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:106
 #: bp-themes/bp-default/groups/create.php:149
 #: bp-themes/bp-default/groups/single/admin.php:127
 #@ buddypress
 msgid "Upload an image to use as an avatar for this group. The image will be shown on the main group page, and in search results."
 msgstr "グループ画像として使う画像をアップロードしてください。この画像は、グループのメインページや検索結果に表示されます。"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:153
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:131
+#: bp-themes/bp-clover-cafe/groups/create.php:136
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:110
 #: bp-themes/bp-clover-cafe/members/single/profile/change-avatar.php:18
 #: bp-themes/bp-default/groups/create.php:153
 #: bp-themes/bp-default/groups/single/admin.php:131
@@ -5471,20 +5413,20 @@ msgstr "グループ画像として使う画像をアップロードしてくだ
 msgid "Upload Image"
 msgstr "画像をアップロード"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:157
+#: bp-themes/bp-clover-cafe/groups/create.php:140
 #: bp-themes/bp-default/groups/create.php:157
 #@ buddypress
 msgid "To skip the avatar upload process, hit the \"Next Step\" button."
 msgstr "アバター画像のアップロードを省略する場合は、「設定を完了する」ボタンを押してください。"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:164
+#: bp-themes/bp-clover-cafe/groups/create.php:147
 #: bp-themes/bp-default/groups/create.php:164
 #@ buddypress
 msgid "Crop Group Avatar"
 msgstr "グループのアバターの切り抜き"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:166
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:151
+#: bp-themes/bp-clover-cafe/groups/create.php:149
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:130
 #: bp-themes/bp-clover-cafe/members/single/profile/change-avatar.php:33
 #: bp-themes/bp-default/groups/create.php:166
 #: bp-themes/bp-default/groups/single/admin.php:151
@@ -5493,8 +5435,8 @@ msgstr "グループのアバターの切り抜き"
 msgid "Avatar to crop"
 msgstr "切り抜くアバター"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:169
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:154
+#: bp-themes/bp-clover-cafe/groups/create.php:152
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:133
 #: bp-themes/bp-clover-cafe/members/single/profile/change-avatar.php:36
 #: bp-themes/bp-default/groups/create.php:169
 #: bp-themes/bp-default/groups/single/admin.php:154
@@ -5503,8 +5445,8 @@ msgstr "切り抜くアバター"
 msgid "Avatar preview"
 msgstr "アバターのプレビュー"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:172
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:157
+#: bp-themes/bp-clover-cafe/groups/create.php:155
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:136
 #: bp-themes/bp-clover-cafe/members/single/profile/change-avatar.php:39
 #: bp-themes/bp-default/groups/create.php:172
 #: bp-themes/bp-default/groups/single/admin.php:157
@@ -5513,7 +5455,7 @@ msgstr "アバターのプレビュー"
 msgid "Crop Image"
 msgstr "画像切り抜き"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:211
+#: bp-themes/bp-clover-cafe/groups/create.php:194
 #: bp-themes/bp-clover-cafe/groups/single/send-invites.php:22
 #: bp-themes/bp-default/groups/create.php:211
 #: bp-themes/bp-default/groups/single/send-invites.php:22
@@ -5521,7 +5463,7 @@ msgstr "画像切り抜き"
 msgid "Select people to invite from your friends list."
 msgstr "招待するメンバーを一覧から選んでください。"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:246
+#: bp-themes/bp-clover-cafe/groups/create.php:229
 #: bp-themes/bp-clover-cafe/groups/single/send-invites.php:73
 #: bp-themes/bp-default/groups/create.php:246
 #: bp-themes/bp-default/groups/single/send-invites.php:73
@@ -5529,19 +5471,19 @@ msgstr "招待するメンバーを一覧から選んでください。"
 msgid "Once you have built up friend connections you will be able to invite others to your group. You can send invites any time in the future by selecting the \"Send Invites\" option when viewing your new group."
 msgstr "交友関係を構築していれば、友達をグループに招待できます。新しいグループを見ているとき、いつでも「招待する」選択肢から招待状を送付できます。"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:268
+#: bp-themes/bp-clover-cafe/groups/create.php:251
 #: bp-themes/bp-default/groups/create.php:268
 #@ buddypress
 msgid "Back to Previous Step"
 msgstr "前のステップに戻る"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:275
+#: bp-themes/bp-clover-cafe/groups/create.php:258
 #: bp-themes/bp-default/groups/create.php:275
 #@ buddypress
 msgid "Next Step"
 msgstr "次のステップに進む"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:282
+#: bp-themes/bp-clover-cafe/groups/create.php:265
 #: bp-themes/bp-default/groups/create.php:282
 #@ buddypress
 msgid "Create Group and Continue"
@@ -5584,10 +5526,10 @@ msgstr "グループのメンバーに変更をメールで通知する"
 
 #: bp-core/admin/bp-core-settings.php:267
 #: bp-themes/bp-clover-cafe/groups/single/admin.php:32
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:117
-#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:58
-#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:74
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:146
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:96
+#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:41
+#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:57
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:151
 #: bp-themes/bp-clover-cafe/members/single/settings/general.php:72
 #: bp-themes/bp-clover-cafe/members/single/settings/notifications.php:61
 #: bp-themes/bp-default/groups/single/admin.php:32
@@ -5602,13 +5544,13 @@ msgstr "グループのメンバーに変更をメールで通知する"
 msgid "Save Changes"
 msgstr "変更を保存"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:137
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:116
 #: bp-themes/bp-default/groups/single/admin.php:137
 #@ buddypress
 msgid "If you'd like to remove the existing avatar but not upload a new one, please use the delete avatar button."
 msgstr "アバターを削除したい場合は「アバター削除」ボタンを押してください。"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:139
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:118
 #: bp-themes/bp-clover-cafe/members/single/profile/change-avatar.php:24
 #: bp-themes/bp-default/groups/single/admin.php:139
 #: bp-themes/bp-default/members/single/profile/change-avatar.php:24
@@ -5616,73 +5558,70 @@ msgstr "アバターを削除したい場合は「アバター削除」ボタン
 msgid "Delete Avatar"
 msgstr "アバターを削除"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:149
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:128
 #: bp-themes/bp-default/groups/single/admin.php:149
 #@ buddypress
 msgid "Crop Avatar"
 msgstr "アバターを切り抜き"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:177
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:156
 #: bp-themes/bp-default/groups/single/admin.php:177
 #@ buddypress
 msgid "Administrators"
 msgstr "管理者"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:205
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:184
 #: bp-themes/bp-default/groups/single/admin.php:205
 #@ buddypress
 msgid "Moderators"
 msgstr "モデレーター"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:260
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:239
 #: bp-themes/bp-default/groups/single/admin.php:260
 #@ buddypress
 msgid "(banned)"
 msgstr "(追放中)"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:266
 #: bp-themes/bp-default/groups/single/admin.php:266
 #@ buddypress
 msgid "Unban this member"
 msgstr "このメンバーのブロックを解除"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:266
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:245
 #: bp-themes/bp-default/groups/single/admin.php:266
 #@ buddypress
 msgid "Remove Ban"
 msgstr "追放を解除"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:270
 #: bp-themes/bp-default/groups/single/admin.php:270
 #@ buddypress
 msgid "Kick and ban this member"
 msgstr "このメンバーを追放する"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:270
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:250
 #: bp-themes/bp-default/groups/single/admin.php:270
 #@ buddypress
 msgid "Kick &amp; Ban"
 msgstr "追放する"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:271
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:251
 #: bp-themes/bp-default/groups/single/admin.php:271
 #@ buddypress
 msgid "Promote to Mod"
 msgstr "モデレーターに昇格"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:276
 #: bp-themes/bp-default/groups/single/admin.php:276
 #@ buddypress
 msgid "Remove this member"
 msgstr "このメンバーを削除"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:276
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:257
 #: bp-themes/bp-default/groups/single/admin.php:276
 #@ buddypress
 msgid "Remove from group"
 msgstr "グループから削除"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:290
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:271
 #: bp-themes/bp-clover-cafe/groups/single/members.php:87
 #: bp-themes/bp-default/groups/single/admin.php:290
 #: bp-themes/bp-default/groups/single/members.php:87
@@ -5690,7 +5629,7 @@ msgstr "グループから削除"
 msgid "This group has no members."
 msgstr "このグループにはメンバーがいません。"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:320
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:301
 #: bp-themes/bp-clover-cafe/members/single/friends/requests.php:37
 #: bp-themes/bp-clover-cafe/members/single/groups/invites.php:23
 #: bp-themes/bp-default/groups/single/admin.php:320
@@ -5700,7 +5639,7 @@ msgstr "このグループにはメンバーがいません。"
 msgid "Accept"
 msgstr "承認"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:322
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:303
 #: bp-themes/bp-clover-cafe/members/single/friends/requests.php:38
 #: bp-themes/bp-clover-cafe/members/single/groups/invites.php:24
 #: bp-themes/bp-default/groups/single/admin.php:322
@@ -5710,27 +5649,24 @@ msgstr "承認"
 msgid "Reject"
 msgstr "拒否"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:335
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:316
 #: bp-themes/bp-default/groups/single/admin.php:335
 #@ buddypress
 msgid "There are no pending membership requests."
 msgstr "保留しているメンバー加入依頼はありません。"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:352
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:333
 #: bp-themes/bp-default/groups/single/admin.php:352
 #@ buddypress
 msgid "WARNING: Deleting this group will completely remove ALL content associated with it. There is no way back, please be careful with this option."
 msgstr "警告: このグループを削除すると、関連するコンテンツが「すべて」削除されます。取り消しはできないため注意して実行してください。"
 
-#: bp-themes/bp-clover-cafe/groups/single/admin.php:355
+#: bp-themes/bp-clover-cafe/groups/single/admin.php:336
 #: bp-themes/bp-default/groups/single/admin.php:355
 #@ buddypress
 msgid "I understand the consequences of deleting this group."
 msgstr "このグループを削除する重大性について理解しました。"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:16
-#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:17
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:27
 #: bp-themes/bp-default/groups/single/forum/edit.php:16
 #: bp-themes/bp-default/groups/single/forum/topic.php:17
 #: bp-themes/bp-default/groups/single/forum.php:27
@@ -5738,13 +5674,13 @@ msgstr "このグループを削除する重大性について理解しました
 msgid "Forum Directory"
 msgstr "フォーラムディレクトリ"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:25
+#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:8
 #: bp-themes/bp-default/groups/single/forum/edit.php:25
 #@ buddypress
 msgid "Edit:"
 msgstr "編集:"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:87
+#: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:70
 #: bp-themes/bp-default/groups/single/forum/edit.php:87
 #@ buddypress
 msgid "This topic does not exist."
@@ -5756,62 +5692,62 @@ msgstr "このトピックは存在しません。"
 msgid "New Reply"
 msgstr "このトピックに返信"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:32
+#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:23
 #: bp-themes/bp-default/groups/single/forum/topic.php:32
 #@ buddypress
 msgid "Topic tags:"
 msgstr "トピックタグ:"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:81
+#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:72
 #: bp-themes/bp-default/groups/single/forum/topic.php:81
 #, php-format
 #@ buddypress
 msgid "%1$s said %2$s:"
 msgstr "%1$s さんは言いました: %2$s"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:95
+#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:86
 #: bp-themes/bp-default/groups/single/forum/topic.php:95
 #@ buddypress
 msgid "Permanent link to this post"
 msgstr "この投稿へのリンク"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:134
+#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:125
 #: bp-themes/bp-default/groups/single/forum/topic.php:134
 #@ buddypress
 msgid "You will auto join this group when you reply to this topic."
 msgstr "このトピックに返信すると、自動的にグループのメンバーに追加されます。"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:139
+#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:130
 #: bp-themes/bp-default/groups/single/forum/topic.php:139
 #@ buddypress
 msgid "Add a reply:"
 msgstr "返信内容:"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:144
+#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:135
 #: bp-themes/bp-default/groups/single/forum/topic.php:144
 #@ buddypress
 msgid "Post Reply"
 msgstr "返信する"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:155
+#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:146
 #: bp-themes/bp-default/groups/single/forum/topic.php:155
 #@ buddypress
 msgid "This topic is closed, replies are no longer accepted."
 msgstr "このトピックは終了しました。返信は受け付けていません。"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:119
+#: bp-themes/bp-clover-cafe/groups/single/forum/topic.php:110
 #: bp-themes/bp-default/groups/single/forum/topic.php:119
 #@ buddypress
 msgid "There are no posts for this topic."
 msgstr "このトピックへの投稿はありません。"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:69
+#: bp-themes/bp-clover-cafe/groups/single/forum.php:60
 #: bp-themes/bp-default/groups/single/forum.php:69
 #@ buddypress
 msgid "You will auto join this group when you start a new topic."
 msgstr "新しいトピックを作成すると、自動的にグループのメンバーに追加されます。"
 
-#: bp-themes/bp-clover-cafe/groups/single/forum.php:73
+#: bp-themes/bp-clover-cafe/groups/single/forum.php:64
 #: bp-themes/bp-default/groups/single/forum.php:73
 #@ buddypress
 msgid "Post a New Topic:"
@@ -5848,7 +5784,6 @@ msgstr "コメント (任意)"
 msgid "Send Request"
 msgstr "依頼する"
 
-#: bp-themes/bp-clover-cafe/header.php:23
 #: bp-themes/bp-default/header.php:22
 #@ buddypress
 msgctxt "Home page banner link title"
@@ -6063,13 +5998,13 @@ msgstr "あなたのアバターは自分のプロフィールページとこの
 msgid "Editing '%s' Profile Group"
 msgstr "プロフィールの編集"
 
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:26
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:33
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:40
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:49
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:67
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:83
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:93
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:29
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:36
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:43
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:52
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:70
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:86
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:96
 #: bp-themes/bp-clover-cafe/registration/register.php:37
 #: bp-themes/bp-clover-cafe/registration/register.php:41
 #: bp-themes/bp-clover-cafe/registration/register.php:45
@@ -6107,8 +6042,8 @@ msgstr "プロフィールの編集"
 msgid "(required)"
 msgstr "(必須)"
 
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:58
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:73
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:61
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:76
 #: bp-themes/bp-clover-cafe/registration/register.php:119
 #: bp-themes/bp-default/members/single/profile/edit.php:58
 #: bp-themes/bp-default/members/single/profile/edit.php:73
@@ -6763,7 +6698,7 @@ msgstr "アバターがアップロードできませんでした。代わりに
 msgid "Profile not recently updated"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/activity/index.php:51
+#: bp-themes/bp-clover-cafe/activity/index.php:39
 #, php-format
 #@ buddypress
 msgid "マイグループ <span>%s</span>"
@@ -7236,17 +7171,17 @@ msgstr ""
 msgid "Replied to a status update"
 msgstr ""
 
-#: bp-activity/bp-activity-template.php:1001
+#: bp-activity/bp-activity-template.php:1009
 #@ buddypress
 msgid "Profile picture"
 msgstr ""
 
-#: bp-activity/bp-activity-template.php:1098
+#: bp-activity/bp-activity-template.php:1106
 #@ buddypress
 msgid "Group logo"
 msgstr ""
 
-#: bp-activity/bp-activity-template.php:1113
+#: bp-activity/bp-activity-template.php:1121
 #, php-format
 #@ buddypress
 msgid "Profile picture of the author of the site %s"
@@ -7828,26 +7763,26 @@ msgstr ""
 msgid "Friendship request could not be cancelled."
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/footer.php:82
+#: bp-themes/bp-clover-cafe/footer.php:85
 #, php-format
 #@ buddypress
 msgid "Powered by <a href=\"%1$s\">WordPress</a> and<br /><a href=\"%2$s\">BuddyPress</a> social network."
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/groups/create.php:112
+#: bp-themes/bp-clover-cafe/groups/create.php:95
 #: bp-themes/bp-default/groups/create.php:112
 #@ buddypress
 msgid "Group Forums"
 msgstr "フォーラム設定"
 
-#: bp-themes/bp-clover-cafe/groups/create.php:116
+#: bp-themes/bp-clover-cafe/groups/create.php:99
 #: bp-themes/bp-default/groups/create.php:116
 #@ buddypress
 msgid "Should this group have a forum?"
 msgstr "このグループにフォーラム機能を設定しますか？"
 
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:118
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:132
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:122
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:136
 #: bp-themes/bp-clover-cafe/registration/register.php:159
 #: bp-themes/bp-clover-cafe/registration/register.php:174
 #: bp-themes/bp-default/members/single/profile/edit.php:118
@@ -7859,13 +7794,13 @@ msgstr "このグループにフォーラム機能を設定しますか？"
 msgid "This field can be seen by: <span class=\"current-visibility-level\">%s</span>"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:118
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:122
 #: bp-themes/bp-default/members/single/profile/edit.php:118
 #@ buddypress
 msgid "Change"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:123
+#: bp-themes/bp-clover-cafe/members/single/profile/edit.php:127
 #: bp-themes/bp-clover-cafe/registration/register.php:164
 #: bp-themes/bp-default/members/single/profile/edit.php:123
 #: bp-themes/bp-default/registration/register.php:164
@@ -7935,5 +7870,36 @@ msgstr ""
 #: bp-xprofile/bp-xprofile-loader.php:110
 #@ buddypress
 msgid "Logged In Users"
+msgstr ""
+
+#: bp-custom.php:28
+#, php-format
+#@ default
+msgid "New user registration on your site %s:"
+msgstr ""
+
+#: bp-custom.php:29
+#: bp-custom.php:38
+#, php-format
+#@ default
+msgid "Username: %s"
+msgstr ""
+
+#: bp-custom.php:30
+#, php-format
+#@ default
+msgid "E-mail: %s"
+msgstr ""
+
+#: bp-custom.php:32
+#, php-format
+#@ default
+msgid "[%s] New User Registration"
+msgstr ""
+
+#: bp-custom.php:39
+#, php-format
+#@ default
+msgid "Password: %s"
 msgstr ""
 
