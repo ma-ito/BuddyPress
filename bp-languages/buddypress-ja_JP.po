@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-10-29 16:32:51+0000\n"
+"PO-Revision-Date: 2012-10-29 16:47:20+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -7158,7 +7158,7 @@ msgstr "あなたへの呼びかけが %1$d 件あります"
 #, php-format
 #@ buddypress
 msgid "%1$s mentioned you"
-msgstr "%1$s さんがあなたを呼びかけています"
+msgstr "%1$s さんがあなたに呼びかけています"
 
 #: bp-activity/bp-activity-functions.php:767
 #@ buddypress
