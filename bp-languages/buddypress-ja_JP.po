@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-11-20 15:11:04+0000\n"
+"PO-Revision-Date: 2012-11-23 05:34:09+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -6069,7 +6069,7 @@ msgstr "一般設定"
 #: bp-themes/bp-default/members/single/settings/general.php:57
 #@ buddypress
 msgid "Current Password <span>(required to update email or change current password)</span>"
-msgstr "現在のパスワード<span>(メールアドレスの変更時またはパスワード変更時は必須)</span>"
+msgstr "現在のパスワード<span>（メールアドレスまたはパスワードの変更時は必須）</span>"
 
 #: bp-themes/bp-clover-cafe/members/single/settings/general.php:58
 #: bp-themes/bp-default/members/single/settings/general.php:58
@@ -6087,7 +6087,7 @@ msgstr "パスワードをお忘れですか ?"
 #: bp-themes/bp-default/members/single/settings/general.php:62
 #@ buddypress
 msgid "Account Email"
-msgstr "アカウントのメール"
+msgstr "メールアドレス（顧客先アドレスの設定は禁止します）"
 
 #: bp-themes/bp-clover-cafe/members/single/settings/general.php:65
 #: bp-themes/bp-default/members/single/settings/general.php:65
