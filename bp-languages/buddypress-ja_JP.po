@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-11-23 05:58:56+0000\n"
+"PO-Revision-Date: 2012-11-23 11:32:10+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -3905,7 +3905,7 @@ msgstr "%1$s人目から%2$s人目のメンバーを表示中 (メンバー%3$s�
 #: bp-members/bp-members-template.php:555
 #@ buddypress
 msgid "Never active"
-msgstr ""
+msgstr "まだログインしていません"
 
 #: bp-members/bp-members-template.php:577
 #, php-format
@@ -7577,7 +7577,7 @@ msgstr ""
 #: bp-core/bp-core-functions.php:527
 #@ buddypress
 msgid "Not recently active"
-msgstr ""
+msgstr "まだログインしていません"
 
 #: bp-core/bp-core-widgets.php:126
 #@ buddypress
