@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-11-23 05:34:09+0000\n"
+"PO-Revision-Date: 2012-11-23 05:58:56+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -6093,7 +6093,7 @@ msgstr "メールアドレス（顧客先アドレスの設定は禁止します
 #: bp-themes/bp-default/members/single/settings/general.php:65
 #@ buddypress
 msgid "Change Password <span>(leave blank for no change)</span>"
-msgstr "パスワード変更 <span>(変更しないなら空白のまま)</span>"
+msgstr "パスワード変更 <span>（変更しない場合は空白のまま）</span>"
 
 #: bp-themes/bp-clover-cafe/members/single/settings/general.php:66
 #: bp-themes/bp-default/members/single/settings/general.php:66
