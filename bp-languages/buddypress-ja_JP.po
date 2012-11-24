@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-11-23 11:32:10+0000\n"
+"PO-Revision-Date: 2012-11-24 11:10:40+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -148,7 +148,7 @@ msgstr "近況"
 #: bp-activity/bp-activity-loader.php:257
 #@ buddypress
 msgid "Personal"
-msgstr "個人"
+msgstr "自分の近況"
 
 #. translators: Mentions RSS title - "[Site Name] | [Displayed User Name] | Mentions
 #: bp-activity/bp-activity-loader.php:153
@@ -5843,7 +5843,7 @@ msgstr "保留している交友依頼はありません。"
 #: bp-themes/bp-default/members/single/groups/invites.php:37
 #@ buddypress
 msgid "You have no outstanding group invites."
-msgstr "グループへの招待はしていません。"
+msgstr "グループへの招待状はありません。"
 
 #: bp-themes/bp-clover-cafe/members/single/messages/compose.php:5
 #: bp-themes/bp-default/members/single/messages/compose.php:5
