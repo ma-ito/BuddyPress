@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-11-24 11:10:40+0000\n"
+"PO-Revision-Date: 2012-12-22 12:48:14+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -4700,7 +4700,7 @@ msgstr ""
 #: bp-themes/bp-default/single.php:28
 #@ buddypress
 msgid "Read the rest of this entry &rarr;"
-msgstr "残りのエントリーを読む &rarr;"
+msgstr "続きを読む"
 
 #: bp-themes/bp-clover-cafe/archive-info.php:45
 #: bp-themes/bp-clover-cafe/archive.php:34
