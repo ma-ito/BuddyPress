@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-12-23 17:14:46+0000\n"
+"PO-Revision-Date: 2012-12-25 14:20:27+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1772,7 +1772,7 @@ msgstr "新着順"
 #: bp-groups/bp-groups-widgets.php:142
 #@ buddypress
 msgid "Active"
-msgstr "活発"
+msgstr "活発順"
 
 #: bp-core/bp-core-widgets.php:52
 #: bp-core/bp-core-widgets.php:135
@@ -1780,7 +1780,7 @@ msgstr "活発"
 #: bp-groups/bp-groups-widgets.php:143
 #@ buddypress
 msgid "Popular"
-msgstr "人気"
+msgstr "人気順"
 
 #: bp-core/bp-core-widgets.php:89
 #@ buddypress
