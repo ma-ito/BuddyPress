@@ -3,13 +3,13 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-12-25 14:20:27+0000\n"
+"PO-Revision-Date: 2012-12-30 06:28:46+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-Language: \n"
 "X-Poedit-Country: \n"
 "X-Poedit-SourceCharset: utf-8\n"
@@ -1426,7 +1426,7 @@ msgid "You do not have access to this page."
 msgstr ""
 
 #: bp-core/bp-core-buddybar.php:479
-#: bp-themes/bp-clover-cafe/sidebar.php:53
+#: bp-themes/bp-clover-cafe/sidebar.php:66
 #: bp-themes/bp-default/sidebar.php:53
 #@ buddypress
 msgid "Log In"
@@ -1447,7 +1447,6 @@ msgstr "アカウント"
 #: bp-core/bp-core-buddybar.php:537
 #: bp-core/deprecated/1.5.php:287
 #: bp-members/bp-members-template.php:731
-#: bp-themes/bp-clover-cafe/sidebar.php:18
 #: bp-themes/bp-default/sidebar.php:18
 #@ buddypress
 msgid "Log Out"
@@ -1756,7 +1755,7 @@ msgstr ""
 #: bp-core/bp-core-widgets.php:133
 #: bp-core/deprecated/1.6.php:111
 #: bp-core/deprecated/1.6.php:134
-#: bp-groups/bp-groups-widgets.php:60
+#: bp-groups/bp-groups-widgets.php:61
 #: bp-groups/bp-groups-widgets.php:141
 #: bp-themes/bp-clover-cafe/blogs/index.php:56
 #: bp-themes/bp-clover-cafe/members/single/blogs.php:22
@@ -1768,7 +1767,7 @@ msgstr "新着順"
 
 #: bp-core/bp-core-widgets.php:48
 #: bp-core/bp-core-widgets.php:134
-#: bp-groups/bp-groups-widgets.php:61
+#: bp-groups/bp-groups-widgets.php:60
 #: bp-groups/bp-groups-widgets.php:142
 #@ buddypress
 msgid "Active"
@@ -4282,13 +4281,13 @@ msgstr "変更を保存しました。"
 msgid "General"
 msgstr "一般"
 
-#: bp-themes/bp-clover-cafe/404.php:7
+#: bp-themes/bp-clover-cafe/404.php:10
 #: bp-themes/bp-default/404.php:7
 #@ buddypress
 msgid "Page not found"
 msgstr "お探しのページは見つかりませんでしたが、わぷーが見つかりました。"
 
-#: bp-themes/bp-clover-cafe/404.php:9
+#: bp-themes/bp-clover-cafe/404.php:13
 #: bp-themes/bp-default/404.php:9
 #@ buddypress
 msgid "We're sorry, but we can't find the page that you're looking for. Perhaps searching will help."
@@ -4310,7 +4309,7 @@ msgstr "削除する際にエラーが発生しました。もう一度お試し
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:478
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:499
-#: bp-themes/bp-clover-cafe/activity/entry.php:84
+#: bp-themes/bp-clover-cafe/activity/entry.php:83
 #: bp-themes/bp-clover-cafe/functions.php:167
 #: bp-themes/bp-default/_inc/ajax.php:478
 #: bp-themes/bp-default/_inc/ajax.php:499
@@ -4322,7 +4321,7 @@ msgstr "お気に入りから削除"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:480
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:497
-#: bp-themes/bp-clover-cafe/activity/entry.php:80
+#: bp-themes/bp-clover-cafe/activity/entry.php:79
 #: bp-themes/bp-clover-cafe/functions.php:166
 #: bp-themes/bp-default/_inc/ajax.php:480
 #: bp-themes/bp-default/_inc/ajax.php:497
@@ -4467,13 +4466,13 @@ msgstr "コメント"
 msgid "Mark as Favorite"
 msgstr "お気に入りに追加する"
 
-#: bp-themes/bp-clover-cafe/activity/entry.php:118
+#: bp-themes/bp-clover-cafe/activity/entry.php:117
 #: bp-themes/bp-default/activity/entry.php:104
 #@ buddypress
 msgid "Post"
 msgstr "投稿"
 
-#: bp-themes/bp-clover-cafe/activity/entry.php:118
+#: bp-themes/bp-clover-cafe/activity/entry.php:117
 #: bp-themes/bp-default/activity/entry.php:104
 #@ buddypress
 msgid "or press esc to cancel."
@@ -4638,19 +4637,14 @@ msgstr "近況を投稿"
 msgid "Post in"
 msgstr "投稿先"
 
-#: bp-themes/bp-clover-cafe/archive.php:10
 #: bp-themes/bp-default/archive.php:10
 #, php-format
 #@ buddypress
 msgid "You are browsing the archive for %1$s."
 msgstr "あなたは %1$s のアーカイブを閲覧しています。"
 
-#: bp-themes/bp-clover-cafe/archive-info.php:35
-#: bp-themes/bp-clover-cafe/archive.php:24
 #: bp-themes/bp-clover-cafe/attachment.php:18
-#: bp-themes/bp-clover-cafe/index.php:24
 #: bp-themes/bp-clover-cafe/search.php:26
-#: bp-themes/bp-clover-cafe/single.php:16
 #: bp-themes/bp-default/archive.php:24
 #: bp-themes/bp-default/attachment.php:18
 #: bp-themes/bp-default/index.php:24
@@ -4662,10 +4656,10 @@ msgctxt "Post written by..."
 msgid "by %s"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/archive-info.php:39
-#: bp-themes/bp-clover-cafe/archive.php:28
+#: bp-themes/bp-clover-cafe/archive-info.php:34
+#: bp-themes/bp-clover-cafe/archive.php:36
 #: bp-themes/bp-clover-cafe/attachment.php:22
-#: bp-themes/bp-clover-cafe/index.php:32
+#: bp-themes/bp-clover-cafe/index.php:25
 #: bp-themes/bp-clover-cafe/search.php:30
 #: bp-themes/bp-default/archive.php:28
 #: bp-themes/bp-default/attachment.php:22
@@ -4675,11 +4669,7 @@ msgstr ""
 msgid "Permanent Link to"
 msgstr "パーマリンク"
 
-#: bp-themes/bp-clover-cafe/archive-info.php:41
-#: bp-themes/bp-clover-cafe/archive.php:30
-#: bp-themes/bp-clover-cafe/index.php:34
 #: bp-themes/bp-clover-cafe/search.php:32
-#: bp-themes/bp-clover-cafe/single.php:23
 #: bp-themes/bp-default/archive.php:30
 #: bp-themes/bp-default/index.php:34
 #: bp-themes/bp-default/search.php:32
@@ -4689,11 +4679,11 @@ msgstr "パーマリンク"
 msgid "%1$s <span>in %2$s</span>"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/archive-info.php:44
-#: bp-themes/bp-clover-cafe/archive.php:33
-#: bp-themes/bp-clover-cafe/index.php:37
+#: bp-themes/bp-clover-cafe/archive-info.php:39
+#: bp-themes/bp-clover-cafe/archive.php:45
+#: bp-themes/bp-clover-cafe/index.php:34
 #: bp-themes/bp-clover-cafe/search.php:35
-#: bp-themes/bp-clover-cafe/single.php:28
+#: bp-themes/bp-clover-cafe/single.php:27
 #: bp-themes/bp-default/archive.php:33
 #: bp-themes/bp-default/index.php:37
 #: bp-themes/bp-default/search.php:35
@@ -4702,12 +4692,13 @@ msgstr ""
 msgid "Read the rest of this entry &rarr;"
 msgstr "続きを読む"
 
-#: bp-themes/bp-clover-cafe/archive-info.php:45
-#: bp-themes/bp-clover-cafe/archive.php:34
-#: bp-themes/bp-clover-cafe/index.php:38
+#: bp-themes/bp-clover-cafe/archive-info.php:40
+#: bp-themes/bp-clover-cafe/archive.php:46
+#: bp-themes/bp-clover-cafe/custom-page.php:29
+#: bp-themes/bp-clover-cafe/index.php:35
 #: bp-themes/bp-clover-cafe/onecolumn-page.php:31
 #: bp-themes/bp-clover-cafe/page.php:20
-#: bp-themes/bp-clover-cafe/single.php:30
+#: bp-themes/bp-clover-cafe/single.php:29
 #: bp-themes/bp-default/archive.php:34
 #: bp-themes/bp-default/index.php:38
 #: bp-themes/bp-default/onecolumn-page.php:31
@@ -4717,11 +4708,8 @@ msgstr "続きを読む"
 msgid "Pages: "
 msgstr "ページ:"
 
-#: bp-themes/bp-clover-cafe/archive-info.php:48
-#: bp-themes/bp-clover-cafe/archive.php:37
-#: bp-themes/bp-clover-cafe/index.php:41
 #: bp-themes/bp-clover-cafe/search.php:38
-#: bp-themes/bp-clover-cafe/single.php:33
+#: bp-themes/bp-clover-cafe/single.php:32
 #: bp-themes/bp-default/archive.php:37
 #: bp-themes/bp-default/index.php:41
 #: bp-themes/bp-default/search.php:38
@@ -4730,9 +4718,6 @@ msgstr "ページ:"
 msgid "Tags: "
 msgstr "タグ: "
 
-#: bp-themes/bp-clover-cafe/archive-info.php:48
-#: bp-themes/bp-clover-cafe/archive.php:37
-#: bp-themes/bp-clover-cafe/index.php:41
 #: bp-themes/bp-clover-cafe/search.php:38
 #: bp-themes/bp-default/archive.php:37
 #: bp-themes/bp-default/index.php:41
@@ -4741,9 +4726,6 @@ msgstr "タグ: "
 msgid "No Comments &#187;"
 msgstr "コメントなし &#187;"
 
-#: bp-themes/bp-clover-cafe/archive-info.php:48
-#: bp-themes/bp-clover-cafe/archive.php:37
-#: bp-themes/bp-clover-cafe/index.php:41
 #: bp-themes/bp-clover-cafe/search.php:38
 #: bp-themes/bp-default/archive.php:37
 #: bp-themes/bp-default/index.php:41
@@ -4752,9 +4734,6 @@ msgstr "コメントなし &#187;"
 msgid "1 Comment &#187;"
 msgstr "1通のコメント &#187;"
 
-#: bp-themes/bp-clover-cafe/archive-info.php:48
-#: bp-themes/bp-clover-cafe/archive.php:37
-#: bp-themes/bp-clover-cafe/index.php:41
 #: bp-themes/bp-clover-cafe/search.php:38
 #: bp-themes/bp-default/archive.php:37
 #: bp-themes/bp-default/index.php:41
@@ -4763,9 +4742,9 @@ msgstr "1通のコメント &#187;"
 msgid "% Comments &#187;"
 msgstr "%通のコメント &#187;"
 
-#: bp-themes/bp-clover-cafe/archive-info.php:59
-#: bp-themes/bp-clover-cafe/archive.php:50
-#: bp-themes/bp-clover-cafe/index.php:54
+#: bp-themes/bp-clover-cafe/archive-info.php:53
+#: bp-themes/bp-clover-cafe/archive.php:61
+#: bp-themes/bp-clover-cafe/index.php:50
 #: bp-themes/bp-default/archive.php:50
 #: bp-themes/bp-default/index.php:54
 #@ buddypress
@@ -4773,7 +4752,7 @@ msgid "Not Found"
 msgstr "見つかりません"
 
 #: bp-themes/bp-clover-cafe/attachment.php:26
-#: bp-themes/bp-clover-cafe/single.php:24
+#: bp-themes/bp-clover-cafe/single.php:23
 #: bp-themes/bp-default/attachment.php:26
 #: bp-themes/bp-default/single.php:24
 #@ buddypress
@@ -4871,8 +4850,6 @@ msgid "Last Active"
 msgstr "活動日時順"
 
 #: bp-themes/bp-clover-cafe/blogs/index.php:57
-#: bp-themes/bp-clover-cafe/groups/index.php:60
-#: bp-themes/bp-clover-cafe/members/index.php:60
 #: bp-themes/bp-clover-cafe/members/single/blogs.php:23
 #: bp-themes/bp-clover-cafe/members/single/friends.php:24
 #: bp-themes/bp-clover-cafe/members/single/groups.php:25
@@ -4904,8 +4881,8 @@ msgstr "コメントを見るにはパスワードを入力してください。
 #@ buddypress
 msgid "1 response to %2$s"
 msgid_plural "%1$s responses to %2$s"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1件のコメントがあります"
+msgstr[1] "%1$s件のコメントがあります"
 
 #: bp-themes/bp-clover-cafe/comments.php:55
 #: bp-themes/bp-default/comments.php:55
@@ -5043,7 +5020,7 @@ msgstr "グループの選択:"
 
 #. translators: no option picked in select box
 #. translators: no option picked in select box
-#. translators: no option picked in select box
+#. translators: no option picked in select box 
 #: bp-themes/bp-clover-cafe/forums/index.php:115
 #: bp-themes/bp-default/forums/index.php:116
 #: bp-xprofile/bp-xprofile-template.php:463
@@ -5177,7 +5154,7 @@ msgstr ""
 #, php-format
 #@ buddypress
 msgid "<a href=\"%1$s\" rel=\"nofollow\">%2$s</a> said on <a href=\"%3$s\"><span class=\"time-since\">%4$s</span></a>"
-msgstr ""
+msgstr "<a href=\"%1$s\" rel=\"nofollow\">%2$s</a> さんは言いました: <span class=\"time-since\">%4$s</span>"
 
 #: bp-themes/bp-clover-cafe/functions.php:495
 #: bp-themes/bp-default/functions.php:495
@@ -5529,7 +5506,7 @@ msgstr "グループのメンバーに変更をメールで通知する"
 #: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:41
 #: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:57
 #: bp-themes/bp-clover-cafe/members/single/profile/edit.php:151
-#: bp-themes/bp-clover-cafe/members/single/settings/general.php:72
+#: bp-themes/bp-clover-cafe/members/single/settings/general.php:73
 #: bp-themes/bp-clover-cafe/members/single/settings/notifications.php:61
 #: bp-themes/bp-default/groups/single/admin.php:32
 #: bp-themes/bp-default/groups/single/admin.php:117
@@ -5794,14 +5771,13 @@ msgstr "ホーム"
 msgid "Search for:"
 msgstr "検索:"
 
-#: bp-themes/bp-clover-cafe/index.php:27
 #: bp-themes/bp-default/index.php:27
 #@ buddypress
 msgctxt "Sticky post"
 msgid "Featured"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/index.php:55
+#: bp-themes/bp-clover-cafe/index.php:51
 #: bp-themes/bp-default/index.php:55
 #@ buddypress
 msgid "Sorry, but you are looking for something that isn't here."
@@ -6089,19 +6065,19 @@ msgstr "パスワードをお忘れですか ?"
 msgid "Account Email"
 msgstr "メールアドレス（顧客先アドレスの設定は禁止します）"
 
-#: bp-themes/bp-clover-cafe/members/single/settings/general.php:65
+#: bp-themes/bp-clover-cafe/members/single/settings/general.php:66
 #: bp-themes/bp-default/members/single/settings/general.php:65
 #@ buddypress
 msgid "Change Password <span>(leave blank for no change)</span>"
 msgstr "パスワード変更 <span>（変更しない場合は空白のまま）</span>"
 
-#: bp-themes/bp-clover-cafe/members/single/settings/general.php:66
+#: bp-themes/bp-clover-cafe/members/single/settings/general.php:67
 #: bp-themes/bp-default/members/single/settings/general.php:66
 #@ buddypress
 msgid "New Password"
 msgstr "新しいパスワード"
 
-#: bp-themes/bp-clover-cafe/members/single/settings/general.php:67
+#: bp-themes/bp-clover-cafe/members/single/settings/general.php:68
 #: bp-themes/bp-default/members/single/settings/general.php:67
 #@ buddypress
 msgid "Repeat New Password"
@@ -6119,6 +6095,7 @@ msgstr "Eメール通知設定"
 msgid "Send a notification by email when:"
 msgstr "次の場合メールで通知する:"
 
+#: bp-themes/bp-clover-cafe/custom-page.php:27
 #: bp-themes/bp-clover-cafe/onecolumn-page.php:29
 #: bp-themes/bp-clover-cafe/page.php:18
 #: bp-themes/bp-default/onecolumn-page.php:29
@@ -6127,6 +6104,7 @@ msgstr "次の場合メールで通知する:"
 msgid "<p class=\"serif\">Read the rest of this page &rarr;</p>"
 msgstr "<p class=\"serif\">このページの続きを読む &rarr;</p>"
 
+#: bp-themes/bp-clover-cafe/custom-page.php:30
 #: bp-themes/bp-clover-cafe/onecolumn-page.php:32
 #: bp-themes/bp-clover-cafe/page.php:21
 #: bp-themes/bp-default/onecolumn-page.php:32
@@ -6184,7 +6162,7 @@ msgid "Account Details"
 msgstr "アカウント詳細"
 
 #: bp-themes/bp-clover-cafe/registration/register.php:37
-#: bp-themes/bp-clover-cafe/sidebar.php:44
+#: bp-themes/bp-clover-cafe/sidebar.php:57
 #: bp-themes/bp-default/registration/register.php:37
 #: bp-themes/bp-default/sidebar.php:44
 #@ buddypress
@@ -6281,46 +6259,46 @@ msgstr "検索結果"
 msgid "No posts found. Try a different search?"
 msgstr "投稿は見つかりませんでした。新しい検索を試してみませんか？"
 
-#: bp-themes/bp-clover-cafe/sidebar.php:37
+#: bp-themes/bp-clover-cafe/sidebar.php:50
 #: bp-themes/bp-default/sidebar.php:37
 #, php-format
 #@ buddypress
 msgid "Please <a href=\"%s\" title=\"Create an account\">create an account</a> to get started."
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/sidebar.php:47
+#: bp-themes/bp-clover-cafe/sidebar.php:60
 #: bp-themes/bp-default/sidebar.php:47
 #@ buddypress
 msgid "Password"
 msgstr "パスワード"
 
-#: bp-themes/bp-clover-cafe/sidebar.php:50
+#: bp-themes/bp-clover-cafe/sidebar.php:63
 #: bp-themes/bp-default/sidebar.php:50
 #@ buddypress
 msgid "Remember Me"
 msgstr "ログイン状態を保存する"
 
-#: bp-themes/bp-clover-cafe/sidebar.php:64
+#: bp-themes/bp-clover-cafe/sidebar.php:77
 #: bp-themes/bp-default/sidebar.php:64
 #@ buddypress
 msgid "Forum Topic Tags"
 msgstr "フォーラムのトピックタグ"
 
-#: bp-themes/bp-clover-cafe/single.php:35
+#: bp-themes/bp-clover-cafe/single.php:34
 #: bp-themes/bp-default/single.php:35
 #@ buddypress
 msgctxt "Previous post link"
 msgid "&larr;"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/single.php:36
+#: bp-themes/bp-clover-cafe/single.php:35
 #: bp-themes/bp-default/single.php:36
 #@ buddypress
 msgctxt "Next post link"
 msgid "&rarr;"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/single.php:45
+#: bp-themes/bp-clover-cafe/single.php:44
 #: bp-themes/bp-default/single.php:45
 #@ buddypress
 msgid "Sorry, no posts matched your criteria."
@@ -7896,8 +7874,17 @@ msgstr ""
 msgid "Password: %s"
 msgstr ""
 
-#: bp-themes/bp-clover-cafe/activity/entry.php:72
+#: bp-themes/bp-clover-cafe/activity/entry.php:71
 #@ buddypress
 msgid "Comment"
 msgstr "コメントする"
+
+#: bp-themes/bp-clover-cafe/archive.php:42
+#: bp-themes/bp-clover-cafe/index.php:31
+#: bp-themes/bp-clover-cafe/single.php:21
+#, php-format
+#@ buddypress
+msgctxt "Post written by..."
+msgid "%s"
+msgstr ""
 
