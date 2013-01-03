@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2012-12-30 06:28:46+0000\n"
+"PO-Revision-Date: 2013-01-03 18:39:43+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -904,7 +904,7 @@ msgstr ""
 #: bp-settings/bp-settings-loader.php:78
 #@ buddypress
 msgid "Account Settings"
-msgstr "アカウント設定"
+msgstr "設定"
 
 #: bp-core/admin/bp-core-components.php:72
 #@ buddypress
@@ -5020,7 +5020,7 @@ msgstr "グループの選択:"
 
 #. translators: no option picked in select box
 #. translators: no option picked in select box
-#. translators: no option picked in select box 
+#. translators: no option picked in select box
 #: bp-themes/bp-clover-cafe/forums/index.php:115
 #: bp-themes/bp-default/forums/index.php:116
 #: bp-xprofile/bp-xprofile-template.php:463
