@@ -5012,7 +5012,7 @@ msgstr "グループの選択:"
 
 #. translators: no option picked in select box
 #. translators: no option picked in select box
-#. translators: no option picked in select box 
+#. translators: no option picked in select box
 #: bp-themes/bp-clover-cafe/forums/index.php:115
 #: bp-themes/bp-default/forums/index.php:116
 #: bp-xprofile/bp-xprofile-template.php:463
