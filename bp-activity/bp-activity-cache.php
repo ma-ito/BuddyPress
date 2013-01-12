@@ -3,7 +3,7 @@
 /**
  * Functions related to the BuddyPress Activity component and the WP Cache
  *
- * @since BuddyPress (1.6)
+ * @since 1.6
  */
 
 // Exit if accessed directly

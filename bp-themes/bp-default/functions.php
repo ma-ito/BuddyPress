@@ -24,7 +24,7 @@
  *
  * @package BuddyPress
  * @subpackage BP-Default
- * @since BuddyPress (1.2)
+ * @since 1.2
  */
 
 // Exit if accessed directly
@@ -112,7 +112,7 @@ function bp_dtheme_setup() {
 		add_theme_support( 'custom-header', $custom_header_args );
 	}
 
-	if ( !is_admin() ) {
+	if ( ! is_admin() || ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
 		// Register buttons for the relevant component templates
 		// Friends button
 		if ( bp_is_active( 'friends' ) )
@@ -226,7 +226,7 @@ if ( !function_exists( 'bp_dtheme_admin_header_style' ) ) :
  *
  * Referenced via add_custom_image_header() in bp_dtheme_setup().
  *
- * @since BuddyPress (1.2)
+ * @since 1.2
  */
 function bp_dtheme_admin_header_style() {
 ?>
@@ -334,7 +334,7 @@ if ( !function_exists( 'bp_dtheme_header_style' ) ) :
  * Referenced via add_custom_image_header() in bp_dtheme_setup().
  *
  * @global WP_Query $post The current WP_Query object for the current post or page
- * @since BuddyPress (1.2)
+ * @since 1.2
  */
 function bp_dtheme_header_style() {
 	global $post;
@@ -453,7 +453,7 @@ if ( !function_exists( 'bp_dtheme_blog_comments' ) ) :
  * @param array $args Arguments from wp_list_comments() call
  * @param int $depth Comment nesting level
  * @see wp_list_comments()
- * @since BuddyPress (1.2)
+ * @since 1.2
  */
 function bp_dtheme_blog_comments( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
@@ -520,7 +520,7 @@ if ( !function_exists( 'bp_dtheme_page_on_front' ) ) :
  * Return the ID of a page set as the home page.
  *
  * @return false|int ID of page set as the home page
- * @since BuddyPress (1.2)
+ * @since 1.2
  */
 function bp_dtheme_page_on_front() {
 	if ( 'page' != get_option( 'show_on_front' ) )
@@ -538,7 +538,7 @@ if ( !function_exists( 'bp_dtheme_activity_secondary_avatars' ) ) :
  * @param BP_Activity_Activity $activity Activity object
  * @package BuddyPress Theme
  * @return string
- * @since BuddyPress (1.2.6)
+ * @since 1.2.6
  */
 function bp_dtheme_activity_secondary_avatars( $action, $activity ) {
 	switch ( $activity->component ) {
@@ -562,7 +562,7 @@ if ( !function_exists( 'bp_dtheme_show_notice' ) ) :
 /**
  * Show a notice when the theme is activated - workaround by Ozh (http://old.nabble.com/Activation-hook-exist-for-themes--td25211004.html)
  *
- * @since BuddyPress (1.2)
+ * @since 1.2
  */
 function bp_dtheme_show_notice() {
 	global $pagenow;

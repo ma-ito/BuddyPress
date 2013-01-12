@@ -136,6 +136,9 @@ function bp_core_set_uri_globals() {
 	// Keep the unfiltered URI safe
 	$bp->unfiltered_uri = $bp_uri;
 
+	// Don't use $bp_unfiltered_uri, this is only for backpat with old plugins. Use $bp->unfiltered_uri.
+	$GLOBALS['bp_unfiltered_uri'] = &$bp->unfiltered_uri;
+
 	// Get slugs of pages into array
 	foreach ( (array) $bp->pages as $page_key => $bp_page )
 		$key_slugs[$page_key] = trailingslashit( '/' . $bp_page->slug );
@@ -523,7 +526,7 @@ add_action( 'login_form_bpnoaccess', 'bp_core_no_access_wp_login_error' );
  * general possible versions of the URL - eg, example.com/groups/mygroup/ instead of
  * example.com/groups/mygroup/home/
  *
- * @since BuddyPress (1.6)
+ * @since 1.6
  * @see BP_Members_Component::setup_globals() where $bp->canonical_stack['base_url'] and
  *   ['component'] may be set
  * @see bp_core_new_nav_item() where $bp->canonical_stack['action'] may be set
@@ -576,7 +579,7 @@ function bp_redirect_canonical() {
 /**
  * Output rel=canonical header tag for BuddyPress content
  *
- * @since BuddyPress (1.6)
+ * @since 1.6
  */
 function bp_rel_canonical() {
 	$canonical_url = bp_get_canonical_url();
@@ -702,7 +705,7 @@ add_action( 'bp_init', '_bp_maybe_remove_redirect_canonical' );
  * This function will be removed in a later version of BuddyPress. Plugins
  * (and plugin authors!) should ignore it.
  *
- * @since BuddyPress (1.6.1)
+ * @since 1.6.1
  *
  * @link http://buddypress.trac.wordpress.org/ticket/4329
  * @link http://buddypress.trac.wordpress.org/ticket/4415
@@ -722,7 +725,7 @@ add_action( 'template_redirect', '_bp_rehook_maybe_redirect_404', 1 );
  * This function should be considered temporary, and may be removed without
  * notice in future versions of BuddyPress.
  *
- * @since BuddyPress (1.6)
+ * @since 1.6
  */
 function _bp_maybe_remove_rel_canonical() {
 	if ( ! bp_is_blog_page() && ! is_404() ) {

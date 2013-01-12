@@ -460,7 +460,7 @@ add_action( 'bp_core_signup_user', 'xprofile_sync_wp_profile' );
 /**
  * Syncs the standard built in WordPress profile data to XProfile.
  *
- * @since BuddyPress (1.2.4)
+ * @since 1.2.4
  * @package BuddyPress Core
  */
 function xprofile_sync_bp_profile( &$errors, $update, &$user ) {
@@ -513,11 +513,11 @@ function bp_xprofile_delete_meta( $object_id, $object_type, $meta_key = false, $
 	$meta_value = trim( $meta_value );
 
 	if ( !$meta_key )
-		$wpdb->query( $wpdb->prepare( "DELETE FROM " . $bp->profile->table_name_meta . " WHERE object_id = %d AND object_type = %s", $object_id, $object_type ) );
+		$wpdb->query( $wpdb->prepare( "DELETE FROM {$bp->profile->table_name_meta} WHERE object_id = %d AND object_type = %s", $object_id, $object_type ) );
 	else if ( $meta_value )
-		$wpdb->query( $wpdb->prepare( "DELETE FROM " . $bp->profile->table_name_meta . " WHERE object_id = %d AND object_type = %s AND meta_key = %s AND meta_value = %s", $object_id, $object_type, $meta_key, $meta_value ) );
+		$wpdb->query( $wpdb->prepare( "DELETE FROM {$bp->profile->table_name_meta} WHERE object_id = %d AND object_type = %s AND meta_key = %s AND meta_value = %s", $object_id, $object_type, $meta_key, $meta_value ) );
 	else
-		$wpdb->query( $wpdb->prepare( "DELETE FROM " . $bp->profile->table_name_meta . " WHERE object_id = %d AND object_type = %s AND meta_key = %s", $object_id, $object_type, $meta_key ) );
+		$wpdb->query( $wpdb->prepare( "DELETE FROM {$bp->profile->table_name_meta} WHERE object_id = %d AND object_type = %s AND meta_key = %s", $object_id, $object_type, $meta_key ) );
 
 	// Delete the cached object
 	wp_cache_delete( 'bp_xprofile_meta_' . $object_type . '_' . $object_id . '_' . $meta_key, 'bp' );
@@ -543,11 +543,11 @@ function bp_xprofile_get_meta( $object_id, $object_type, $meta_key = '') {
 		$meta_key = preg_replace( '|[^a-z0-9_]|i', '', $meta_key );
 
 		if ( !$metas = wp_cache_get( 'bp_xprofile_meta_' . $object_type . '_' . $object_id . '_' . $meta_key, 'bp' ) ) {
-			$metas = $wpdb->get_col( $wpdb->prepare( "SELECT meta_value FROM " . $bp->profile->table_name_meta . " WHERE object_id = %d AND object_type = %s AND meta_key = %s", $object_id, $object_type, $meta_key ) );
+			$metas = $wpdb->get_col( $wpdb->prepare( "SELECT meta_value FROM {$bp->profile->table_name_meta} WHERE object_id = %d AND object_type = %s AND meta_key = %s", $object_id, $object_type, $meta_key ) );
 			wp_cache_set( 'bp_xprofile_meta_' . $object_type . '_' . $object_id . '_' . $meta_key, $metas, 'bp' );
 		}
 	} else {
-		$metas = $wpdb->get_col( $wpdb->prepare( "SELECT meta_value FROM " . $bp->profile->table_name_meta . " WHERE object_id = %d AND object_type = %s", $object_id, $object_type ) );
+		$metas = $wpdb->get_col( $wpdb->prepare( "SELECT meta_value FROM {$bp->profile->table_name_meta} WHERE object_id = %d AND object_type = %s", $object_id, $object_type ) );
 	}
 
 	if ( empty( $metas ) ) {
@@ -590,12 +590,12 @@ function bp_xprofile_update_meta( $object_id, $object_type, $meta_key, $meta_val
 	if ( empty( $meta_value ) )
 		return bp_xprofile_delete_meta( $object_id, $object_type, $meta_key );
 
-	$cur = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM " . $bp->profile->table_name_meta . " WHERE object_id = %d AND object_type = %s AND meta_key = %s", $object_id, $object_type, $meta_key ) );
+	$cur = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$bp->profile->table_name_meta} WHERE object_id = %d AND object_type = %s AND meta_key = %s", $object_id, $object_type, $meta_key ) );
 
 	if ( empty( $cur ) )
-		$wpdb->query( $wpdb->prepare( "INSERT INTO " . $bp->profile->table_name_meta . " ( object_id, object_type, meta_key, meta_value ) VALUES ( %d, %s, %s, %s )", $object_id, $object_type,  $meta_key, $meta_value ) );
+		$wpdb->query( $wpdb->prepare( "INSERT INTO {$bp->profile->table_name_meta} ( object_id, object_type, meta_key, meta_value ) VALUES ( %d, %s, %s, %s )", $object_id, $object_type,  $meta_key, $meta_value ) );
 	else if ( $cur->meta_value != $meta_value )
-		$wpdb->query( $wpdb->prepare( "UPDATE " . $bp->profile->table_name_meta . " SET meta_value = %s WHERE object_id = %d AND object_type = %s AND meta_key = %s", $meta_value, $object_id, $object_type, $meta_key ) );
+		$wpdb->query( $wpdb->prepare( "UPDATE {$bp->profile->table_name_meta} SET meta_value = %s WHERE object_id = %d AND object_type = %s AND meta_key = %s", $meta_value, $object_id, $object_type, $meta_key ) );
 	else
 		return false;
 
@@ -648,7 +648,7 @@ function bp_xprofile_get_visibility_levels() {
  * profile viewer). Then, based on that relationship, we query for the set of fields that should
  * be excluded from the profile loop.
  *
- * @since BuddyPress (1.6)
+ * @since 1.6
  * @see BP_XProfile_Group::get()
  * @uses apply_filters() Filter bp_xprofile_get_hidden_fields_for_user to modify visibility levels,
  *   or if you have added your own custom levels
@@ -700,7 +700,7 @@ function bp_xprofile_get_hidden_fields_for_user( $displayed_user_id = 0, $curren
 /**
  * Fetch an array of the xprofile fields that a given user has marked with certain visibility levels
  *
- * @since BuddyPress (1.6)
+ * @since 1.6
  * @see bp_xprofile_get_hidden_fields_for_user()
  *
  * @param int $user_id The id of the profile owner

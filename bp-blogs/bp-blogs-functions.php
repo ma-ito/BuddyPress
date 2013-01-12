@@ -49,7 +49,7 @@ function bp_blogs_record_existing_blogs() {
 	$wpdb->query( "TRUNCATE TABLE {$bp->blogs->table_name}" );
 
 	if ( is_multisite() )
-		$blog_ids = $wpdb->get_col( $wpdb->prepare( "SELECT blog_id FROM {$wpdb->base_prefix}blogs WHERE mature = 0 AND spam = 0 AND deleted = 0" ) );
+		$blog_ids = $wpdb->get_col( "SELECT blog_id FROM {$wpdb->base_prefix}blogs WHERE mature = 0 AND spam = 0 AND deleted = 0" );
 	else
 		$blog_ids = 1;
 
@@ -353,7 +353,7 @@ add_action( 'remove_user_from_blog', 'bp_blogs_remove_user_from_blog', 10, 2 );
  * Blogs component. This function bumps the priority of the core function, so that we can be sure
  * that the Blogs component is loaded first. See http://buddypress.trac.wordpress.org/ticket/3916
  *
- * @since BuddyPress (1.6)
+ * @since 1.6
  */
 function bp_blogs_maybe_add_user_to_blog() {
 	if ( ! is_multisite() )
@@ -440,7 +440,7 @@ add_action( 'delete_comment', 'bp_blogs_remove_comment' );
  * @param string $new_status New comment status.
  * @param string $old_status Previous comment status.
  * @param object $comment Comment data.
- * @since BuddyPress (1.6)
+ * @since 1.6
  */
 function bp_blogs_transition_activity_status( $new_status, $old_status, $comment ) {
 	global $bp;

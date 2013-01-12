@@ -5,13 +5,13 @@
  *
  * @package BuddyPress
  * @subpackage Blogs
- * @since BuddyPress (1.6)
+ * @since 1.6
  */
 
 /**
  * Ensures that the 'Create a new site' link at wp-admin/my-sites.php points to the BP blog signup
  *
- * @since BuddyPress (1.6)
+ * @since 1.6
  * @uses apply_filters() Filter bp_blogs_creation_location to alter the returned value
  *
  * @param string $url The original URL (points to wp-signup.php by default)

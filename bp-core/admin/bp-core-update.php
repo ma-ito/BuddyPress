@@ -130,20 +130,17 @@ class BP_Core_Setup_Wizard {
 		// Bail if user is not capable of being here
 		if ( ! bp_current_user_can( 'activate_plugins' ) )
 			wp_die( 'You do not have sufficient permissions to access this page.' );
+
+		// Update or Setup
+		$type = ( 'update' == bp_get_maintenance_mode() ) ? __( 'Update', 'buddypress' ) : __( 'Setup', 'buddypress' );
+
 		?>
 
 		<div class="wrap" id="bp-wizard">
 
 			<?php screen_icon( 'buddypress' ); ?>
 
-			<h2>
-				<?php
-				if ( 'update' == bp_get_maintenance_mode() )
-					_e( 'BuddyPress Update', 'buddypress' );
-				else
-					_e( 'BuddyPress Setup', 'buddypress' );
-				?>
-			</h2>
+			<h2><?php printf( __( 'BuddyPress %s', 'buddypress' ), $type ); ?></h2>
 
 			<?php
 				do_action( 'bp_admin_notices' );
@@ -657,7 +654,7 @@ class BP_Core_Setup_Wizard {
 	/**
 	 * When upgrading to BP 1.6, prompt the admin to switch to WordPress' Toolbar.
 	 *
-	 * @since BuddyPress (1.6)
+	 * @since 1.6
 	 */
 	function step_admin_bar() {
 	?>
@@ -685,15 +682,11 @@ class BP_Core_Setup_Wizard {
 	}
 
 	function step_finish() {
-	?>
-		<p>
-			<?php
-			if ( 'update' == bp_get_maintenance_mode() )
-				_e( "The BuddyPress update is complete, and your site is ready to go!", 'buddypress' );
-			else
-				_e( "The BuddyPress setup is complete, and your site is ready to go!", 'buddypress' );
-			?>
-		</p>
+
+		// What type of action is happening here?
+		$type = ( bp_get_maintenance_mode() == 'install' ) ? __( 'setup', 'buddypress' ) : __( 'update', 'buddypress' ); ?>
+
+		<p><?php printf( __( "The BuddyPress %1\$s is complete, and your site is ready to go!", 'buddypress' ), $type ); ?></p>
 
 		<div class="submit clear">
 			<input type="hidden" name="save" value="finish" />
@@ -943,7 +936,7 @@ class BP_Core_Setup_Wizard {
 	 * When upgrading to BP 1.6, the admin is prompted to switch to WordPress' Toolbar.
 	 * If they choose not to, record that preference in the options table.
 	 *
-	 * @since BuddyPress (1.6)
+	 * @since 1.6
 	 */
 	function step_admin_bar_save() {
 		if ( isset( $_POST['submit'] ) ) {

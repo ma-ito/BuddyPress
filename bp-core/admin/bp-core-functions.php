@@ -32,7 +32,7 @@ function bp_core_admin_menu_init() {
  * @global array $_parent_pages
  * @global array $_registered_pages
  * @global array $submenu
- * @since BuddyPress (1.6)
+ * @since 1.6
  */
 function bp_core_admin_backpat_menu() {
 	global $_parent_pages, $_registered_pages, $submenu;
@@ -65,7 +65,7 @@ add_action( bp_core_admin_hook(), 'bp_core_admin_backpat_menu', 999 );
 /**
  * Tweak the Settings subnav menu to show only one BuddyPress menu item (Settings > BuddyPress).
  *
- * @since BuddyPress (1.6)
+ * @since 1.6
  */
 function bp_core_modify_admin_menu() {
  	$page  = bp_core_do_network_admin()  ? 'settings.php' : 'options-general.php';
@@ -85,7 +85,7 @@ add_action( 'admin_head', 'bp_core_modify_admin_menu', 999 );
  *
  * @global string $plugin_page
  * @global array $submenu
- * @since BuddyPress (1.6)
+ * @since 1.6
  */
 function bp_core_modify_admin_menu_highlight() {
 	global $plugin_page, $submenu_file;
@@ -101,7 +101,7 @@ function bp_core_modify_admin_menu_highlight() {
  * will never appear.
  *
  * @see bp_core_admin_backpat_menu()
- * @since BuddyPress (1.6)
+ * @since 1.6
  * @todo Add convenience links into the markup once new positions are finalised.
  */
 function bp_core_admin_backpat_page() {
@@ -217,7 +217,7 @@ function bp_core_activation_notice() {
 	 * on the off chance that someone has activated the blogs component and then disabled MS
 	 */
 	if ( bp_is_active( 'blogs' ) ) {
-		$count = $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$bp->blogs->table_name}" ) );
+		$count = $wpdb->get_var( "SELECT COUNT(*) FROM {$bp->blogs->table_name}" );
 
 		if ( empty( $count ) ) {
 			bp_blogs_record_existing_blogs();
