@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.1\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2013-01-03 18:39:43+0000\n"
+"PO-Revision-Date: 2013-01-14 06:32:05+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -5934,7 +5934,7 @@ msgstr "アバター画像を変更"
 #: bp-themes/bp-default/members/single/profile/change-avatar.php:7
 #@ buddypress
 msgid "Your avatar will be used on your profile and throughout the site. If there is a <a href=\"http://gravatar.com\">Gravatar</a> associated with your account email we will use that, or you can upload an image from your computer."
-msgstr "あなたのアバターは自分のプロフィールページとこのサイト全体で使用されます。<a href=\"http://gravatar.com\">Gravatar</a> にあなたのメールアドレスで登録されたアバターがあればそのアバターを使用します。もしくは、ご自分のコンピュータから画像をアップロードすることもできます。"
+msgstr "好きな画像をアップロードをしてアバター画像を変更することができます。アップロードが終わると画像の編集画面に移りますので、必要に応じて画像の切り抜きを行ってください。"
 
 #: bp-themes/bp-clover-cafe/members/single/profile/change-avatar.php:14
 #: bp-themes/bp-default/members/single/profile/change-avatar.php:14
@@ -6063,7 +6063,7 @@ msgstr "パスワードをお忘れですか ?"
 #: bp-themes/bp-default/members/single/settings/general.php:62
 #@ buddypress
 msgid "Account Email"
-msgstr "メールアドレス（顧客先アドレスの設定は禁止します）"
+msgstr "メールアドレス（顧客先アドレスの設定は禁止いたします）"
 
 #: bp-themes/bp-clover-cafe/members/single/settings/general.php:66
 #: bp-themes/bp-default/members/single/settings/general.php:65
