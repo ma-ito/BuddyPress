@@ -37,6 +37,11 @@ class BP_Groups_Widget extends WP_Widget {
 	}
 
 	function widget( $args, $instance ) {
+
+		// 検索パラメータがあるとフィルタリングされてしまうため非表示にする
+		if ( !empty( $_GET['s'] ) )
+			return;
+
 		$user_id = apply_filters( 'bp_group_widget_user_id', '0' );
 
 		extract( $args );
