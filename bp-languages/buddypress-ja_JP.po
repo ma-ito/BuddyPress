@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BuddyPress v1.6.1\n"
+"Project-Id-Version: BuddyPress v1.6.3\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2013-01-14 06:32:05+0000\n"
+"PO-Revision-Date: 2013-02-11 13:28:25+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -139,7 +139,7 @@ msgstr "ストリームを検索..."
 #: bp-activity/bp-activity-loader.php:241
 #: bp-activity/bp-activity-screens.php:278
 #: bp-activity/feeds/bp-activity-personal-feed.php:28
-#: bp-core/admin/bp-core-update.php:394
+#: bp-core/admin/bp-core-update.php:391
 #@ buddypress
 msgid "Activity"
 msgstr "近況"
@@ -176,17 +176,16 @@ msgstr "友達"
 
 #: bp-activity/bp-activity-loader.php:189
 #: bp-activity/bp-activity-loader.php:284
-#: bp-core/admin/bp-core-update.php:357
-#: bp-core/bp-core-template.php:260
+#: bp-core/admin/bp-core-update.php:354
 #: bp-groups/bp-groups-activity.php:143
 #: bp-groups/bp-groups-activity.php:179
 #: bp-groups/bp-groups-activity.php:215
 #: bp-groups/bp-groups-activity.php:251
 #: bp-groups/bp-groups-loader.php:502
-#: bp-groups/bp-groups-screens.php:844
+#: bp-groups/bp-groups-screens.php:847
 #: bp-groups/bp-groups-widgets.php:28
-#: bp-groups/bp-groups-widgets.php:48
-#: bp-groups/bp-groups-widgets.php:119
+#: bp-groups/bp-groups-widgets.php:53
+#: bp-groups/bp-groups-widgets.php:124
 #@ buddypress
 msgid "Groups"
 msgstr "グループ"
@@ -321,7 +320,7 @@ msgstr "このアクティビティを見ることはできません。"
 #: bp-activity/bp-activity-screens.php:279
 #: bp-blogs/bp-blogs-template.php:499
 #: bp-friends/bp-friends-screens.php:84
-#: bp-groups/bp-groups-screens.php:845
+#: bp-groups/bp-groups-screens.php:848
 #: bp-messages/bp-messages-screens.php:149
 #: bp-themes/bp-clover-cafe/groups/single/admin.php:26
 #: bp-themes/bp-clover-cafe/registration/register.php:227
@@ -334,7 +333,7 @@ msgstr "はい"
 #: bp-activity/bp-activity-screens.php:280
 #: bp-blogs/bp-blogs-template.php:503
 #: bp-friends/bp-friends-screens.php:85
-#: bp-groups/bp-groups-screens.php:846
+#: bp-groups/bp-groups-screens.php:849
 #: bp-messages/bp-messages-screens.php:150
 #: bp-themes/bp-clover-cafe/groups/single/admin.php:27
 #: bp-themes/bp-clover-cafe/registration/register.php:228
@@ -397,8 +396,8 @@ msgstr "%1$s件目から%2$s件目の項目を表示中 (%3$s件中)"
 #: bp-members/bp-members-buddybar.php:90
 #: bp-members/bp-members-loader.php:197
 #: bp-members/bp-members-template.php:478
-#: bp-members/bp-members-template.php:777
-#: bp-members/bp-members-template.php:796
+#: bp-members/bp-members-template.php:778
+#: bp-members/bp-members-template.php:797
 #: bp-messages/bp-messages-loader.php:255
 #: bp-messages/bp-messages-template.php:326
 #: bp-themes/bp-clover-cafe/groups/single/admin.php:164
@@ -440,7 +439,7 @@ msgstr "削除"
 #: bp-activity/bp-activity-template.php:2153
 #: bp-core/admin/bp-core-slugs.php:112
 #: bp-core/admin/bp-core-slugs.php:173
-#: bp-members/bp-members-template.php:582
+#: bp-members/bp-members-template.php:583
 #: bp-themes/bp-clover-cafe/activity/entry.php:37
 #: bp-themes/bp-clover-cafe/functions.php:165
 #: bp-themes/bp-default/activity/entry.php:37
@@ -450,7 +449,7 @@ msgstr "削除"
 msgid "View"
 msgstr "表示"
 
-#: bp-core/admin/bp-core-update.php:304
+#: bp-core/admin/bp-core-update.php:301
 #@ buddypress
 msgid "groups"
 msgstr "グループ"
@@ -672,10 +671,10 @@ msgstr ""
 
 #: bp-blogs/bp-blogs-template.php:350
 #: bp-core/bp-core-classes.php:177
-#: bp-groups/bp-groups-widgets.php:80
-#: bp-groups/bp-groups-widgets.php:185
-#: bp-members/bp-members-template.php:553
-#: bp-members/bp-members-template.php:828
+#: bp-groups/bp-groups-widgets.php:85
+#: bp-groups/bp-groups-widgets.php:190
+#: bp-members/bp-members-template.php:554
+#: bp-members/bp-members-template.php:829
 #: bp-themes/bp-clover-cafe/groups/groups-loop.php:47
 #: bp-themes/bp-clover-cafe/groups/single/group-header.php:42
 #: bp-themes/bp-default/groups/groups-loop.php:47
@@ -801,7 +800,7 @@ msgstr "%s の最新のコメント"
 #: bp-core/deprecated/1.5.php:397
 #: bp-forums/bp-forums-template.php:1321
 #: bp-groups/bp-groups-template.php:2291
-#: bp-members/bp-members-template.php:667
+#: bp-members/bp-members-template.php:668
 #: bp-messages/bp-messages-template.php:373
 #: bp-themes/bp-clover-cafe/searchform.php:5
 #: bp-themes/bp-default/header.php:30
@@ -840,7 +839,7 @@ msgstr "重要: <a href=\"http://codex.buddypress.org/buddypress-site-administra
 #: bp-core/admin/bp-core-functions.php:365
 #: bp-core/admin/bp-core-update.php:57
 #: bp-core/admin/bp-core-update.php:69
-#: bp-core/admin/bp-core-update.php:204
+#: bp-core/admin/bp-core-update.php:201
 #@ buddypress
 msgid "Components"
 msgstr "コンポーネント"
@@ -849,7 +848,7 @@ msgstr "コンポーネント"
 #: bp-core/admin/bp-core-slugs.php:26
 #: bp-core/admin/bp-core-update.php:58
 #: bp-core/admin/bp-core-update.php:70
-#: bp-core/admin/bp-core-update.php:208
+#: bp-core/admin/bp-core-update.php:205
 #@ buddypress
 msgid "Pages"
 msgstr "固定ページ"
@@ -866,8 +865,7 @@ msgid "Settings"
 msgstr "設定"
 
 #: bp-core/admin/bp-core-functions.php:381
-#: bp-core/admin/bp-core-update.php:412
-#: bp-core/bp-core-template.php:266
+#: bp-core/admin/bp-core-update.php:409
 #: bp-forums/bp-forums-admin.php:14
 #: bp-forums/bp-forums-admin.php:47
 #: bp-forums/bp-forums-admin.php:314
@@ -1017,7 +1015,7 @@ msgstr "保存"
 
 #: bp-core/admin/bp-core-functions.php:283
 #: bp-core/admin/bp-core-slugs.php:138
-#: bp-core/admin/bp-core-update.php:428
+#: bp-core/admin/bp-core-update.php:425
 #: bp-members/bp-members-adminbar.php:60
 #@ buddypress
 msgid "Register"
@@ -1025,7 +1023,7 @@ msgstr "登録"
 
 #: bp-core/admin/bp-core-functions.php:278
 #: bp-core/admin/bp-core-slugs.php:139
-#: bp-core/admin/bp-core-update.php:442
+#: bp-core/admin/bp-core-update.php:439
 #: bp-messages/bp-messages-template.php:564
 #: bp-themes/bp-clover-cafe/registration/activate.php:36
 #: bp-themes/bp-default/registration/activate.php:36
@@ -1056,21 +1054,21 @@ msgid "Name"
 msgstr ""
 
 #: bp-core/admin/bp-core-update.php:59
-#: bp-core/admin/bp-core-update.php:212
+#: bp-core/admin/bp-core-update.php:209
 #@ buddypress
 msgid "Permalinks"
 msgstr "パーマリンク"
 
 #: bp-core/admin/bp-core-update.php:60
-#: bp-core/admin/bp-core-update.php:216
+#: bp-core/admin/bp-core-update.php:213
 #@ buddypress
 msgid "Theme"
 msgstr "テーマ"
 
 #: bp-core/admin/bp-core-update.php:61
 #: bp-core/admin/bp-core-update.php:80
-#: bp-core/admin/bp-core-update.php:181
-#: bp-core/admin/bp-core-update.php:224
+#: bp-core/admin/bp-core-update.php:178
+#: bp-core/admin/bp-core-update.php:221
 #: bp-themes/bp-clover-cafe/groups/create.php:272
 #: bp-themes/bp-default/groups/create.php:289
 #@ buddypress
@@ -1078,22 +1076,23 @@ msgid "Finish"
 msgstr "設定を完了する"
 
 #: bp-core/admin/bp-core-update.php:78
-#: bp-core/admin/bp-core-update.php:200
+#: bp-core/admin/bp-core-update.php:197
 #@ buddypress
 msgid "Database Update"
 msgstr "データベース更新"
 
 #: bp-activity/bp-activity-admin.php:660
+#: bp-core/admin/bp-core-update.php:135
 #@ buddypress
 msgid "Update"
 msgstr "更新"
 
-#: bp-core/admin/bp-core-update.php:184
+#: bp-core/admin/bp-core-update.php:181
 #@ buddypress
 msgid "Finish &amp; Activate"
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:190
+#: bp-core/admin/bp-core-update.php:187
 #@ buddypress
 msgid "Save &amp; Next"
 msgstr ""
@@ -1106,7 +1105,18 @@ msgstr ""
 msgid "Site Directory"
 msgstr "サイトディレクトリ"
 
-#: bp-core/admin/bp-core-update.php:343
+#: bp-core/admin/bp-core-update.php:340
+#: bp-core/admin/bp-core-update.php:358
+#: bp-core/admin/bp-core-update.php:377
+#: bp-core/admin/bp-core-update.php:395
+#: bp-core/admin/bp-core-update.php:413
+#: bp-core/admin/bp-core-update.php:429
+#: bp-core/admin/bp-core-update.php:443
+#@ buddypress
+msgid "Automatically create a page at:"
+msgstr "ページを自動的に作成:"
+
+#: bp-core/admin/bp-core-update.php:344
 #: bp-core/admin/bp-core-update.php:361
 #: bp-core/admin/bp-core-update.php:380
 #: bp-core/admin/bp-core-update.php:398
@@ -1114,68 +1124,56 @@ msgstr "サイトディレクトリ"
 #: bp-core/admin/bp-core-update.php:432
 #: bp-core/admin/bp-core-update.php:446
 #@ buddypress
-msgid "Automatically create a page at:"
-msgstr "ページを自動的に作成:"
-
-#: bp-core/admin/bp-core-update.php:347
-#: bp-core/admin/bp-core-update.php:364
-#: bp-core/admin/bp-core-update.php:383
-#: bp-core/admin/bp-core-update.php:401
-#: bp-core/admin/bp-core-update.php:419
-#: bp-core/admin/bp-core-update.php:435
-#: bp-core/admin/bp-core-update.php:449
-#@ buddypress
 msgid "Use an existing page:"
 msgstr "既存のページを使用:"
 
-#: bp-core/admin/bp-core-update.php:345
-#: bp-core/admin/bp-core-update.php:363
-#: bp-core/admin/bp-core-update.php:382
-#: bp-core/admin/bp-core-update.php:400
-#: bp-core/admin/bp-core-update.php:418
-#: bp-core/admin/bp-core-update.php:434
-#: bp-core/admin/bp-core-update.php:448
+#: bp-core/admin/bp-core-update.php:342
+#: bp-core/admin/bp-core-update.php:360
+#: bp-core/admin/bp-core-update.php:379
+#: bp-core/admin/bp-core-update.php:397
+#: bp-core/admin/bp-core-update.php:415
+#: bp-core/admin/bp-core-update.php:431
+#: bp-core/admin/bp-core-update.php:445
 #@ buddypress
 msgid "- Select -"
 msgstr "- 選択 -"
 
-#: bp-core/admin/bp-core-update.php:259
+#: bp-core/admin/bp-core-update.php:256
 #@ buddypress
 msgid "BuddyPress bundles several individual social components together, each one adding a distinct feature. This first step decides which features are enabled on your site; all features are enabled by default. Don't worry, you can change your mind at any point in the future."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:301
+#: bp-core/admin/bp-core-update.php:298
 #@ buddypress
 msgid "members"
 msgstr "メンバー"
 
-#: bp-core/admin/bp-core-update.php:307
+#: bp-core/admin/bp-core-update.php:304
 #@ buddypress
 msgid "activity"
 msgstr "最近の状況"
 
-#: bp-core/admin/bp-core-update.php:310
+#: bp-core/admin/bp-core-update.php:307
 #@ buddypress
 msgid "forums"
 msgstr "フォーラム"
 
-#: bp-core/admin/bp-core-update.php:313
+#: bp-core/admin/bp-core-update.php:310
 #@ buddypress
 msgid "blogs"
 msgstr "ブログ"
 
-#: bp-core/admin/bp-core-update.php:316
+#: bp-core/admin/bp-core-update.php:313
 #@ buddypress
 msgid "register"
 msgstr "登録"
 
-#: bp-core/admin/bp-core-update.php:319
+#: bp-core/admin/bp-core-update.php:316
 #@ buddypress
 msgid "activate"
 msgstr "有効化"
 
-#: bp-core/admin/bp-core-update.php:339
-#: bp-core/bp-core-template.php:257
+#: bp-core/admin/bp-core-update.php:336
 #: bp-core/bp-core-widgets.php:19
 #: bp-core/bp-core-widgets.php:111
 #: bp-groups/bp-groups-template.php:1284
@@ -1186,7 +1184,7 @@ msgstr "有効化"
 msgid "Members"
 msgstr "メンバー"
 
-#: bp-core/admin/bp-core-update.php:340
+#: bp-core/admin/bp-core-update.php:337
 #@ buddypress
 msgid "Displays member profiles, and a directory of all site members."
 msgstr "メンバーのプロフィールと全員のディレクトリを表示する。"
@@ -1197,137 +1195,137 @@ msgstr "メンバーのプロフィールと全員のディレクトリを表示
 msgid "Site Activity"
 msgstr "サイトアクティビティ"
 
-#: bp-core/admin/bp-core-update.php:395
+#: bp-core/admin/bp-core-update.php:392
 #@ buddypress
 msgid "Displays the activity for the entire site, a member's friends, groups and @mentions."
 msgstr "サイト全体のアクティビティ、メンバーの友達、グループと@ 呼びかけを表示する。"
 
-#: bp-core/admin/bp-core-update.php:358
+#: bp-core/admin/bp-core-update.php:355
 #@ buddypress
 msgid "Displays individual groups as well as a directory of groups."
 msgstr "グループディレクトリに加えて個別のグループも表示する。"
 
-#: bp-core/admin/bp-core-update.php:413
+#: bp-core/admin/bp-core-update.php:410
 #@ buddypress
 msgid "Displays a directory of public forum topics."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:429
+#: bp-core/admin/bp-core-update.php:426
 #@ buddypress
 msgid "Displays a site registration page where users can create new accounts."
 msgstr "新規アカウントを作成する登録ページを表示する。"
 
-#: bp-core/admin/bp-core-update.php:443
+#: bp-core/admin/bp-core-update.php:440
 #@ buddypress
 msgid "The page users will visit to activate their account once they have registered."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:488
+#: bp-core/admin/bp-core-update.php:485
 #@ default
 msgid "Day and name"
 msgstr "日付と投稿名"
 
-#: bp-core/admin/bp-core-update.php:492
+#: bp-core/admin/bp-core-update.php:489
 #@ default
 msgid "Month and name"
 msgstr "月と投稿名"
 
-#: bp-core/admin/bp-core-update.php:496
+#: bp-core/admin/bp-core-update.php:493
 #@ default
 msgid "Numeric"
 msgstr "数字ベース"
 
-#: bp-core/admin/bp-core-update.php:562
+#: bp-core/admin/bp-core-update.php:559
 #@ buddypress
 msgid "Use BuddyPress Default"
 msgstr "BuddyPress デフォルトを使用"
 
-#: bp-core/admin/bp-core-update.php:563
+#: bp-core/admin/bp-core-update.php:560
 #@ buddypress
 msgid "BuddyPress Default"
 msgstr "BuddyPress デフォルト"
 
-#: bp-core/admin/bp-core-update.php:568
+#: bp-core/admin/bp-core-update.php:565
 #@ buddypress
 msgid "Yes, please!"
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:576
+#: bp-core/admin/bp-core-update.php:573
 #@ buddypress
 msgid "Other themes"
 msgstr "他のテーマ"
 
-#: bp-core/admin/bp-core-update.php:577
+#: bp-core/admin/bp-core-update.php:574
 #@ buddypress
 msgid "A BuddyPress theme"
 msgstr "BuddyPress テーマ"
 
-#: bp-core/admin/bp-core-update.php:583
+#: bp-core/admin/bp-core-update.php:580
 #@ buddypress
 msgid "Use this theme"
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:604
+#: bp-core/admin/bp-core-update.php:601
 #@ buddypress
 msgid "Manually update current theme"
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:608
+#: bp-core/admin/bp-core-update.php:605
 #@ buddypress
 msgid "Your existing theme"
 msgstr "既存のテーマ"
 
-#: bp-core/admin/bp-core-update.php:618
+#: bp-core/admin/bp-core-update.php:615
 #@ buddypress
 msgid "Install BuddyPress Template Pack"
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:622
+#: bp-core/admin/bp-core-update.php:619
 #@ buddypress
 msgid "Choose this option (go to Appearance &rarr; BP Compatibility after setup is complete)"
 msgstr "このオプションを選択 (設定完了後、外観 &rarr; BP 互換性ページへ移動してください)"
 
-#: bp-core/admin/bp-core-update.php:623
+#: bp-core/admin/bp-core-update.php:620
 #@ buddypress
 msgid "Plugin Installed"
 msgstr "インストール済みのプラグイン"
 
-#: bp-core/admin/bp-core-update.php:634
+#: bp-core/admin/bp-core-update.php:631
 #@ buddypress
 msgid "Do not change theme"
 msgstr "テーマを変更しない"
 
-#: bp-core/admin/bp-core-update.php:637
+#: bp-core/admin/bp-core-update.php:634
 #@ buddypress
 msgid "You are happy with your current theme and plan on changing it later."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:640
+#: bp-core/admin/bp-core-update.php:637
 #@ buddypress
 msgid "Don't change my current theme"
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:833
+#: bp-core/admin/bp-core-update.php:826
 #@ buddypress
 msgid "Oops, there was a problem creating a configuration file. "
 msgstr "設定ファイルの作成時に問題が発生しました。"
 
-#: bp-core/admin/bp-core-update.php:839
+#: bp-core/admin/bp-core-update.php:832
 #@ default
 msgid "If your <code>web.config</code> file were <a href=\"http://codex.wordpress.org/Changing_File_Permissions\">writable</a>, we could do this automatically, but it isn&#8217;t so this is the url rewrite rule you should have in your <code>web.config</code> file. Click in the field and press <kbd>CTRL + a</kbd> to select all. Then insert this rule inside of the <code>/&lt;configuration&gt;/&lt;system.webServer&gt;/&lt;rewrite&gt;/&lt;rules&gt;</code> element in <code>web.config</code> file."
 msgstr "あなたの <code>web.config</code> が<a href=\"http://wpdocs.sourceforge.jp/Changing_File_Permissions\">書き込み可能</a>ならこの操作は自動的に行われますが、そうでない場合は <code>web.config</code> ファイルに URL リライトルールを書き込む必要があります。このフィールドをクリックし、<kbd>CTRL + a</kbd> ですべてのコードを選択して、<code>web.config</code> ファイルの <code>/&lt;configuration&gt;/&lt;system.webServer&gt;/&lt;rewrite&gt;/&lt;rules&gt;</code> 要素に挿入してください。"
 
-#: bp-core/admin/bp-core-update.php:848
+#: bp-core/admin/bp-core-update.php:841
 #@ default
 msgid "Permalink structure updated. Remove write access on web.config file now!"
 msgstr "パーマリンク構造を更新しました。web.config ファイルの書き込みアクセスを削除してください！"
 
-#: bp-core/admin/bp-core-update.php:853
+#: bp-core/admin/bp-core-update.php:846
 #@ default
 msgid "If your <code>.htaccess</code> file were <a href=\"http://codex.wordpress.org/Changing_File_Permissions\">writable</a>, we could do this automatically, but it isn&#8217;t so these are the mod_rewrite rules you should have in your <code>.htaccess</code> file. Click in the field and press <kbd>CTRL + a</kbd> to select all."
 msgstr "<code>.htaccess</code> が<a href=\"http://wpdocs.sourceforge.jp/Changing_File_Permissions\">書き込み可能</a>ならこの操作は自動的に行われますが、そうでない場合は <code>.htaccess</code> ファイルに mod_rewrite ルールを書き込む必要があります。以下のフィールドをクリックし、<kbd>CTRL + a</kbd> ですべてのコードを選択してください。"
 
-#: bp-core/admin/bp-core-update.php:865
+#: bp-core/admin/bp-core-update.php:858
 #@ buddypress
 msgid "Paste all these rules into a new <code>.htaccess</code> file in the root of your WordPress installation and save the file. Once you're done, please hit the \"Save and Next\" button to continue."
 msgstr "WordPress をインストールしたルートディレクトリに新しく <code>.htaccess</code> ファイルを作成してこのすべてのルールをペーストし、保存してください。その後「保存して次へ」ボタンを押して先へ進んでください。"
@@ -1337,7 +1335,7 @@ msgstr "WordPress をインストールしたルートディレクトリに新�
 #: bp-core/bp-core-admin.php:217
 #: bp-core/bp-core-admin.php:237
 #: bp-loader.php:0
-#: bp-members/bp-members-functions.php:1260
+#: bp-members/bp-members-functions.php:1310
 #@ buddypress
 msgid "BuddyPress"
 msgstr ""
@@ -1353,63 +1351,63 @@ msgstr ""
 msgid "Avatar Image"
 msgstr "アバター画像"
 
-#: bp-core/bp-core-avatars.php:482
+#: bp-core/bp-core-avatars.php:481
 #@ buddypress
 msgid "There is no error, the file uploaded with success"
 msgstr "エラーはありません。ファイルアップロードは成功しました。"
 
+#: bp-core/bp-core-avatars.php:482
 #: bp-core/bp-core-avatars.php:483
-#: bp-core/bp-core-avatars.php:484
 #@ buddypress
 msgid "Your image was bigger than the maximum allowed file size of: "
 msgstr "画像サイズが大きすぎます。最大サイズは次の通りです:"
 
-#: bp-core/bp-core-avatars.php:485
+#: bp-core/bp-core-avatars.php:484
 #@ buddypress
 msgid "The uploaded file was only partially uploaded"
 msgstr "アップロードしたファイルは一部分のみアップロードされました"
 
-#: bp-core/bp-core-avatars.php:486
+#: bp-core/bp-core-avatars.php:485
 #@ buddypress
 msgid "No file was uploaded"
 msgstr "ファイルはアップロードされませんでした"
 
-#: bp-core/bp-core-avatars.php:487
+#: bp-core/bp-core-avatars.php:486
 #@ buddypress
 msgid "Missing a temporary folder"
 msgstr "一時フォルダーが見つかりません"
 
-#: bp-core/bp-core-avatars.php:491
+#: bp-core/bp-core-avatars.php:490
 #, php-format
 #@ buddypress
 msgid "Your upload failed, please try again. Error was: %s"
 msgstr "アップロードが失敗しました。もう一度お試しください。エラー内容: %s"
 
-#: bp-core/bp-core-avatars.php:496
+#: bp-core/bp-core-avatars.php:495
 #, php-format
 #@ buddypress
 msgid "The file you uploaded is too big. Please upload a file under %s"
 msgstr "アップロードしたファイルは大きすぎます。%s 以下のサイズでアップロードしてください"
 
-#: bp-core/bp-core-avatars.php:501
+#: bp-core/bp-core-avatars.php:500
 #@ buddypress
 msgid "Please upload only JPG, GIF or PNG photos."
 msgstr "JPG, GIF, PNG 以外のフォーマットには対応しておりません。"
 
-#: bp-core/bp-core-avatars.php:512
-#: bp-core/bp-core-avatars.php:525
+#: bp-core/bp-core-avatars.php:511
+#: bp-core/bp-core-avatars.php:546
 #, php-format
 #@ buddypress
 msgid "Upload Failed! Error was: %s"
 msgstr ""
 
-#: bp-core/bp-core-avatars.php:543
+#: bp-core/bp-core-avatars.php:564
 #, php-format
 #@ buddypress
 msgid "Upload failed! Error was: %s"
 msgstr "アップロードが失敗しました。エラー: %s"
 
-#: bp-core/bp-core-avatars.php:678
+#: bp-core/bp-core-avatars.php:699
 #: bp-core/bp-core-classes.php:174
 #: bp-core/bp-core-classes.php:175
 #: bp-core/bp-core-classes.php:176
@@ -1446,7 +1444,7 @@ msgstr "アカウント"
 
 #: bp-core/bp-core-buddybar.php:537
 #: bp-core/deprecated/1.5.php:287
-#: bp-members/bp-members-template.php:731
+#: bp-members/bp-members-template.php:732
 #: bp-themes/bp-default/sidebar.php:18
 #@ buddypress
 msgid "Log Out"
@@ -1472,13 +1470,13 @@ msgstr "グループをでたらめに"
 msgid "Random Site"
 msgstr ""
 
-#: bp-core/bp-core-catchuri.php:278
+#: bp-core/bp-core-catchuri.php:281
 #@ buddypress
 msgid "This user has been marked as a spammer. Only site admins can view this profile."
 msgstr "このユーザーはスパマーとしてマークされています。サイト管理者だけがプロフィールを見ることができます。"
 
-#: bp-core/bp-core-catchuri.php:452
-#: bp-core/bp-core-catchuri.php:513
+#: bp-core/bp-core-catchuri.php:455
+#: bp-core/bp-core-catchuri.php:516
 #@ buddypress
 msgid "You must log in to access the page you requested."
 msgstr ""
@@ -1525,7 +1523,7 @@ msgid "Activate %s"
 msgstr "%s を有効にする"
 
 #: bp-core/bp-core-filters.php:256
-#: bp-members/bp-members-functions.php:1263
+#: bp-members/bp-members-functions.php:1313
 #@ buddypress
 msgid "Activate Your Account"
 msgstr "アカウントを有効にする"
@@ -1716,13 +1714,11 @@ msgstr "オプション"
 msgid "%1$s at %2$s"
 msgstr "%1$s %2$s"
 
-#: bp-core/admin/bp-core-update.php:376
-#: bp-core/bp-core-template.php:263
+#: bp-core/admin/bp-core-update.php:373
 #@ buddypress
 msgid "Blogs"
 msgstr "ブログ"
 
-#: bp-core/bp-core-template.php:268
 #: bp-themes/bp-clover-cafe/forums/forums-loop.php:42
 #: bp-themes/bp-default/activity/index.php:99
 #: bp-themes/bp-default/forums/forums-loop.php:40
@@ -1731,17 +1727,12 @@ msgstr "ブログ"
 msgid "Posts"
 msgstr "投稿数"
 
-#: bp-core/bp-core-template.php:271
-#@ buddypress
-msgid "Search these:"
-msgstr ""
-
-#: bp-core/bp-core-template.php:299
+#: bp-core/bp-core-template.php:302
 #@ buddypress
 msgid "Search anything..."
 msgstr "検索する..."
 
-#: bp-core/bp-core-template.php:393
+#: bp-core/bp-core-template.php:396
 #@ buddypress
 msgid " [&hellip;]"
 msgstr ""
@@ -1755,8 +1746,8 @@ msgstr ""
 #: bp-core/bp-core-widgets.php:133
 #: bp-core/deprecated/1.6.php:111
 #: bp-core/deprecated/1.6.php:134
-#: bp-groups/bp-groups-widgets.php:61
-#: bp-groups/bp-groups-widgets.php:141
+#: bp-groups/bp-groups-widgets.php:66
+#: bp-groups/bp-groups-widgets.php:146
 #: bp-themes/bp-clover-cafe/blogs/index.php:56
 #: bp-themes/bp-clover-cafe/members/single/blogs.php:22
 #: bp-themes/bp-default/blogs/index.php:56
@@ -1767,16 +1758,16 @@ msgstr "新着順"
 
 #: bp-core/bp-core-widgets.php:48
 #: bp-core/bp-core-widgets.php:134
-#: bp-groups/bp-groups-widgets.php:60
-#: bp-groups/bp-groups-widgets.php:142
+#: bp-groups/bp-groups-widgets.php:65
+#: bp-groups/bp-groups-widgets.php:147
 #@ buddypress
 msgid "Active"
 msgstr "活発順"
 
 #: bp-core/bp-core-widgets.php:52
 #: bp-core/bp-core-widgets.php:135
-#: bp-groups/bp-groups-widgets.php:62
-#: bp-groups/bp-groups-widgets.php:143
+#: bp-groups/bp-groups-widgets.php:67
+#: bp-groups/bp-groups-widgets.php:148
 #@ buddypress
 msgid "Popular"
 msgstr "人気順"
@@ -1789,7 +1780,7 @@ msgstr "誰もまだ登録していません !"
 #: bp-core/bp-core-widgets.php:124
 #: bp-core/bp-core-widgets.php:201
 #: bp-core/bp-core-widgets.php:265
-#: bp-groups/bp-groups-widgets.php:132
+#: bp-groups/bp-groups-widgets.php:137
 #: bp-themes/bp-clover-cafe/forums/index.php:103
 #: bp-themes/bp-clover-cafe/groups/single/forum/edit.php:30
 #: bp-themes/bp-clover-cafe/groups/single/forum.php:66
@@ -2340,7 +2331,7 @@ msgstr "あなたはこの人からの友達リクエストを保留したまま
 
 #: bp-friends/bp-friends-actions.php:70
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:600
-#: bp-themes/bp-default/_inc/ajax.php:600
+#: bp-themes/bp-default/_inc/ajax.php:601
 #@ buddypress
 msgid "Friendship could not be canceled."
 msgstr "友達から解除できませんでした。"
@@ -2586,8 +2577,8 @@ msgstr "友達を削除"
 #: bp-friends/bp-friends-template.php:320
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:602
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:616
-#: bp-themes/bp-default/_inc/ajax.php:602
-#: bp-themes/bp-default/_inc/ajax.php:616
+#: bp-themes/bp-default/_inc/ajax.php:603
+#: bp-themes/bp-default/_inc/ajax.php:617
 #@ buddypress
 msgid "Add Friend"
 msgstr "友達に追加"
@@ -2641,7 +2632,7 @@ msgid "You joined the group!"
 msgstr "グループに参加しました！"
 
 #: bp-groups/bp-groups-actions.php:254
-#: bp-groups/bp-groups-screens.php:660
+#: bp-groups/bp-groups-screens.php:663
 #@ buddypress
 msgid "This group must have at least one admin"
 msgstr ""
@@ -2828,12 +2819,12 @@ msgstr "グループ設定"
 msgid "Group Avatar"
 msgstr "グループ画像"
 
-#: bp-groups/bp-groups-classes.php:820
+#: bp-groups/bp-groups-classes.php:832
 #@ buddypress
 msgid "Group Mod"
 msgstr "グループモデレーター"
 
-#: bp-groups/bp-groups-classes.php:826
+#: bp-groups/bp-groups-classes.php:838
 #: bp-groups/bp-groups-functions.php:121
 #@ buddypress
 msgid "Group Admin"
@@ -2847,6 +2838,7 @@ msgid "%1$s replied to the forum topic %2$s in the group %3$s"
 msgstr "%1$s さんが <span>%2$s</span> に返信しました:"
 
 #: bp-groups/bp-groups-forums.php:154
+#: bp-groups/bp-groups-forums.php:206
 #, php-format
 #@ buddypress
 msgid "%1$s started the forum topic %2$s in the group %3$s"
@@ -2931,7 +2923,7 @@ msgstr "管理"
 #: bp-groups/bp-groups-loader.php:412
 #: bp-groups/bp-groups-template.php:1581
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:708
-#: bp-themes/bp-default/_inc/ajax.php:708
+#: bp-themes/bp-default/_inc/ajax.php:709
 #@ buddypress
 msgid "Request Membership"
 msgstr "加入を依頼する"
@@ -3293,112 +3285,112 @@ msgstr "アバターを削除しました！"
 msgid "There was a problem deleting that avatar, please try again."
 msgstr "アバターを削除する際にエラーが発生しました。もう一度お試しください。"
 
-#: bp-groups/bp-groups-screens.php:602
+#: bp-groups/bp-groups-screens.php:605
 #@ buddypress
 msgid "There was a problem cropping the avatar, please try uploading it again"
 msgstr "アバターを切り取る際に問題が発生しました。再度アップロードを行ってください。"
 
-#: bp-groups/bp-groups-screens.php:604
+#: bp-groups/bp-groups-screens.php:607
 #@ buddypress
 msgid "The new group avatar was uploaded successfully!"
 msgstr "新しいグループ画像をアップロードしました !"
 
-#: bp-groups/bp-groups-screens.php:639
+#: bp-groups/bp-groups-screens.php:642
 #@ buddypress
 msgid "There was an error when promoting that user, please try again"
 msgstr "ユーザを昇格させる際にエラーが発生しました。もう一度お試しください。"
 
-#: bp-groups/bp-groups-screens.php:641
+#: bp-groups/bp-groups-screens.php:644
 #@ buddypress
 msgid "User promoted successfully"
 msgstr "ユーザーを昇格させました"
 
-#: bp-groups/bp-groups-screens.php:664
+#: bp-groups/bp-groups-screens.php:667
 #@ buddypress
 msgid "There was an error when demoting that user, please try again"
 msgstr "ユーザを降格させる際にエラーが発生しました。もう一度お試しください。"
 
-#: bp-groups/bp-groups-screens.php:666
+#: bp-groups/bp-groups-screens.php:669
 #@ buddypress
 msgid "User demoted successfully"
 msgstr "ユーザーを降格させました"
 
-#: bp-groups/bp-groups-screens.php:682
+#: bp-groups/bp-groups-screens.php:685
 #@ buddypress
 msgid "There was an error when banning that user, please try again"
 msgstr "ユーザーを追放する際にエラーが発生しました。もう一度お試しください。"
 
-#: bp-groups/bp-groups-screens.php:684
+#: bp-groups/bp-groups-screens.php:687
 #@ buddypress
 msgid "User banned successfully"
 msgstr "ユーザーを追放しました"
 
-#: bp-groups/bp-groups-screens.php:700
+#: bp-groups/bp-groups-screens.php:703
 #@ buddypress
 msgid "There was an error when unbanning that user, please try again"
 msgstr "ユーザーの追放を撤回する際にエラーが発生しました。もう一度お試しください。"
 
-#: bp-groups/bp-groups-screens.php:702
+#: bp-groups/bp-groups-screens.php:705
 #@ buddypress
 msgid "User ban removed successfully"
 msgstr "ユーザーの追放を撤回しました"
 
-#: bp-groups/bp-groups-screens.php:718
+#: bp-groups/bp-groups-screens.php:721
 #@ buddypress
 msgid "There was an error removing that user from the group, please try again"
 msgstr "グループからユーザーを削除する際にエラーが発生しました。もう一度お試しください。"
 
-#: bp-groups/bp-groups-screens.php:720
+#: bp-groups/bp-groups-screens.php:723
 #@ buddypress
 msgid "User removed successfully"
 msgstr "ユーザーを削除しました"
 
-#: bp-groups/bp-groups-screens.php:758
+#: bp-groups/bp-groups-screens.php:761
 #@ buddypress
 msgid "There was an error accepting the membership request, please try again."
 msgstr "グループへの加入依頼を受理する際にエラーが発生しました。もう一度お試しください。"
 
-#: bp-groups/bp-groups-screens.php:760
+#: bp-groups/bp-groups-screens.php:763
 #@ buddypress
 msgid "Group membership request accepted"
 msgstr "グループへの加入依頼を受理しました"
 
-#: bp-groups/bp-groups-screens.php:769
+#: bp-groups/bp-groups-screens.php:772
 #@ buddypress
 msgid "There was an error rejecting the membership request, please try again."
 msgstr "グループへの加入依頼を拒否する際にエラーが発生しました。もう一度お試しください。"
 
-#: bp-groups/bp-groups-screens.php:771
+#: bp-groups/bp-groups-screens.php:774
 #@ buddypress
 msgid "Group membership request rejected"
 msgstr "グループへの加入依頼を拒否しました"
 
-#: bp-groups/bp-groups-screens.php:801
+#: bp-groups/bp-groups-screens.php:804
 #@ buddypress
 msgid "There was an error deleting the group, please try again."
 msgstr "グループを削除する際にエラーが発生しました。もう一度お試しください。"
 
-#: bp-groups/bp-groups-screens.php:803
+#: bp-groups/bp-groups-screens.php:806
 #@ buddypress
 msgid "The group was deleted successfully"
 msgstr "グループを削除しました。"
 
-#: bp-groups/bp-groups-screens.php:853
+#: bp-groups/bp-groups-screens.php:856
 #@ buddypress
 msgid "A member invites you to join a group"
 msgstr "グループに招待されました"
 
-#: bp-groups/bp-groups-screens.php:859
+#: bp-groups/bp-groups-screens.php:862
 #@ buddypress
 msgid "Group information is updated"
 msgstr "グループの情報が更新されました"
 
-#: bp-groups/bp-groups-screens.php:865
+#: bp-groups/bp-groups-screens.php:868
 #@ buddypress
 msgid "You are promoted to a group administrator or moderator"
 msgstr "あなたがグループ管理者に指名されました"
 
-#: bp-groups/bp-groups-screens.php:871
+#: bp-groups/bp-groups-screens.php:874
 #@ buddypress
 msgid "A member requests to join a private group for which you are an admin"
 msgstr "あなたが管理している非公開グループに加入依頼がきています"
@@ -3541,14 +3533,14 @@ msgstr "トピックの作成"
 
 #: bp-groups/bp-groups-template.php:1542
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:689
-#: bp-themes/bp-default/_inc/ajax.php:689
+#: bp-themes/bp-default/_inc/ajax.php:690
 #@ buddypress
 msgid "Leave Group"
 msgstr "グループを脱退"
 
 #: bp-groups/bp-groups-template.php:1564
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:706
-#: bp-themes/bp-default/_inc/ajax.php:706
+#: bp-themes/bp-default/_inc/ajax.php:707
 #@ buddypress
 msgid "Join Group"
 msgstr "グループに参加"
@@ -3634,29 +3626,29 @@ msgstr "グループの活動 RSS フィード"
 msgid "A dynamic list of recently active, popular, and newest groups"
 msgstr ""
 
-#: bp-groups/bp-groups-widgets.php:78
-#: bp-groups/bp-groups-widgets.php:183
+#: bp-groups/bp-groups-widgets.php:83
+#: bp-groups/bp-groups-widgets.php:188
 #, php-format
 #@ buddypress
 msgid "created %s"
 msgstr "作成日: %s"
 
-#: bp-groups/bp-groups-widgets.php:97
+#: bp-groups/bp-groups-widgets.php:102
 #@ buddypress
 msgid "There are no groups to display."
 msgstr "表示するグループはありません。"
 
-#: bp-groups/bp-groups-widgets.php:136
+#: bp-groups/bp-groups-widgets.php:141
 #@ buddypress
 msgid "Max groups to show:"
 msgstr "表示する最大グループ数:"
 
-#: bp-groups/bp-groups-widgets.php:139
+#: bp-groups/bp-groups-widgets.php:144
 #@ buddypress
 msgid "Default groups to show:"
 msgstr "デフォルトで表示するグループ:"
 
-#: bp-groups/bp-groups-widgets.php:202
+#: bp-groups/bp-groups-widgets.php:207
 #@ buddypress
 msgid "No groups matched the current filter."
 msgstr "現在の条件に該当するグループはありません。"
@@ -3796,71 +3788,71 @@ msgstr "この項目は必須です"
 msgid "Your account is now active!"
 msgstr "アカウントを登録しました！"
 
-#: bp-members/bp-members-functions.php:988
+#: bp-members/bp-members-functions.php:1038
 #@ buddypress
 msgid "Please enter a username"
 msgstr "ユーザー名を入力してください。"
 
-#: bp-members/bp-members-functions.php:996
+#: bp-members/bp-members-functions.php:1046
 #@ buddypress
 msgid "Only lowercase letters and numbers allowed"
 msgstr "英小文字と数字のみ使えます"
 
-#: bp-members/bp-members-functions.php:999
+#: bp-members/bp-members-functions.php:1049
 #@ buddypress
 msgid "Username must be at least 4 characters"
 msgstr "ユーザー名は最低4文字必要です"
 
-#: bp-members/bp-members-functions.php:1002
+#: bp-members/bp-members-functions.php:1052
 #@ buddypress
 msgid "Sorry, usernames may not contain the character \"_\"!"
 msgstr "ユーザー名に '_' (アンダーバー) を含めることはできません！"
 
-#: bp-members/bp-members-functions.php:1009
+#: bp-members/bp-members-functions.php:1059
 #@ buddypress
 msgid "Sorry, usernames must have letters too!"
 msgstr "ユーザー名には半角英字の小文字を含めてください！"
 
-#: bp-members/bp-members-functions.php:1012
+#: bp-members/bp-members-functions.php:1062
 #@ buddypress
 msgid "Please check your email address."
 msgstr ""
 
-#: bp-members/bp-members-functions.php:1015
-#: bp-members/bp-members-functions.php:1023
+#: bp-members/bp-members-functions.php:1065
+#: bp-members/bp-members-functions.php:1073
 #@ buddypress
 msgid "Sorry, that email address is not allowed!"
 msgstr "そのメールアドレスでは登録できません !"
 
-#: bp-members/bp-members-functions.php:1028
+#: bp-members/bp-members-functions.php:1078
 #@ buddypress
 msgid "Sorry, that username already exists!"
 msgstr "このユーザー名は既に使用されています !"
 
-#: bp-members/bp-members-functions.php:1032
+#: bp-members/bp-members-functions.php:1082
 #@ buddypress
 msgid "Sorry, that email address is already used!"
 msgstr "このメールアドレスは既に使用されています !"
 
-#: bp-members/bp-members-functions.php:1071
+#: bp-members/bp-members-functions.php:1121
 #, php-format
 #@ buddypress
 msgid "<strong>ERROR</strong>: Couldn&#8217;t register you... please contact the <a href=\"mailto:%s\">webmaster</a> !"
 msgstr "<strong>エラー</strong>: アカウントを登録できませんでした。<a href=\"mailto:%s\">サイト管理者</a>にご連絡ください。"
 
-#: bp-members/bp-members-functions.php:1169
-#: bp-members/bp-members-functions.php:1173
+#: bp-members/bp-members-functions.php:1219
+#: bp-members/bp-members-functions.php:1223
 #@ buddypress
 msgid "Invalid activation key"
 msgstr "無効な有効化キーです。"
 
-#: bp-members/bp-members-functions.php:1210
+#: bp-members/bp-members-functions.php:1260
 #, php-format
 #@ buddypress
 msgid "%s became a registered member"
 msgstr "%s は登録ユーザーになりました"
 
-#: bp-members/bp-members-functions.php:1296
+#: bp-members/bp-members-functions.php:1346
 #@ buddypress
 msgid "<strong>ERROR</strong>: Your account has not been activated. Check your email for the activation link."
 msgstr ""
@@ -3901,30 +3893,30 @@ msgstr "%1$s人目から%2$s人目のメンバーを表示中 (オンライン�
 msgid "Viewing member %1$s to %2$s (of %3$s members)"
 msgstr "%1$s人目から%2$s人目のメンバーを表示中 (メンバー%3$s人中)"
 
-#: bp-members/bp-members-template.php:555
+#: bp-members/bp-members-template.php:556
 #@ buddypress
 msgid "Never active"
 msgstr "まだログインしていません"
 
-#: bp-members/bp-members-template.php:577
+#: bp-members/bp-members-template.php:578
 #, php-format
 #@ buddypress
 msgctxt "member latest update in member directory"
 msgid "- &quot;%s &quot;"
 msgstr ""
 
-#: bp-members/bp-members-template.php:634
+#: bp-members/bp-members-template.php:635
 #, php-format
 #@ buddypress
 msgid "registered %s"
 msgstr ""
 
-#: bp-members/bp-members-template.php:1076
+#: bp-members/bp-members-template.php:1077
 #@ buddypress
 msgid "Your Avatar"
 msgstr "あなたのアバター"
 
-#: bp-members/bp-members-template.php:1146
+#: bp-members/bp-members-template.php:1147
 #@ buddypress
 msgid "Activity RSS Feed"
 msgstr "アクティビティ RSS フィード"
@@ -3969,7 +3961,7 @@ msgstr "メッセージを削除する際にエラーが発生しました。"
 
 #: bp-messages/bp-messages-actions.php:110
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:853
-#: bp-themes/bp-default/_inc/ajax.php:853
+#: bp-themes/bp-default/_inc/ajax.php:854
 #@ buddypress
 msgid "Messages deleted."
 msgstr "メッセージを削除しました。"
@@ -4214,58 +4206,58 @@ msgstr "%d人の受信者"
 
 #: bp-messages/bp-messages-template.php:921
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:760
-#: bp-themes/bp-default/_inc/ajax.php:760
+#: bp-themes/bp-default/_inc/ajax.php:761
 #, php-format
 #@ buddypress
 msgid "Sent %s"
 msgstr "送信日時: %s"
 
-#: bp-settings/bp-settings-actions.php:161
+#: bp-settings/bp-settings-actions.php:157
 #@ buddypress
 msgid "That email address is invalid. Check the formatting and try again."
 msgstr "無効なメールアドレスです。フォーマットを確認してもう一度お試しください。"
 
-#: bp-settings/bp-settings-actions.php:164
+#: bp-settings/bp-settings-actions.php:160
 #@ buddypress
 msgid "That email address is currently unavailable for use."
 msgstr "そのメールアドレスは現在使用できません。"
 
-#: bp-settings/bp-settings-actions.php:167
+#: bp-settings/bp-settings-actions.php:163
 #@ buddypress
 msgid "That email address is already taken."
 msgstr "このメールアドレスは既に使用されています。"
 
-#: bp-settings/bp-settings-actions.php:170
+#: bp-settings/bp-settings-actions.php:166
 #@ buddypress
 msgid "Email address cannot be empty."
 msgstr "メールアドレスは必ず入力してください。"
 
-#: bp-settings/bp-settings-actions.php:180
+#: bp-settings/bp-settings-actions.php:176
 #@ buddypress
 msgid "Your current password is invalid."
 msgstr "現在のパスワードが無効です。"
 
-#: bp-settings/bp-settings-actions.php:183
+#: bp-settings/bp-settings-actions.php:179
 #@ buddypress
 msgid "The new password fields did not match."
 msgstr "新しいパスワードが一致しませんでした。"
 
-#: bp-settings/bp-settings-actions.php:186
+#: bp-settings/bp-settings-actions.php:182
 #@ buddypress
 msgid "One of the password fields was empty."
 msgstr "パスワード欄のいずれかが記入されていません。"
 
-#: bp-settings/bp-settings-actions.php:195
+#: bp-settings/bp-settings-actions.php:191
 #@ buddypress
 msgid "Your settings have been saved."
 msgstr "設定を保存しました。"
 
-#: bp-settings/bp-settings-actions.php:201
+#: bp-settings/bp-settings-actions.php:197
 #@ buddypress
 msgid "No changes were made to your account."
 msgstr "アカウントは変更されませんでした。"
 
-#: bp-settings/bp-settings-actions.php:203
+#: bp-settings/bp-settings-actions.php:199
 #@ buddypress
 msgid "No changes were made to this account."
 msgstr "アカウントは変更されませんでした。"
@@ -4301,8 +4293,8 @@ msgstr "近況を投稿する際にエラーが発生しました。もう一度
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:379
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:415
-#: bp-themes/bp-default/_inc/ajax.php:379
-#: bp-themes/bp-default/_inc/ajax.php:415
+#: bp-themes/bp-default/_inc/ajax.php:380
+#: bp-themes/bp-default/_inc/ajax.php:416
 #@ buddypress
 msgid "There was a problem when deleting. Please try again."
 msgstr "削除する際にエラーが発生しました。もう一度お試しください。"
@@ -4311,8 +4303,8 @@ msgstr "削除する際にエラーが発生しました。もう一度お試し
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:499
 #: bp-themes/bp-clover-cafe/activity/entry.php:83
 #: bp-themes/bp-clover-cafe/functions.php:167
-#: bp-themes/bp-default/_inc/ajax.php:478
-#: bp-themes/bp-default/_inc/ajax.php:499
+#: bp-themes/bp-default/_inc/ajax.php:479
+#: bp-themes/bp-default/_inc/ajax.php:500
 #: bp-themes/bp-default/activity/entry.php:72
 #: bp-themes/bp-default/functions.php:167
 #@ buddypress
@@ -4323,8 +4315,8 @@ msgstr "お気に入りから削除"
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:497
 #: bp-themes/bp-clover-cafe/activity/entry.php:79
 #: bp-themes/bp-clover-cafe/functions.php:166
-#: bp-themes/bp-default/_inc/ajax.php:480
-#: bp-themes/bp-default/_inc/ajax.php:497
+#: bp-themes/bp-default/_inc/ajax.php:481
+#: bp-themes/bp-default/_inc/ajax.php:498
 #: bp-themes/bp-default/activity/entry.php:68
 #: bp-themes/bp-default/functions.php:166
 #@ buddypress
@@ -4334,7 +4326,7 @@ msgstr "お気に入り"
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:569
 #: bp-themes/bp-clover-cafe/groups/create.php:212
 #: bp-themes/bp-clover-cafe/groups/single/send-invites.php:42
-#: bp-themes/bp-default/_inc/ajax.php:569
+#: bp-themes/bp-default/_inc/ajax.php:570
 #: bp-themes/bp-default/groups/create.php:229
 #: bp-themes/bp-default/groups/single/send-invites.php:42
 #@ buddypress
@@ -4342,73 +4334,73 @@ msgid "Remove Invite"
 msgstr "キャンセルする"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:621
-#: bp-themes/bp-default/_inc/ajax.php:621
+#: bp-themes/bp-default/_inc/ajax.php:622
 #@ buddypress
 msgid "Request Pending"
 msgstr "保留中のリクエスト"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:641
-#: bp-themes/bp-default/_inc/ajax.php:641
+#: bp-themes/bp-default/_inc/ajax.php:642
 #@ buddypress
 msgid "There was a problem accepting that request. Please try again."
 msgstr "依頼を受理する際にエラーが発生しました。もう一度お試しください。"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:660
-#: bp-themes/bp-default/_inc/ajax.php:660
+#: bp-themes/bp-default/_inc/ajax.php:661
 #@ buddypress
 msgid "There was a problem rejecting that request. Please try again."
 msgstr "依頼を拒否する際にエラーが発生しました。もう一度お試しください。"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:687
-#: bp-themes/bp-default/_inc/ajax.php:687
+#: bp-themes/bp-default/_inc/ajax.php:688
 #@ buddypress
 msgid "Error joining group"
 msgstr "グループ加入のエラー"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:695
-#: bp-themes/bp-default/_inc/ajax.php:695
+#: bp-themes/bp-default/_inc/ajax.php:696
 #@ buddypress
 msgid "Error requesting membership"
 msgstr "グループ加入依頼のエラー"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:697
-#: bp-themes/bp-default/_inc/ajax.php:697
+#: bp-themes/bp-default/_inc/ajax.php:698
 #@ buddypress
 msgid "Membership Requested"
 msgstr "加入を依頼中"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:704
-#: bp-themes/bp-default/_inc/ajax.php:704
+#: bp-themes/bp-default/_inc/ajax.php:705
 #@ buddypress
 msgid "Error leaving group"
 msgstr "グループ脱退のエラー"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:726
-#: bp-themes/bp-default/_inc/ajax.php:726
+#: bp-themes/bp-default/_inc/ajax.php:727
 #@ buddypress
 msgid "There was a problem closing the notice."
 msgstr "通知を閉じる際に問題が発生しました。"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:777
-#: bp-themes/bp-default/_inc/ajax.php:777
+#: bp-themes/bp-default/_inc/ajax.php:778
 #@ buddypress
 msgid "There was a problem sending that reply. Please try again."
 msgstr "返信する際にエラーが発生しました。もう一度お試しください。"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:795
-#: bp-themes/bp-default/_inc/ajax.php:795
+#: bp-themes/bp-default/_inc/ajax.php:796
 #@ buddypress
 msgid "There was a problem marking messages as unread."
 msgstr "メッセージを未読にする際に問題が発生しました。"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:820
-#: bp-themes/bp-default/_inc/ajax.php:820
+#: bp-themes/bp-default/_inc/ajax.php:821
 #@ buddypress
 msgid "There was a problem marking messages as read."
 msgstr "メッセージを既読にする際に問題が発生しました。"
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:845
-#: bp-themes/bp-default/_inc/ajax.php:845
+#: bp-themes/bp-default/_inc/ajax.php:846
 #@ buddypress
 msgid "There was a problem deleting messages."
 msgstr "メッセージを削除する際に問題が発生しました。"
@@ -4864,19 +4856,19 @@ msgid "Alphabetical"
 msgstr "アルファベット順"
 
 #: bp-themes/bp-clover-cafe/comments.php:12
-#: bp-themes/bp-default/comments.php:12
+#: bp-themes/bp-default/comments.php:3
 #@ buddypress
 msgid "Password Protected"
 msgstr "パスワードで保護されています"
 
 #: bp-themes/bp-clover-cafe/comments.php:13
-#: bp-themes/bp-default/comments.php:13
+#: bp-themes/bp-default/comments.php:4
 #@ buddypress
 msgid "Enter the password to view comments."
 msgstr "コメントを見るにはパスワードを入力してください。"
 
 #: bp-themes/bp-clover-cafe/comments.php:31
-#: bp-themes/bp-default/comments.php:31
+#: bp-themes/bp-default/comments.php:24
 #, php-format
 #@ buddypress
 msgid "1 response to %2$s"
@@ -4885,20 +4877,20 @@ msgstr[0] "1件のコメントがあります"
 msgstr[1] "%1$s件のコメントがあります"
 
 #: bp-themes/bp-clover-cafe/comments.php:55
-#: bp-themes/bp-default/comments.php:55
+#: bp-themes/bp-default/comments.php:46
 #, php-format
 #@ buddypress
 msgid "Comments are closed, but <a href=\"%1$s\" title=\"Trackback URL for this post\">trackbacks</a> and pingbacks are open."
 msgstr "コメントは停止しています。ただし、 <a href=\"%1$s\" title=\"この投稿のトラックバック\">トラックバック</a>やピンバックは受け付けています。"
 
 #: bp-themes/bp-clover-cafe/comments.php:59
-#: bp-themes/bp-default/comments.php:59
+#: bp-themes/bp-default/comments.php:50
 #@ buddypress
 msgid "Comments are closed."
 msgstr "コメントは停止中です。"
 
 #: bp-themes/bp-clover-cafe/comments.php:70
-#: bp-themes/bp-default/comments.php:70
+#: bp-themes/bp-default/comments.php:62
 #, php-format
 #@ buddypress
 msgid "1 trackback"
@@ -5527,7 +5519,6 @@ msgid "If you'd like to remove the existing avatar but not upload a new one, ple
 msgstr "アバターを削除したい場合は「アバター削除」ボタンを押してください。"
 
 #: bp-themes/bp-clover-cafe/groups/single/admin.php:118
-#: bp-themes/bp-clover-cafe/members/single/profile/change-avatar.php:24
 #: bp-themes/bp-default/groups/single/admin.php:139
 #: bp-themes/bp-default/members/single/profile/change-avatar.php:24
 #@ buddypress
@@ -6047,7 +6038,6 @@ msgstr "一般設定"
 msgid "Current Password <span>(required to update email or change current password)</span>"
 msgstr "現在のパスワード<span>（メールアドレスまたはパスワードの変更時は必須）</span>"
 
-#: bp-themes/bp-clover-cafe/members/single/settings/general.php:58
 #: bp-themes/bp-default/members/single/settings/general.php:58
 #@ buddypress
 msgid "Password Lost and Found"
@@ -6595,12 +6585,12 @@ msgstr "保存する前に、このプロフィール欄グループにおいて
 msgid "There was a problem updating some of your profile information, please try again."
 msgstr "プロフィール情報を更新する際にエラーが発生しました。もう一度お試しください。"
 
-#: bp-xprofile/bp-xprofile-screens.php:180
+#: bp-xprofile/bp-xprofile-screens.php:183
 #@ buddypress
 msgid "There was a problem cropping your avatar, please try uploading it again"
 msgstr "アバターを切り取る際に問題が発生しました。再度アップロードしてください"
 
-#: bp-xprofile/bp-xprofile-screens.php:182
+#: bp-xprofile/bp-xprofile-screens.php:185
 #@ buddypress
 msgid "Your new avatar was uploaded successfully!"
 msgstr "あなたのアバターは正常にアップロードされました！"
@@ -6673,12 +6663,6 @@ msgstr "アバターがアップロードできませんでした。代わりに
 #: bp-xprofile/bp-xprofile-template.php:855
 #@ buddypress
 msgid "Profile not recently updated"
-msgstr ""
-
-#: bp-themes/bp-clover-cafe/activity/index.php:39
-#, php-format
-#@ buddypress
-msgid "マイグループ <span>%s</span>"
 msgstr ""
 
 #: bp-themes/bp-clover-cafe/forums/forums-loop.php:40
@@ -7119,7 +7103,7 @@ msgctxt "x hours ago - akismet cleared this item"
 msgid "<span>%1$s</span> &mdash; %2$s"
 msgstr ""
 
-#: bp-activity/bp-activity-classes.php:120
+#: bp-activity/bp-activity-classes.php:122
 #: bp-activity/bp-activity-template.php:120
 #, php-format
 #@ buddypress
@@ -7339,108 +7323,92 @@ msgid "Absolute path to your bbPress configuration file."
 msgstr ""
 
 #: bp-core/admin/bp-core-update.php:75
-#: bp-core/admin/bp-core-update.php:220
+#: bp-core/admin/bp-core-update.php:217
 #: bp-core/bp-core-admin.php:286
 #: bp-core/bp-core-admin.php:291
 #@ buddypress
 msgid "Toolbar"
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:142
-#@ buddypress
-msgid "BuddyPress Update"
-msgstr ""
-
-#: bp-core/admin/bp-core-update.php:144
 #: bp-core/bp-core-admin.php:192
 #@ buddypress
 msgid "BuddyPress Setup"
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:241
+#: bp-core/admin/bp-core-update.php:238
 #@ buddypress
 msgid "To complete the update, a few changes need to be made to your database. These changes are not destructive and will not remove or change any existing settings."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:331
+#: bp-core/admin/bp-core-update.php:328
 #@ buddypress
 msgid "BuddyPress uses WordPress pages to display directories. This allows you to easily change their titles and relocate them."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:333
+#: bp-core/admin/bp-core-update.php:330
 #@ buddypress
 msgid "Choose an existing page, have one auto-created, or create them manually and come back here once you are finished."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:377
+#: bp-core/admin/bp-core-update.php:374
 #@ buddypress
 msgid "Displays a directory of the blogs in your network."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:476
+#: bp-core/admin/bp-core-update.php:473
 #@ buddypress
 msgid "Your permalink settings are compatible with BuddyPress."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:478
+#: bp-core/admin/bp-core-update.php:475
 #@ buddypress
 msgid "Pretty permalinks must be active on your site."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:484
+#: bp-core/admin/bp-core-update.php:481
 #, php-format
 #@ buddypress
 msgid "For more advanced options please visit the <a href=\"%s\">permalink settings page</a> now and come back here later."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:566
+#: bp-core/admin/bp-core-update.php:563
 #@ buddypress
 msgid "The default BuddyPress theme comes with the basics, to get up and running out of the box. It supports all features and is highly customizable."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:567
+#: bp-core/admin/bp-core-update.php:564
 #@ buddypress
 msgid "This is the best choice if you want to start using BuddyPress immediately."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:580
+#: bp-core/admin/bp-core-update.php:577
 #@ buddypress
 msgid "You have some other BuddyPress compatible themes available. Pick one of them from this list to use it."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:614
+#: bp-core/admin/bp-core-update.php:611
 #@ buddypress
 msgid "The BuddyPress Template Pack will guide you through the process of manually editing your existing theme. It comes with a step-by-step guide and involves copying the BuddyPress template files into your theme. <strong>This option requires knowledge of CSS and HTML.</strong> You will need to tweak the new templates to match your existing theme."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:638
+#: bp-core/admin/bp-core-update.php:635
 #@ buddypress
 msgid "This is the best choice if you have a custom theme already and want to manually integrate BuddyPress later."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:665
+#: bp-core/admin/bp-core-update.php:662
 #@ buddypress
 msgid "BuddyPress now uses the WordPress Toolbar; we've turbo-charged it by adding social items to help your users explore your site and manage their content."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:667
+#: bp-core/admin/bp-core-update.php:664
 #@ buddypress
 msgid "We've noticed that your site uses the old bar from earlier versions of BuddyPress."
 msgstr ""
 
-#: bp-core/admin/bp-core-update.php:672
+#: bp-core/admin/bp-core-update.php:669
 #@ buddypress
 msgid "If you'd prefer to not switch to the WordPress Toolbar just yet, check this box. Don't worry, you can change your mind later."
-msgstr ""
-
-#: bp-core/admin/bp-core-update.php:692
-#@ buddypress
-msgid "The BuddyPress update is complete, and your site is ready to go!"
-msgstr ""
-
-#: bp-core/admin/bp-core-update.php:694
-#@ buddypress
-msgid "The BuddyPress setup is complete, and your site is ready to go!"
 msgstr ""
 
 #: bp-core/bp-core-admin.php:194
@@ -7542,7 +7510,7 @@ msgid "BuddyPress was successfully activated! Please run the <a href=\"%s\">inst
 msgstr ""
 
 #: bp-core/bp-core-filters.php:255
-#: bp-members/bp-members-functions.php:1262
+#: bp-members/bp-members-functions.php:1312
 #, php-format
 #@ buddypress
 msgid ""
@@ -7606,7 +7574,7 @@ msgstr ""
 
 #: bp-friends/bp-friends-template.php:285
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:610
-#: bp-themes/bp-default/_inc/ajax.php:610
+#: bp-themes/bp-default/_inc/ajax.php:611
 #@ buddypress
 msgid "Cancel Friendship Request"
 msgstr ""
@@ -7615,12 +7583,6 @@ msgstr ""
 #@ buddypress
 msgid "Cancel Friendship Requested"
 msgstr ""
-
-#: bp-groups/bp-groups-forums.php:206
-#, php-format
-#@ buddypress
-msgid "%1$s edited the forum topic %2$s in the group %3$s"
-msgstr "%1$s さんが トピック %2$s を編集しました:"
 
 #: bp-groups/bp-groups-loader.php:284
 #@ buddypress
@@ -7632,7 +7594,7 @@ msgstr ""
 msgid "It looks like you've already said that!"
 msgstr ""
 
-#: bp-groups/bp-groups-widgets.php:134
+#: bp-groups/bp-groups-widgets.php:139
 #@ buddypress
 msgid "Link widget title to Groups directory"
 msgstr ""
@@ -7659,12 +7621,6 @@ msgstr ""
 #: bp-loader.php:0
 #@ buddypress
 msgid "http://buddypress.org/community/members/"
-msgstr ""
-
-#. translators: plugin header field 'Version'
-#: bp-loader.php:0
-#@ buddypress
-msgid "1.6.1"
 msgstr ""
 
 #: bp-members/bp-members-adminbar.php:38
@@ -7706,17 +7662,17 @@ msgstr ""
 "▽メッセージボックスにアクセスする:\n"
 "%4$s"
 
-#: bp-settings/bp-settings-actions.php:253
+#: bp-settings/bp-settings-actions.php:247
 #@ buddypress
 msgid "Your notification settings have been saved."
 msgstr ""
 
-#: bp-settings/bp-settings-actions.php:255
+#: bp-settings/bp-settings-actions.php:249
 #@ buddypress
 msgid "This user's notification settings have been saved."
 msgstr ""
 
-#: bp-settings/bp-settings-actions.php:346
+#: bp-settings/bp-settings-actions.php:340
 #, php-format
 #@ buddypress
 msgid "%s was successfully deleted."
@@ -7729,13 +7685,13 @@ msgid "Capabilities"
 msgstr ""
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:608
-#: bp-themes/bp-default/_inc/ajax.php:608
+#: bp-themes/bp-default/_inc/ajax.php:609
 #@ buddypress
 msgid " Friendship could not be requested."
 msgstr ""
 
 #: bp-themes/bp-clover-cafe/_inc/ajax.php:618
-#: bp-themes/bp-default/_inc/ajax.php:618
+#: bp-themes/bp-default/_inc/ajax.php:619
 #@ buddypress
 msgid "Friendship request could not be cancelled."
 msgstr ""
@@ -7887,4 +7843,43 @@ msgstr "コメントする"
 msgctxt "Post written by..."
 msgid "%s"
 msgstr ""
+
+#: bp-core/admin/bp-core-update.php:135
+#@ buddypress
+msgid "Setup"
+msgstr ""
+
+#: bp-core/admin/bp-core-update.php:143
+#, php-format
+#@ buddypress
+msgid "BuddyPress %s"
+msgstr ""
+
+#: bp-core/admin/bp-core-update.php:687
+#@ buddypress
+msgid "setup"
+msgstr ""
+
+#: bp-core/admin/bp-core-update.php:687
+#@ buddypress
+msgid "update"
+msgstr ""
+
+#: bp-core/admin/bp-core-update.php:689
+#, php-format
+#@ buddypress
+msgid "The BuddyPress %1$s is complete, and your site is ready to go!"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: bp-loader.php:0
+#@ buddypress
+msgid "1.6.3"
+msgstr ""
+
+#: bp-themes/bp-clover-cafe/activity/index.php:39
+#, php-format
+#@ buddypress
+msgid "My Group Activity <span>%s</span>"
+msgstr "グループの近況"
 
