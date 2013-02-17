@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: BuddyPress v1.6.3\n"
 "Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
 "POT-Creation-Date: 2012-03-13 21:36:22+00:00\n"
-"PO-Revision-Date: 2013-02-11 13:28:25+0000\n"
+"PO-Revision-Date: 2013-02-17 07:17:29+0000\n"
 "Last-Translator: ma-ito <clover.cafe@icloud.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -3718,17 +3718,17 @@ msgstr "アカウント削除"
 #: bp-settings/bp-settings-loader.php:185
 #@ buddypress
 msgid "Notifications"
-msgstr "通知"
+msgstr "お知らせ"
 
 #: bp-members/bp-members-adminbar.php:167
 #@ buddypress
 msgid "No new notifications"
-msgstr "新しい通知はありません"
+msgstr "新しいお知らせはありません"
 
 #: bp-members/bp-members-buddybar.php:45
 #@ buddypress
 msgid "No new notifications."
-msgstr "新しい通知はありません。"
+msgstr "新しいお知らせはありません"
 
 #: bp-members/bp-members-buddybar.php:75
 #@ buddypress
