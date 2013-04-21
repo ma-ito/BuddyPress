@@ -14,10 +14,10 @@ function bp_core_set_avatar_constants() {
 	global $bp;
 
 	if ( !defined( 'BP_AVATAR_THUMB_WIDTH' ) )
-		define( 'BP_AVATAR_THUMB_WIDTH', 50 );
+		define( 'BP_AVATAR_THUMB_WIDTH', 40 );
 
 	if ( !defined( 'BP_AVATAR_THUMB_HEIGHT' ) )
-		define( 'BP_AVATAR_THUMB_HEIGHT', 50 );
+		define( 'BP_AVATAR_THUMB_HEIGHT', 40 );
 
 	if ( !defined( 'BP_AVATAR_FULL_WIDTH' ) )
 		define( 'BP_AVATAR_FULL_WIDTH', 150 );
