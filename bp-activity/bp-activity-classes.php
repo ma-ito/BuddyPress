@@ -130,7 +130,8 @@ class BP_Activity_Activity {
 				7 => 'show_hidden',
 				8 => 'exclude',
 				9 => 'in',
-				10 => 'spam'
+				10 => 'spam',
+				11 => 'following'
 			);
 
 			$func_args = func_get_args();
@@ -150,6 +151,7 @@ class BP_Activity_Activity {
 			'display_comments' => false,      // Whether to include activity comments
 			'show_hidden'      => false,      // Show items marked hide_sitewide
 			'spam'             => 'ham_only', // Spam status
+			'following'        => false,
 		);
 		$r = wp_parse_args( $args, $defaults );
 		extract( $r );
@@ -177,7 +179,11 @@ class BP_Activity_Activity {
 		}
 
 		// Filtering
-		if ( $filter && $filter_sql = BP_Activity_Activity::get_filter_sql( $filter ) )
+		if ( $following && $filter )
+			$filter_sql = BP_Activity_Activity::get_filter_sql_following( $filter );
+		else if ( $filter )
+			$filter_sql = BP_Activity_Activity::get_filter_sql( $filter );
+		if ( $filter_sql )
 			$where_conditions['filter_sql'] = $filter_sql;
 
 		// Sorting
@@ -217,7 +223,12 @@ class BP_Activity_Activity {
 		if ( false === $display_comments || 'threaded' === $display_comments )
 			$where_conditions[] = "a.type != 'activity_comment'";
 
+		// Add 'created_group' activities to MyGroup Stream
 		$where_sql = 'WHERE ' . join( ' AND ', $where_conditions );
+		if ( !empty( $_POST['s'] ) ) {
+			if ( $filter['user_id'] !== false && $filter['object'])
+				$where_sql .= " OR a.type = 'created_group'";
+		}
 
 		// Define the preferred order for indexes
 		$indexes = apply_filters( 'bp_activity_preferred_index_order', array( 'user_id', 'item_id', 'secondary_item_id', 'date_recorded', 'component', 'type', 'hide_sitewide', 'is_spam' ) );
@@ -665,6 +676,27 @@ class BP_Activity_Activity {
 			return false;
 	}
 
+	function get_in_operator_sql_following( $field, $items ) {
+		global $wpdb;
+
+		// split items at the comma
+		$items_dirty = explode( ',', $items );
+
+		// array of prepared integers or quoted strings
+		$items_prepared = array();
+
+		// clean up and format each item
+		foreach ( $items_dirty as $item ) {
+			// clean up the string
+			$item = trim( $item );
+			// pass everything through prepare for security and to safely quote strings
+			$items_prepared[] = ( is_numeric( $item ) ) ? $wpdb->prepare( '%d', $item ) : $wpdb->prepare( '%s', $item );
+		}
+
+		// build IN operator sql syntax
+		return sprintf( '%s IN ( 0 )', trim( $field ) );
+	}
+
 	function get_filter_sql( $filter_array ) {
 
 		$filter_sql = array();
@@ -698,6 +730,49 @@ class BP_Activity_Activity {
 			if ( !empty( $sid_sql ) )
 				$filter_sql[] = $sid_sql;
 		}
+
+		if ( empty( $filter_sql ) )
+			return false;
+
+		return join( ' AND ', $filter_sql );
+	}
+
+	function get_filter_sql_following( $filter_array ) {
+
+		$filter_sql = array();
+
+		if ( !empty( $filter_array['user_id'] ) ) {
+			$user_sql = BP_Activity_Activity::get_in_operator_sql( 'a.user_id', $filter_array['user_id'] );
+			if ( !empty( $user_sql ) )
+				$filter_sql[] = $user_sql;
+		}
+
+		if ( !empty( $filter_array['object'] ) ) {
+			$object_sql = BP_Activity_Activity::get_in_operator_sql( 'a.component', $filter_array['object'] );
+			if ( !empty( $object_sql ) )
+				$filter_sql[] = $object_sql;
+		}
+
+		if ( !empty( $filter_array['action'] ) ) {
+			$action_sql = BP_Activity_Activity::get_in_operator_sql( 'a.type', $filter_array['action'] );
+			if ( !empty( $action_sql ) )
+				$filter_sql[] = $action_sql;
+		}
+
+		if ( !empty( $filter_array['primary_id'] ) ) {
+			$pid_sql = BP_Activity_Activity::get_in_operator_sql( 'a.item_id', $filter_array['primary_id'] );
+			if ( !empty( $pid_sql ) )
+				$filter_sql[] = $pid_sql;
+		}
+
+		if ( !empty( $filter_array['secondary_id'] ) ) {
+			$sid_sql = BP_Activity_Activity::get_in_operator_sql( 'a.secondary_item_id', $filter_array['secondary_id'] );
+			if ( !empty( $sid_sql ) )
+				$filter_sql[] = $sid_sql;
+		}
+
+		$group_sql = BP_Activity_Activity::get_in_operator_sql_following('a.item_id', $filter_array['primary_id'] );
+		$filter_sql[] = $group_sql;
 
 		if ( empty( $filter_sql ) )
 			return false;

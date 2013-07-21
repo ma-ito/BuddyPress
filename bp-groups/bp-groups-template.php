@@ -1710,7 +1710,6 @@ function bp_group_new_topic_button( $group = false ) {
 			'link_class'        => 'group-button show-hide-new',
 			'link_id'           => 'new-topic-button',
 			'link_text'         => __( 'New Topic', 'buddypress' ),
-			'link_title'        => __( 'New Topic', 'buddypress' ),
 		);
 
 		// Filter and return the HTML button
@@ -1741,6 +1740,10 @@ function bp_group_join_button( $group = false ) {
 		 	if ( 1 == count( $group_admins ) && $group_admins[0]->user_id == bp_loggedin_user_id() )
 				return false;
 
+			// Hide a leave button where name is 社員会
+			if ( '社員会' === $group->name )
+				return false;
+
 			$button = array(
 				'id'                => 'leave_group',
 				'component'         => 'groups',
@@ -1750,7 +1753,6 @@ function bp_group_join_button( $group = false ) {
 				'wrapper_id'        => 'groupbutton-' . $group->id,
 				'link_href'         => wp_nonce_url( bp_get_group_permalink( $group ) . 'leave-group', 'groups_leave_group' ),
 				'link_text'         => __( 'Leave Group', 'buddypress' ),
-				'link_title'        => __( 'Leave Group', 'buddypress' ),
 				'link_class'        => 'group-button leave-group',
 			);
 
@@ -1773,7 +1775,6 @@ function bp_group_join_button( $group = false ) {
 						'wrapper_id'        => 'groupbutton-' . $group->id,
 						'link_href'         => wp_nonce_url( bp_get_group_permalink( $group ) . 'join', 'groups_join_group' ),
 						'link_text'         => __( 'Join Group', 'buddypress' ),
-						'link_title'        => __( 'Join Group', 'buddypress' ),
 						'link_class'        => 'group-button join-group',
 					);
 					break;
@@ -1791,7 +1792,6 @@ function bp_group_join_button( $group = false ) {
 							'wrapper_id'        => 'groupbutton-' . $group->id,
 							'link_href'         => wp_nonce_url( bp_get_group_permalink( $group ) . 'request-membership', 'groups_request_membership' ),
 							'link_text'         => __( 'Request Membership', 'buddypress' ),
-							'link_title'        => __( 'Request Membership', 'buddypress' ),
 							'link_class'        => 'group-button request-membership',
 						);
 
@@ -1806,7 +1806,6 @@ function bp_group_join_button( $group = false ) {
 							'wrapper_id'        => 'groupbutton-' . $group->id,
 							'link_href'         => bp_get_group_permalink( $group ),
 							'link_text'         => __( 'Request Sent', 'buddypress' ),
-							'link_title'        => __( 'Request Sent', 'buddypress' ),
 							'link_class'        => 'group-button pending membership-requested',
 						);
 					}

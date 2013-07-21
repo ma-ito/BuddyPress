@@ -70,7 +70,7 @@ class BP_Settings_Component extends BP_Component {
 
 		// Add the settings navigation item
 		$main_nav = array(
-			'name'                    => __( 'Settings', 'buddypress' ),
+			'name'                    => __( 'Account Settings', 'buddypress' ),
 			'slug'                    => $this->slug,
 			'position'                => 100,
 			'show_for_displayed_user' => bp_core_can_edit_settings(),
