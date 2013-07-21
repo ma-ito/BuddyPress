@@ -910,6 +910,7 @@ function bp_activity_get( $args = '' ) {
 		'exclude'          => false,        // Comma-separated list of activity IDs to exclude
 		'in'               => false,        // Comma-separated list or array of activity IDs to which you want to limit the query
 		'spam'             => 'ham_only',   // 'ham_only' (default), 'spam_only' or 'all'.
+		'following'        => false,
 
 		/**
 		 * Pass filters as an array -- all filter items can be multiple values comma separated:
@@ -939,7 +940,8 @@ function bp_activity_get( $args = '' ) {
 				'filter'           => $filter,
 				'display_comments' => $display_comments,
 				'show_hidden'      => $show_hidden,
-				'spam'             => $spam
+				'spam'             => $spam,
+				'following'        => $following
 			);
 			$activity = BP_Activity_Activity::get( $args );
 			wp_cache_set( 'bp_activity_sitewide_front', $activity, 'bp' );
@@ -958,7 +960,8 @@ function bp_activity_get( $args = '' ) {
 			'show_hidden'      => $show_hidden,
 			'exclude'          => $exclude,
 			'in'               => $in,
-			'spam'             => $spam
+			'spam'             => $spam,
+			'following'        => $following
 		);
 		$activity = BP_Activity_Activity::get( $args );
 	}
