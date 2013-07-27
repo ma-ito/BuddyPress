@@ -620,6 +620,11 @@ function bp_core_time_since( $older_date, $newer_date = false ) {
 	// Difference in seconds
 	$since = $newer_date - $older_date;
 
+	// format changed within 3 days
+	if ( 60 * 60 * 24 * 4 > $since) {
+		return "3 日以内";
+	}
+
 	// Something went wrong with date calculation and we ended up with a negative date.
 	if ( 0 > $since ) {
 		$output = $unknown_text;
