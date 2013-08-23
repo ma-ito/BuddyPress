@@ -898,6 +898,7 @@ function groups_send_membership_request( $requesting_user_id, $group_id ) {
 }
 
 function groups_accept_membership_request( $membership_id, $user_id = 0, $group_id = 0 ) {
+	global $bp;
 
 	if ( !empty( $user_id ) && !empty( $group_id ) )
 		$membership = new BP_Groups_Member( $user_id, $group_id );
@@ -917,7 +918,7 @@ function groups_accept_membership_request( $membership_id, $user_id = 0, $group_
 	$group = groups_get_group( array( 'group_id' => $membership->group_id ) );
 
 	groups_record_activity( array(
-		'action'  => apply_filters_ref_array( 'groups_activity_membership_accepted_action', array( sprintf( __( '%1$s joined the group %2$s', 'buddypress'), bp_core_get_userlink( $membership->user_id ), '<a href="' . bp_get_group_permalink( $group ) . '">' . esc_attr( $group->name ) . '</a>' ), $membership->user_id, &$group ) ),
+		'action'  => apply_filters_ref_array( 'groups_activity_membership_accepted_action', array( sprintf( __( '%1$s joined the group %2$s', 'buddypress'), bp_core_get_userlink( $membership->user_id ), '<a class="' . $bp->groups->current_group->status . '" href="' . bp_get_group_permalink( $group ) . '">' . esc_attr( $group->name ) . '</a>' ), $membership->user_id, &$group ) ),
 		'type'    => 'joined_group',
 		'item_id' => $membership->group_id,
 		'user_id' => $membership->user_id
