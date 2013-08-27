@@ -225,7 +225,7 @@ class BP_Activity_Activity {
 
 		// Add 'created_group' activities to MyGroup Stream
 		$where_sql = 'WHERE ' . join( ' AND ', $where_conditions );
-		if ( !empty( $_POST['s'] ) ) {
+		if ( empty( $search_terms ) ) {
 			if ( $filter['user_id'] !== false && $filter['object'])
 				$where_sql .= " OR a.type = 'created_group'";
 		}
