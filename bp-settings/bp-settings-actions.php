@@ -111,7 +111,7 @@ function bp_settings_action_general() {
 			// Password change attempt is successful
 			if ( ( $_POST['pass1'] == $_POST['pass2'] ) && !strpos( " " . $_POST['pass1'], "\\" ) ) {
 				$strength = check_password_strength( $update_user->user_login, $_POST['pass1'], $_POST['pass2'] );
-				if ( 4 == $strength ) {
+				if ( 3 <= $strength ) {
 					$update_user->user_pass = $_POST['pass1'];
 					$pass_changed = true;
 				} else {
