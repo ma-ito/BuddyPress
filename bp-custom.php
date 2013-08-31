@@ -6,6 +6,46 @@ define( 'BP_DEFAULT_COMPONENT', 'profile' );
 /* disable admin bar */
 add_filter( 'show_admin_bar', '__return_false' );
 
+/*
+ * password strength meter
+ * js code: wp-admin/js/password-strength-meter.js
+ */
+function check_password_strength( $username, $password1, $password2 ) {
+	$short  = 1;
+	$bad    = 2;
+	$good   = 3;
+	$strong = 4;
+
+	//password < 4
+	if ( strlen( $password1 ) < 4)
+		return $short;
+
+	//password1 == username
+	if ( strtolower( $password1 ) == strtolower( $username ) )
+		return $bad;
+
+	$symbolSize = 0;
+	if ( preg_match( '/[0-9]/', $password1 ) )
+		$symbolSize += 10;
+	if ( preg_match( '/[a-z]/', $password1 ) )
+		$symbolSize += 26;
+	if ( preg_match( '/[A-Z]/', $password1 ) )
+		$symbolSize += 26;
+	if ( preg_match( '/[^a-zA-Z0-9]/', $password1 ) )
+		$symbolSize += 31;
+
+	$natLog = log( pow( $symbolSize, strlen( $password1 ) ) );
+	$score = $natLog / log( 2 );
+
+	if ( $score < 40 )
+		return $bad;
+
+	if ( $score < 56 )
+		return $good;
+
+	return $strong;
+}
+
 if ( !function_exists('wp_new_user_notification') ) :
 /**
  * Notify the blog admin of a new user, normally via email.
