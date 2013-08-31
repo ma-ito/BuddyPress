@@ -60,4 +60,20 @@ function wp_new_user_notification($user_id, $plaintext_pass = '') {
 }
 endif;
 
+/* for DEBUG */
+function console_log( $msg ) {
+	echo '<script type="text/javascript">console.log(';
+	if ( is_array( $msg ) ) {
+		$string = '"';
+		foreach ($msg as $item) {
+			$string .= $item . ' | ';
+		}
+		$string .= '"';
+		echo $string;
+	} else {
+		echo '"' . $msg . '"';
+	}
+	echo ');</script>';
+}
+
 ?>
