@@ -91,9 +91,9 @@ function wp_new_user_notification($user_id, $plaintext_pass = '') {
 		'------------------------------------------------' . "\r\n" .
 		'本メールにお心当たりがない場合は、恐れ入りますが' . "\r\n" .
 		'下記の連絡先までご連絡ください。' . "\r\n" .
-		'------------------------------------------------' . "\r\n\r\n" .
-		"-- \r\n" . 'クローバーカフェ運営チーム一同' . "\r\n" .
-		'連絡先：' . get_option('admin_email') . "\r\n";
+		'------------------------------------------------' . "\r\n";
+
+	$message = apply_filters( 'cc_new_user_notification_message', $message );
 
 	wp_mail($user_email, 'アカウント登録のお知らせ', $message);
 
