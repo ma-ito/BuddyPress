@@ -39,7 +39,7 @@ To view the group: %2$s
 ---------------------
 ', 'buddypress' ), $group->name, $group_link );
 
-		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
+		//$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 
 		/* Send the message */
 		$to      = apply_filters( 'groups_notification_group_updated_to', $to );
@@ -87,10 +87,12 @@ To view %4$s\'s profile: %5$s
 ---------------------
 ', 'buddypress' ), $requesting_user_name, $group->name, $group_requests, $requesting_user_name, $profile_link );
 
+	/*
 	// Only show the disable notifications line if the settings component is enabled
 	if ( bp_is_active( 'settings' ) ) {
 		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 	}
+	*/
 
 	/* Send the message */
 	$to      = apply_filters( 'groups_notification_new_membership_request_to', $to );
@@ -145,10 +147,12 @@ To submit another request please log in and visit: %2$s
 ', 'buddypress' ), $group->name, $group_link );
 	}
 
+	/*
 	// Only show the disable notifications line if the settings component is enabled
 	if ( bp_is_active( 'settings' ) ) {
 		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 	}
+	*/
 
 	/* Send the message */
 	$to      = apply_filters( 'groups_notification_membership_request_completed_to', $to );
@@ -185,7 +189,8 @@ function groups_notification_promoted_member( $user_id, $group_id ) {
 	// Set up and send the message
 	$to       = $ud->user_email;
 	$subject  = bp_get_email_subject( array( 'text' => sprintf( __( 'You have been promoted in the group: "%s"', 'buddypress' ), $group->name ) ) );
-	$message  = sprintf( __(
+	$message  = bp_core_get_user_displayname( $user_id );
+	$message .= sprintf( __(
 'You have been promoted to %1$s for the group: "%2$s".
 
 To view the group please visit: %3$s
@@ -193,10 +198,12 @@ To view the group please visit: %3$s
 ---------------------
 ', 'buddypress' ), $promoted_to, $group->name, $group_link );
 
+	/*
 	// Only show the disable notifications line if the settings component is enabled
 	if ( bp_is_active( 'settings' ) ) {
 		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 	}
+	*/
 
 	/* Send the message */
 	$to      = apply_filters( 'groups_notification_promoted_member_to', $to );
