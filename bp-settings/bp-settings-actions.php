@@ -109,18 +109,22 @@ function bp_settings_action_general() {
 		if ( !empty( $_POST['pass1'] ) && !empty( $_POST['pass2'] ) ) {
 
 			// Password change attempt is successful
-			if ( ( $_POST['pass1'] == $_POST['pass2'] ) && !strpos( " " . $_POST['pass1'], "\\" ) ) {
-				$strength = check_password_strength( $update_user->user_login, $_POST['pass1'], $_POST['pass2'] );
-				if ( 3 <= $strength ) {
-					$update_user->user_pass = $_POST['pass1'];
-					$pass_changed = true;
-				} else {
-					$pass_error = 'nochange';
-				}
+			if ( $_POST['pwd'] != $_POST['pass1'] ) {
+				if ( ( $_POST['pass1'] == $_POST['pass2'] ) && !strpos( " " . $_POST['pass1'], "\\" ) ) {
+					$strength = check_password_strength( $update_user->user_login, $_POST['pass1'], $_POST['pass2'] );
+					if ( 3 <= $strength ) {
+						$update_user->user_pass = $_POST['pass1'];
+						$pass_changed = true;
+					} else {
+						$pass_error = 'nochange';
+					}
 
-			// Password change attempt was unsuccessful
+				// Password change attempt was unsuccessful
+				} else {
+					$pass_error = 'mismatch';
+				}
 			} else {
-				$pass_error = 'mismatch';
+				$pass_error = 'nochange';
 			}
 
 		// Both password fields were empty
@@ -149,6 +153,11 @@ function bp_settings_action_general() {
 		// Make sure these changes are in $bp for the current page load
 		if ( ( false === $email_error ) && ( false === $pass_error ) && ( wp_update_user( $update_user ) ) ) {
 			$bp->displayed_user->userdata = bp_core_get_core_userdata( bp_displayed_user_id() );
+		}
+
+		if ( $pass_changed ) {
+			delete_user_setting('default_password_nag');
+			update_user_option(bp_displayed_user_id(), 'default_password_nag', false, true);
 		}
 
 	// Password Error
