@@ -256,10 +256,12 @@ To view %5$s\'s profile visit: %6$s
 ---------------------
 ', 'buddypress' ), $inviter_name, $group->name, $invites_link, $group_link, $inviter_name, $inviter_link );
 
+		/*
 		// Only show the disable notifications line if the settings component is enabled
 		if ( bp_is_active( 'settings' ) ) {
 			$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 		}
+		*/
 
 		/* Send the message */
 		$to      = apply_filters( 'groups_notification_group_invites_to', $to );
