@@ -3,6 +3,12 @@
 /* Change the default tab opened when looking at a user’s profile */
 define( 'BP_DEFAULT_COMPONENT', 'profile' );
 
+/* restrict post revisions */
+define('WP_POST_REVISIONS', 5);
+
+/* change post autosave interval */
+define('AUTOSAVE_INTERVAL', 300 );
+
 /* disable admin bar */
 add_filter( 'show_admin_bar', '__return_false' );
 
