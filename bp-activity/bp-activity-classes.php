@@ -183,7 +183,7 @@ class BP_Activity_Activity {
 			$filter_sql = BP_Activity_Activity::get_filter_sql_following( $filter );
 		else if ( $filter )
 			$filter_sql = BP_Activity_Activity::get_filter_sql( $filter );
-		if ( $filter_sql )
+		if ( isset( $filter_sql ) )
 			$where_conditions['filter_sql'] = $filter_sql;
 
 		// Sorting
