@@ -363,7 +363,7 @@ function bp_activity_truncate_entry( $text ) {
 
 	// Run the text through the excerpt function. If it's too short, the original text will be
 	// returned.
-	$excerpt        = bp_create_excerpt( $text, $excerpt_length, array( 'ending' => __( '&hellip;', 'buddypress' ) ) );
+	$excerpt        = bp_create_excerpt( $text, $excerpt_length, array( 'ending' => __( '&hellip;', 'buddypress' ), 'exact' => true ) );
 
 	// If the text returned by bp_create_excerpt() is different from the original text (ie it's
 	// been truncated), add the "Read More" link. Note that bp_create_excerpt() is stripping
