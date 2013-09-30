@@ -306,7 +306,8 @@ function groups_leave_group( $group_id, $user_id = 0 ) {
 	if ( bp_is_active( 'activity' ) && gmmktime() <= strtotime( '+5 minutes', (int)strtotime( $membership->date_modified ) ) )
 		bp_activity_delete( array( 'component' => $bp->groups->id, 'type' => 'joined_group', 'user_id' => $user_id, 'item_id' => $group_id ) );
 
-	bp_core_add_message( __( 'You successfully left the group.', 'buddypress' ) );
+	// ma-ito
+	//bp_core_add_message( __( 'You successfully left the group.', 'buddypress' ) );
 
 	do_action( 'groups_leave_group', $group_id, $user_id );
 
