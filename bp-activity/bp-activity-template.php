@@ -449,8 +449,7 @@ function bp_has_activities( $args = '' ) {
 	} else {
 		if ( 'following' == $scope ) {
 			if ( !empty( $bp->displayed_user->id ) && !bp_is_my_profile() )
-				if ( !bp_follow_is_following( array( 'leader_id' => bp_displayed_user_id(), 'follower_id' => bp_loggedin_user_id() ) ) )
-					return false;
+				return false;
 
 			if ( !bp_is_my_profile())
 				$user_id = $user_id . ',' . bp_loggedin_user_id();
