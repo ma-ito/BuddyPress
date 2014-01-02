@@ -911,22 +911,6 @@ function groups_accept_membership_request( $membership_id, $user_id = 0, $group_
 		groups_delete_invite( $membership->user_id, $membership->group_id );
 	}
 
-	/* テストが完了次第削除する(ma-ito)
-	// Record this in activity streams
-	$group = groups_get_group( array( 'group_id' => $membership->group_id ) );
-
-	groups_record_activity( array(
-		'action'  => apply_filters_ref_array( 'groups_activity_membership_accepted_action', array( sprintf( __( '%1$s joined the group %2$s', 'buddypress'), bp_core_get_userlink( $membership->user_id ), '<a class="' . $bp->groups->current_group->status . '" href="' . bp_get_group_permalink( $group ) . '">' . esc_attr( $group->name ) . '</a>' ), $membership->user_id, &$group ) ),
-		'type'    => 'joined_group',
-		'item_id' => $membership->group_id,
-		'user_id' => $membership->user_id
-	) );
-
-	// Send a notification to the user.
-	groups_notification_membership_request_completed( $membership->user_id, $membership->group_id, true );
-
-	do_action( 'groups_membership_accepted', $membership->user_id, $membership->group_id );
-	*/
 	do_action( 'groups_membership_accepted', $membership->user_id, $membership->group_id, true );
 
 	return true;
