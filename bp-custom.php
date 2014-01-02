@@ -12,6 +12,9 @@ define('AUTOSAVE_INTERVAL', 300 );
 /* disable admin bar */
 add_filter( 'show_admin_bar', '__return_false' );
 
+/* enable old theme directory */
+add_filter( 'bp_do_register_theme_directory', '__return_true' );
+
 /*
  * password strength meter
  * js code: wp-admin/js/password-strength-meter.js
