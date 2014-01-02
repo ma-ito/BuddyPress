@@ -963,7 +963,6 @@ class BP_Activity_Activity {
 		return sprintf( '%s IN ( 0 )', trim( $field ) );
 	}
 
-	function get_filter_sql( $filter_array ) {
 	/**
 	 * Create filter SQL clauses.
 	 *
@@ -1067,7 +1066,6 @@ class BP_Activity_Activity {
 		return join( ' AND ', $filter_sql );
 	}
 
-	function get_last_updated() {
 	/**
 	 * Get the date/time of last recorded activity.
 	 *
