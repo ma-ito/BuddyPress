@@ -124,7 +124,7 @@ function messages_format_notifications( $action, $item_id, $secondary_item_id, $
 			$filter = 'bp_messages_multiple_new_message_notification';
 		} else {
 			if ( !empty( $secondary_item_id ) ) {
-				$text = sprintf( __('You have %d new message from %s', 'buddypress' ), (int) $total_items, bp_core_get_user_displayname( $secondary_item_id ) );
+				$text = sprintf( __('You have %1$d new message from %2$s', 'buddypress' ), (int) $total_items, bp_core_get_user_displayname( $secondary_item_id ) );
 			} else {
 				$text = sprintf( __('You have %d new message',         'buddypress' ), (int) $total_items );
 			}
