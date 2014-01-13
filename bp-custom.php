@@ -55,6 +55,60 @@ function check_password_strength( $username, $password1, $password2 ) {
 	return $strong;
 }
 
+if ( ! function_exists('wp_notify_postauthor') ) :
+/**
+ * Notify an author of a comment/trackback/pingback to one of their posts.
+ *
+ * @since 1.0.0
+ *
+ * @param int $comment_id Comment ID
+ * @param string $comment_type Optional. The comment type either 'comment' (default), 'trackback', or 'pingback'
+ * @return bool False if user email does not exist. True on completion.
+ */
+function wp_notify_postauthor( $comment_id, $comment_type = '' ) {
+	$comment = get_comment( $comment_id );
+	if ( empty( $comment ) )
+		return false;
+
+	$post    = get_post( $comment->comment_post_ID );
+	$author  = get_userdata( $post->post_author );
+
+	// The comment was left by the author
+	if ( $comment->user_id == $post->post_author )
+		return false;
+
+	// The author moderated a comment on his own post
+	if ( $post->post_author == get_current_user_id() )
+		return false;
+
+	// The post author is no longer a member of the blog
+	if ( ! user_can( $post->post_author, 'read_post', $post->ID ) )
+		return false;
+
+	// If there's no email to send the comment to
+	if ( '' == $author->user_email )
+		return false;
+
+	if ( empty( $comment_type ) ) $comment_type = 'comment';
+
+	if ('comment' == $comment_type) {
+		$message  = sprintf( '%sさんがブログにコメントを投稿しました。', $comment->comment_author ) . "\r\n\r\n";
+		//$message .= __('Comment: ') . "\r\n" . $comment->comment_content . "\r\n\r\n";
+		$message .= '▽コメントを表示する' . "\r\n";
+		$message .= get_permalink($comment->comment_post_ID) . '#comment-' . $comment_id . "\r\n";
+
+		$to = $author->user_email;
+		$subject = 'ブログにコメントが投稿されました';
+		$message = apply_filters( 'comment_notification_text', $message );
+		$header = apply_filters( 'cc_append_cc_email_address', $post->post_author );
+
+		@wp_mail( $to, $subject, $message, $header );
+	}
+
+	return true;
+}
+endif;
+
 if ( !function_exists('wp_new_user_notification') ) :
 /**
  * Notify the blog admin of a new user, normally via email.
