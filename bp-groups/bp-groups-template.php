@@ -1791,7 +1791,7 @@ function bp_group_join_button( $group = false ) {
 							'block_self'        => false,
 							'wrapper_class'     => 'group-button ' . $group->status,
 							'wrapper_id'        => 'groupbutton-' . $group->id,
-							'link_href'         => add_query_arg( 'redirect_to', bp_get_group_permalink( $group ), bp_get_group_accept_invite_link( $group ) ),
+							'link_href'         => add_query_arg( 'redirect_to', urlencode( bp_get_group_permalink( $group ) ), bp_get_group_accept_invite_link( $group ) ), // added urlencode(ma-ito)
 							'link_text'         => __( 'Accept Invitation', 'buddypress' ),
 							'link_class'        => 'group-button accept-invite',
 						);

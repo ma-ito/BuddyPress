@@ -61,7 +61,8 @@ function groups_screen_group_invites() {
 			$redirect_to = trailingslashit( bp_loggedin_user_domain() . bp_get_groups_slug() . '/' . bp_current_action() );
 		}
 
-		bp_core_redirect( $redirect_to );
+		// added utf8 encode(ma-ito)
+		bp_core_redirect( utf8_uri_encode( $redirect_to ) );
 
 	} else if ( bp_is_action_variable( 'reject' ) && is_numeric( $group_id ) ) {
 		// Check the nonce
