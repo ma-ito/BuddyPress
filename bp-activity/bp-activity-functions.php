@@ -1110,6 +1110,11 @@ function bp_activity_add( $args = '' ) {
 	$activity->hide_sitewide     = $hide_sitewide;
 	$activity->is_spam           = $is_spam;
 
+	// only use [box]shortcode htmlspecialcharsfor buddypress activity(ma-ito)
+	if ( $activity->secondary_item_id == false ) {
+		$activity->content = apply_filters('cc_run_shortcode', $activity->content );
+	}
+
 	if ( !$activity->save() )
 		return false;
 
