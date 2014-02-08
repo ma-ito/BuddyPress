@@ -1037,7 +1037,7 @@ class BP_Groups_Theme_Compat {
 			'post_content'   => '',
 			'post_type'      => 'bp_group',
 			'post_status'    => 'publish',
-			'is_archive'     => true,
+			'is_page'        => true,
 			'comment_status' => 'closed'
 		) );
 	}
@@ -1098,7 +1098,7 @@ class BP_Groups_Theme_Compat {
 			'post_content'   => '',
 			'post_type'      => 'bp_group',
 			'post_status'    => 'publish',
-			'is_archive'     => true,
+			'is_page'        => true,
 			'comment_status' => 'closed'
 		) );
 	}
@@ -1158,7 +1158,7 @@ class BP_Groups_Theme_Compat {
 			'post_content'   => '',
 			'post_type'      => 'bp_group',
 			'post_status'    => 'publish',
-			'is_archive'     => true,
+			'is_page'        => true,
 			'comment_status' => 'closed'
 		) );
 	}
