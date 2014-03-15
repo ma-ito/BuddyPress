@@ -25,11 +25,17 @@ function bp_core_confirmation_js() {
 
 	<script type="text/javascript">
 		jQuery( document ).ready( function() {
+			confirmEvent();
+		});
+		jQuery( document ).ready().ajaxComplete( function() {
+			setTimeout('confirmEvent()', 1000);
+		});
+		function confirmEvent() {
 			jQuery( 'a.confirm').click( function() {
 				if ( confirm( '<?php _e( 'Are you sure?', 'buddypress' ) ?>' ) )
 					return true; else return false;
 			});
-		});
+		}
 	</script>
 
 <?php
