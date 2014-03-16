@@ -31,9 +31,14 @@ function bp_core_confirmation_js() {
 			setTimeout('confirmEvent()', 1000);
 		});
 		function confirmEvent() {
-			jQuery( 'a.confirm').click( function() {
-				if ( confirm( '<?php _e( 'Are you sure?', 'buddypress' ) ?>' ) )
-					return true; else return false;
+			jQuery('a.confirm').unbind();
+			jQuery( 'a.confirm').click( function(e) {
+				if ( confirm( '<?php _e( 'Are you sure?', 'buddypress' ) ?>' ) ) {
+					return true;
+				} else {
+					e.stopImmediatePropagation();
+					return false;
+				}
 			});
 		}
 	</script>
