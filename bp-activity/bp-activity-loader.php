@@ -171,7 +171,7 @@ class BP_Activity_Component extends BP_Component {
 				'parent_url'      => $activity_link,
 				'parent_slug'     => $this->slug,
 				'screen_function' => 'bp_activity_screen_mentions',
-				'position'        => 20,
+				'position'        => 50,
 				'item_css_id'     => 'activity-mentions'
 			);
 		}
@@ -183,7 +183,7 @@ class BP_Activity_Component extends BP_Component {
 			'parent_url'      => $activity_link,
 			'parent_slug'     => $this->slug,
 			'screen_function' => 'bp_activity_screen_favorites',
-			'position'        => 30,
+			'position'        => 40,
 			'item_css_id'     => 'activity-favs'
 		);
 
@@ -195,7 +195,7 @@ class BP_Activity_Component extends BP_Component {
 				'parent_url'      => $activity_link,
 				'parent_slug'     => $this->slug,
 				'screen_function' => 'bp_activity_screen_friends',
-				'position'        => 40,
+				'position'        => 60,
 				'item_css_id'     => 'activity-friends'
 			) ;
 		}
@@ -203,12 +203,12 @@ class BP_Activity_Component extends BP_Component {
 		// Additional menu if groups is active
 		if ( bp_is_active( 'groups' ) ) {
 			$sub_nav[] = array(
-				'name'            => __( 'Groups', 'buddypress' ),
+				'name'            => __( 'Group activities', 'buddypress' ),
 				'slug'            => bp_get_groups_slug(),
 				'parent_url'      => $activity_link,
 				'parent_slug'     => $this->slug,
 				'screen_function' => 'bp_activity_screen_groups',
-				'position'        => 50,
+				'position'        => 20,
 				'item_css_id'     => 'activity-groups'
 			);
 		}
