@@ -487,8 +487,13 @@ function bp_has_activities( $args = '' ) {
 	if ( array_key_exists( bp_current_action(), (array) $bp->loaded_components ) ) {
 		$scope = $bp->loaded_components[bp_current_action()];
 	}
-	else
-		$scope = bp_current_action();
+	else {
+		if ( 'stocks' == bp_current_action() ) {
+			$scope = 'favorites';
+		} else {
+			$scope = bp_current_action();
+		}
+	}
 
 	// Support for permalinks on single item pages: /groups/my-group/activity/124/
 	if ( bp_is_current_action( bp_get_activity_slug() ) )
@@ -2331,7 +2336,7 @@ function bp_activity_favorite_link() {
 	 */
 	function bp_get_activity_favorite_link() {
 		global $activities_template;
-		return apply_filters( 'bp_get_activity_favorite_link', wp_nonce_url( home_url( bp_get_activity_root_slug() . '/favorite/' . $activities_template->activity->id . '/' ), 'mark_favorite' ) );
+		return apply_filters( 'bp_get_activity_favorite_link', wp_nonce_url( home_url( bp_get_activity_root_slug() . '/stock/' . $activities_template->activity->id . '/' ), 'mark_favorite' ) );
 	}
 
 /**
@@ -2360,7 +2365,7 @@ function bp_activity_unfavorite_link() {
 	 */
 	function bp_get_activity_unfavorite_link() {
 		global $activities_template;
-		return apply_filters( 'bp_get_activity_unfavorite_link', wp_nonce_url( home_url( bp_get_activity_root_slug() . '/unfavorite/' . $activities_template->activity->id . '/' ), 'unmark_favorite' ) );
+		return apply_filters( 'bp_get_activity_unfavorite_link', wp_nonce_url( home_url( bp_get_activity_root_slug() . '/unstock/' . $activities_template->activity->id . '/' ), 'unmark_favorite' ) );
 	}
 
 /**

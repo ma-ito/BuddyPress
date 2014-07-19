@@ -179,7 +179,7 @@ class BP_Activity_Component extends BP_Component {
 		// Favorite activity items
 		$sub_nav[] = array(
 			'name'            => __( 'Favorites', 'buddypress' ),
-			'slug'            => 'favorites',
+			'slug'            => 'stocks',
 			'parent_url'      => $activity_link,
 			'parent_slug'     => $this->slug,
 			'screen_function' => 'bp_activity_screen_favorites',
