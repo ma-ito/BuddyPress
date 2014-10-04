@@ -15,6 +15,18 @@ add_filter( 'show_admin_bar', '__return_false' );
 /* enable old theme directory */
 add_filter( 'bp_do_register_theme_directory', '__return_true' );
 
+// rel="shortlink"
+remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
+
+// rel="next"、rel="prev"
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
+
+function remove_recent_comments_style() {
+	global $wp_widget_factory;
+	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
+}
+add_action( 'widgets_init', 'remove_recent_comments_style' );
+
 /*
  * password strength meter
  * js code: wp-admin/js/password-strength-meter.js
