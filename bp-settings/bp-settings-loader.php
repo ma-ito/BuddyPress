@@ -103,7 +103,7 @@ class BP_Settings_Component extends BP_Component {
 		// Add Email nav item. Formerly called 'Notifications', we
 		// retain the old slug and function names for backward compat
 		$sub_nav[] = array(
-			'name'            => __( 'Email', 'buddypress' ),
+			'name'            => __( 'Mail Notification', 'buddypress' ),
 			'slug'            => 'notifications',
 			'parent_url'      => $settings_link,
 			'parent_slug'     => $this->slug,
