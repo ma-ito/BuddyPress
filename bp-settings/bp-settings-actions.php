@@ -47,9 +47,11 @@ function bp_settings_action_general() {
 	// Define local defaults
 	$bp            = buddypress(); // The instance
 	$email_error   = false;        // invalid|blocked|taken|empty|nochange
+	$sub_email_error = false;        // invalid|blocked|taken|empty|nochange
 	$pass_error    = false;        // invalid|mismatch|empty|nochange
 	$pass_changed  = false;        // true if the user changes their password
 	$email_changed = false;        // true if the user changes their email
+	$sub_email_changed = false;        // true if the user changes their email
 	$feedback_type = 'error';      // success|error
 	$feedback      = array();      // array of strings for feedback
 
@@ -104,6 +106,37 @@ function bp_settings_action_general() {
 			$email_error = 'empty';
 		}
 
+		/* Sub Email ito */
+		if ( !empty( $_POST['sub_email'] ) ) {
+
+			// What is missing from the profile page vs signup - lets double check the goodies
+			$sub_user_email = sanitize_email( esc_html( trim( $_POST['sub_email'] ) ) );
+
+			// Run some tests on the email address
+			if ( !empty( $sub_user_email ) ) {
+				// User is changing email address
+				if ( get_user_meta( bp_displayed_user_id(), 'sub_user_email', true ) != $sub_user_email ) {
+
+					// Yay we made it!
+					update_user_meta( bp_displayed_user_id(), 'sub_user_email', $sub_user_email );
+					$sub_email_changed = true;
+
+				// No change
+				} else {
+					$sub_email_error = false;
+				}
+			} else {
+				$sub_email_error = 'invalid';
+			}
+
+		// empty
+		} else {
+			if ( get_user_meta( bp_displayed_user_id(), 'sub_user_email', true ) != '' ) {
+				update_user_meta( bp_displayed_user_id(), 'sub_user_email', '' );
+				$sub_email_changed = true;
+			}
+		}
+
 		/** Password Change Attempt ***************************************/
 
 		if ( !empty( $_POST['pass1'] ) && !empty( $_POST['pass2'] ) ) {
@@ -152,7 +185,7 @@ function bp_settings_action_general() {
 
 		// Clear cached data, so that the changed settings take effect
 		// on the current page load
-		if ( ( false === $email_error ) && ( false === $pass_error ) && ( wp_update_user( $update_user ) ) ) {
+		if ( ( ( false === $email_error ) || ( false === $sub_email_error ) ) && ( false === $pass_error ) && ( wp_update_user( $update_user ) ) ) {
 			wp_cache_delete( 'bp_core_userdata_' . bp_displayed_user_id(), 'bp' );
 			$bp->displayed_user->userdata = bp_core_get_core_userdata( bp_displayed_user_id() );
 		}
@@ -186,6 +219,16 @@ function bp_settings_action_general() {
 			break;
 	}
 
+	// Sub Email feedback
+	switch ( $sub_email_error ) {
+		case 'invalid' :
+			$feedback['email_invalid']  = __( 'That email address is invalid. Check the formatting and try again.', 'buddypress' );
+			break;
+		case false :
+			// No change
+			break;
+	}
+
 	// Password feedback
 	switch ( $pass_error ) {
 		case 'invalid' :
@@ -203,12 +246,12 @@ function bp_settings_action_general() {
 	}
 
 	// No errors so show a simple success message
-	if ( ( ( false === $email_error ) || ( false == $pass_error ) ) && ( ( true === $pass_changed ) || ( true === $email_changed ) ) ) {
+	if ( ( ( false === $email_error ) || ( false === $sub_email_error ) || ( false == $pass_error ) ) && ( ( true === $pass_changed ) || ( true === $email_changed ) || ( true === $sub_email_changed ) ) ) {
 		$feedback[]    = __( 'Your settings have been saved.', 'buddypress' );
 		$feedback_type = 'success';
 
 	// Some kind of errors occurred
-	} elseif ( ( ( false === $email_error ) || ( false === $pass_error ) ) && ( ( false === $pass_changed ) || ( false === $email_changed ) ) ) {
+	} elseif ( ( ( false === $email_error ) || ( false === $sub_email_error ) || ( false === $pass_error ) ) && ( ( false === $pass_changed ) || ( false === $email_changed ) || ( false === $sub_email_changed ) ) ) {
 		if ( bp_is_my_profile() ) {
 			$feedback['nochange'] = __( 'No changes were made to your account.', 'buddypress' );
 		} else {
