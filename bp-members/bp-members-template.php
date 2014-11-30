@@ -607,7 +607,8 @@ function bp_member_latest_update( $args = '' ) {
 		global $members_template;
 
 		$defaults = array(
-			'length'    => 160,
+			// choose excerpt length(ma-ito)
+			'length'    => apply_filters( 'cc_activity_excerpt_length', 160 ),
 			'view_link' => true
 		);
 
