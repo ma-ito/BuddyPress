@@ -194,7 +194,7 @@ function groups_edit_base_group_details( $group_id, $group_name, $group_desc, $n
 		return false;
 
 	if ( $notify_members ) {
-		groups_notification_group_updated( $group->id );
+		groups_notification_group_updated( $group->id, $old_group );
 	}
 
 	do_action( 'groups_details_updated', $group->id );
