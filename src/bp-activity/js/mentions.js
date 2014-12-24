@@ -122,7 +122,8 @@
 				 * @since BuddyPress (2.1.0)
 				 */
 				remote_filter: function( query, render_view ) {
-					var self = $( this );
+					var self = $( this ),
+						params = {};
 
 					mentionsItem = mentionsQueryCache[ query ];
 					if ( typeof mentionsItem === 'object' ) {
@@ -134,7 +135,13 @@
 						self.xhr.abort();
 					}
 
-					self.xhr = $.getJSON( ajaxurl, { 'action': 'bp_get_suggestions', 'term': query, 'type': 'members' } )
+					params = { 'action': 'bp_get_suggestions', 'term': query, 'type': 'members' };
+
+					if ( $.isNumeric( this.$inputor.data( 'suggestions-group-id' ) ) ) {
+						params['group-id'] = parseInt( this.$inputor.data( 'suggestions-group-id' ), 10 );
+					}
+
+					self.xhr = $.getJSON( ajaxurl, params )
 						/**
 						 * Success callback for the @suggestions lookup.
 						 *
