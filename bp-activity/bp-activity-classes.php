@@ -293,7 +293,7 @@ class BP_Activity_Activity {
 				8 => 'exclude',
 				9 => 'in',
 				10 => 'spam',
-				11 => 'following'
+				11 => 'following',
 			);
 
 			$func_args = func_get_args();

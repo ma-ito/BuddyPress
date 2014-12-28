@@ -65,7 +65,7 @@ function bp_groups_format_activity_action_created_group( $action, $activity ) {
 		'group_id'        => $activity->item_id,
 		'populate_extras' => false,
 	) );
-	$group_link = '<a href="' . esc_url( bp_get_group_permalink( $group ) ) . '">' . esc_html( $group->name ) . '</a>';
+	$group_link = '<a class="' . $group->status . '" href="' . esc_url( bp_get_group_permalink( $group ) ) . '">' . esc_html( $group->name ) . '</a>';
 
 	$action = sprintf( __( '%1$s created the group %2$s', 'buddypress'), $user_link, $group_link );
 
@@ -88,7 +88,7 @@ function bp_groups_format_activity_action_joined_group( $action, $activity ) {
 		'group_id'        => $activity->item_id,
 		'populate_extras' => false,
 	) );
-	$group_link = '<a href="' . esc_url( bp_get_group_permalink( $group ) ) . '">' . esc_html( $group->name ) . '</a>';
+	$group_link = '<a class="' . $group->status . '" href="' . esc_url( bp_get_group_permalink( $group ) ) . '">' . esc_html( $group->name ) . '</a>';
 
 	$action = sprintf( __( '%1$s joined the group %2$s', 'buddypress' ), $user_link, $group_link );
 
@@ -256,7 +256,6 @@ function bp_groups_membership_accepted_add_activity( $user_id, $group_id ) {
 
 	// Record in activity streams
 	groups_record_activity( array(
-		'action'  => apply_filters_ref_array( 'groups_activity_membership_accepted_action', array( sprintf( __( '%1$s joined the group %2$s', 'buddypress' ), bp_core_get_userlink( $user_id ), '<a class="' . $group->status . '" href="' . bp_get_group_permalink( $group ) . '">' . esc_attr( $group->name ) . '</a>' ), $user_id, &$group ) ),
 		'type'    => 'joined_group',
 		'item_id' => $group_id,
 		'user_id' => $user_id

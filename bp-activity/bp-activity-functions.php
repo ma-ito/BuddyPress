@@ -986,7 +986,7 @@ function bp_activity_get( $args = '' ) {
 				'show_hidden'       => $show_hidden,
 				'spam'              => $spam,
 				'update_meta_cache' => $update_meta_cache,
-				'following'         => $following
+				'following'         => $following,
 			);
 			$activity = BP_Activity_Activity::get( $args );
 			wp_cache_set( 'bp_activity_sitewide_front', $activity, 'bp' );
@@ -1006,7 +1006,7 @@ function bp_activity_get( $args = '' ) {
 			'exclude'          => $exclude,
 			'in'               => $in,
 			'spam'             => $spam,
-			'following'        => $following
+			'following'        => $following,
 		);
 		$activity = BP_Activity_Activity::get( $args );
 	}
