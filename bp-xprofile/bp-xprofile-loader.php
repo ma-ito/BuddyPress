@@ -214,6 +214,7 @@ class BP_XProfile_Component extends BP_Component {
 			);
 		}
 
+		/* disabled privacy settings(ma-ito)
 		// Privacy Settings
 		if ( bp_is_active( 'settings' ) ) {
 
@@ -231,6 +232,7 @@ class BP_XProfile_Component extends BP_Component {
 				'user_has_access' => bp_core_can_edit_settings()
 			);
 		}
+		*/
 
 		parent::setup_nav( $main_nav, $sub_nav );
 	}
