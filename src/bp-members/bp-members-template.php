@@ -872,7 +872,8 @@ function bp_member_latest_update( $args = '' ) {
 		global $members_template;
 
 		$defaults = array(
-			'length'    => 225,
+			// choose excerpt length(ma-ito)
+			'length'    => apply_filters( 'cc_activity_excerpt_length', 160 ),
 			'view_link' => true
 		);
 
@@ -882,7 +883,10 @@ function bp_member_latest_update( $args = '' ) {
 		if ( !bp_is_active( 'activity' ) || empty( $members_template->member->latest_update ) || !$update = maybe_unserialize( $members_template->member->latest_update ) )
 			return false;
 
-		$update_content = apply_filters( 'bp_get_activity_latest_update_excerpt', trim( strip_tags( bp_create_excerpt( $update['content'], $length ) ) ) );
+		// remove font style shortcodes(ma-ito)
+		$text = apply_filters( 'cc_remove_shortcode_font', $update['content'] );
+
+		$update_content = apply_filters( 'bp_get_activity_latest_update_excerpt', trim( strip_tags( bp_create_excerpt( $text, $length, array( 'exact' => true ) ) ) );
 
 		$update_content = sprintf( _x( '- &quot;%s&quot;', 'member latest update in member directory', 'buddypress' ), $update_content );
 

@@ -753,9 +753,10 @@ function xprofile_sync_wp_profile( $user_id = 0 ) {
 
 	$wpdb->query( $wpdb->prepare( "UPDATE {$wpdb->users} SET display_name = %s WHERE ID = %d", $fullname, $user_id ) );
 }
-add_action( 'xprofile_updated_profile', 'xprofile_sync_wp_profile' );
-add_action( 'bp_core_signup_user',      'xprofile_sync_wp_profile' );
-add_action( 'bp_core_activated_user',   'xprofile_sync_wp_profile' );
+/* disable sync username: fix first and last name swapping issue(ma-ito)
+//add_action( 'xprofile_updated_profile', 'xprofile_sync_wp_profile' );
+//add_action( 'bp_core_signup_user',      'xprofile_sync_wp_profile' );
+//add_action( 'bp_core_activated_user',   'xprofile_sync_wp_profile' );
 
 
 /**

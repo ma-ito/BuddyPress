@@ -1026,6 +1026,7 @@ function bp_activity_get( $args = '' ) {
 		'spam'              => 'ham_only',   // 'ham_only' (default), 'spam_only' or 'all'.
 		'update_meta_cache' => true,
 		'count_total'       => false,
+		'following'         => false,
 
 		/**
 		 * Pass filters as an array -- all filter items can be multiple values comma separated:
@@ -1060,6 +1061,7 @@ function bp_activity_get( $args = '' ) {
 				'spam'              => $r['spam'],
 				'update_meta_cache' => $r['update_meta_cache'],
 				'count_total'       => $r['count_total'],
+				'following'         => $r['following'],
 			) );
 
 			wp_cache_set( 'bp_activity_sitewide_front', $activity, 'bp' );
@@ -1081,6 +1083,7 @@ function bp_activity_get( $args = '' ) {
 			'in'               => $r['in'],
 			'spam'             => $r['spam'],
 			'count_total'      => $r['count_total'],
+			'following'        => $r['following'],
 		) );
 	}
 
@@ -1219,6 +1222,11 @@ function bp_activity_add( $args = '' ) {
 	$activity->action            = ! empty( $r['action'] )
 										? $r['action']
 										: bp_activity_generate_action_string( $activity );
+
+	// only use <pre><code> shortcode htmlspecialchars for buddypress activity(ma-ito)
+	if ( $activity->secondary_item_id == false ) {
+		$activity->content = apply_filters( 'cc_run_shortcode', $activity->content );
+	}
 
 	if ( ! $activity->save() ) {
 		return false;

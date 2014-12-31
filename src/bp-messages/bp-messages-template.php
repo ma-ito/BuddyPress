@@ -448,7 +448,7 @@ function bp_message_thread_excerpt() {
 	function bp_get_message_thread_excerpt() {
 		global $messages_template;
 
-		return apply_filters( 'bp_get_message_thread_excerpt', strip_tags( bp_create_excerpt( $messages_template->thread->last_message_content, 75 ) ) );
+		return apply_filters( 'bp_get_message_thread_excerpt', strip_tags( bp_create_excerpt( $messages_template->thread->last_message_content, 75, array( 'exact' => true ) ) ) );
 	}
 
 /**
@@ -1155,7 +1155,6 @@ function bp_send_message_button() {
 				'block_self'        => true,
 				'wrapper_id'        => 'send-private-message',
 				'link_href'         => bp_get_send_private_message_link(),
-				'link_title'        => __( 'Send a private message to this user.', 'buddypress' ),
 				'link_text'         => __( 'Private Message', 'buddypress' ),
 				'link_class'        => 'send-message',
 			) ) )

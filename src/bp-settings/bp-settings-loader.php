@@ -70,7 +70,7 @@ class BP_Settings_Component extends BP_Component {
 
 		// Add the settings navigation item
 		$main_nav = array(
-			'name'                    => __( 'Settings', 'buddypress' ),
+			'name'                    => __( 'Account Settings', 'buddypress' ),
 			'slug'                    => $this->slug,
 			'position'                => 100,
 			'show_for_displayed_user' => bp_core_can_edit_settings(),
@@ -103,7 +103,7 @@ class BP_Settings_Component extends BP_Component {
 		// Add Email nav item. Formerly called 'Notifications', we
 		// retain the old slug and function names for backward compat
 		$sub_nav[] = array(
-			'name'            => __( 'Email', 'buddypress' ),
+			'name'            => __( 'Mail Notification', 'buddypress' ),
 			'slug'            => 'notifications',
 			'parent_url'      => $settings_link,
 			'parent_slug'     => $this->slug,

@@ -159,7 +159,8 @@ class BP_Activity_Template {
 				9 => 'exclude',
 				10 => 'in',
 				11 => 'spam',
-				12 => 'page_arg'
+				12 => 'page_arg',
+				13 => 'following',
 			);
 
 			$func_args = func_get_args();
@@ -183,6 +184,7 @@ class BP_Activity_Template {
 			'show_hidden'       => false,
 			'spam'              => 'ham_only',
 			'update_meta_cache' => true,
+			'following'         => false,
 		);
 		$r = wp_parse_args( $args, $defaults );
 		extract( $r );
@@ -209,6 +211,7 @@ class BP_Activity_Template {
 				'show_hidden'       => $show_hidden,
 				'spam'              => $spam,
 				'update_meta_cache' => $update_meta_cache,
+				'following'         => $following,
 			) );
 
 		// Fetch all activity items
@@ -228,6 +231,7 @@ class BP_Activity_Template {
 				'in'                => $in,
 				'spam'              => $spam,
 				'update_meta_cache' => $update_meta_cache,
+				'following'         => $following,
 			) );
 		}
 
@@ -515,6 +519,7 @@ function bp_has_activities( $args = '' ) {
 	$show_hidden = false;
 	$object      = false;
 	$primary_id  = false;
+	$following   = false;
 
 	// User filtering
 	if ( bp_displayed_user_id() )
@@ -534,8 +539,13 @@ function bp_has_activities( $args = '' ) {
 	if ( array_key_exists( bp_current_action(), (array) $bp->loaded_components ) ) {
 		$scope = $bp->loaded_components[bp_current_action()];
 	}
-	else
-		$scope = bp_current_action();
+	else {
+		if ( 'stocks' == bp_current_action() ) {
+			$scope = 'favorites';
+		} else {
+			$scope = bp_current_action();
+		}
+	}
 
 	// Support for permalinks on single item pages: /groups/my-group/activity/124/
 	if ( bp_is_current_action( bp_get_activity_slug() ) )
@@ -549,7 +559,7 @@ function bp_has_activities( $args = '' ) {
 		'in'                => $in,          // comma-separated list or array of activity IDs among which to search
 		'sort'              => 'DESC',       // sort DESC or ASC
 		'page'              => 1,            // which page to load
-		'per_page'          => 20,           // number of items per page
+		'per_page'          => 15,           // number of items per page
 		'max'               => false,        // max number to return
 		'show_hidden'       => $show_hidden, // Show activity items that are hidden site-wide?
 		'spam'              => 'ham_only',   // Hide spammed items
@@ -593,15 +603,20 @@ function bp_has_activities( $args = '' ) {
 
 	if ( empty( $search_terms ) && ! empty( $_REQUEST['s'] ) )
 		$search_terms = $_REQUEST['s'];
-
 	// If you have passed a "scope" then this will override any filters you have passed.
 	if ( 'just-me' == $scope || 'friends' == $scope || 'groups' == $scope || 'favorites' == $scope || 'mentions' == $scope ) {
 		if ( 'just-me' == $scope )
-			$display_comments = 'stream';
+			$following = true;
 
 		// determine which user_id applies
 		if ( empty( $user_id ) )
 			$user_id = bp_displayed_user_id() ? bp_displayed_user_id() : bp_loggedin_user_id();
+
+		if ( function_exists( 'bp_follow_is_following' ) ) {
+			if ( $user_id != bp_loggedin_user_id() &&
+					!bp_follow_is_following( array( 'leader_id' => bp_displayed_user_id(), 'follower_id' => bp_loggedin_user_id() ) ) )
+				return false;
+		}
 
 		// are we displaying user specific activity?
 		if ( is_numeric( $user_id ) ) {
@@ -629,6 +644,9 @@ function bp_has_activities( $args = '' ) {
 					}
 					break;
 				case 'favorites':
+					if ( !empty( $bp->displayed_user->id ) && !bp_is_my_profile() )
+						return false;
+
 					$favs = bp_activity_get_user_favorites( $user_id );
 					if ( empty( $favs ) )
 						return false;
@@ -644,11 +662,39 @@ function bp_has_activities( $args = '' ) {
 						return false;
 					}
 
+					if ( !empty( $bp->displayed_user->id ) && !bp_is_my_profile() )
+						return false;
+
 					// Start search at @ symbol and stop search at closing tag delimiter.
 					$search_terms     = '@' . bp_activity_get_user_mentionname( $user_id ) . '<';
 					$display_comments = 'stream';
 					$user_id = 0;
 					break;
+			}
+		}
+	} else {
+		if ( 'following' == $scope ) {
+			if ( !empty( $bp->displayed_user->id ) && !bp_is_my_profile() )
+				return false;
+
+			if ( !bp_is_my_profile())
+				$user_id = $user_id . ',' . bp_loggedin_user_id();
+
+			$following = true;
+
+		} else if ( 'home' != $scope ) {
+			$user_id = bp_loggedin_user_id();
+			if ( !empty( $user_id ) ) {
+				$show_hidden = ( $user_id == $bp->loggedin_user->id && $scope != 'friends' ) ? 1 : 0;
+				if ( bp_is_active( 'groups' ) ) {
+					$groups = groups_get_user_groups( $user_id );
+					if ( empty( $groups['groups'] ) )
+						return false;
+
+					$object = $bp->groups->id;
+					$primary_id = implode( ',', (array)$groups['groups'] );
+				}
+				$user_id = 0;
 			}
 		}
 	}
@@ -688,6 +734,7 @@ function bp_has_activities( $args = '' ) {
 		'show_hidden'       => $show_hidden,
 		'spam'              => $spam,
 		'update_meta_cache' => $update_meta_cache,
+		'following'         => $following,
 	);
 
 	$activities_template = new BP_Activity_Template( $template_args );
@@ -2461,7 +2508,7 @@ function bp_activity_favorite_link() {
 	 */
 	function bp_get_activity_favorite_link() {
 		global $activities_template;
-		return apply_filters( 'bp_get_activity_favorite_link', wp_nonce_url( home_url( bp_get_activity_root_slug() . '/favorite/' . $activities_template->activity->id . '/' ), 'mark_favorite' ) );
+		return apply_filters( 'bp_get_activity_favorite_link', wp_nonce_url( home_url( bp_get_activity_root_slug() . '/stock/' . $activities_template->activity->id . '/' ), 'mark_favorite' ) );
 	}
 
 /**
@@ -2490,7 +2537,7 @@ function bp_activity_unfavorite_link() {
 	 */
 	function bp_get_activity_unfavorite_link() {
 		global $activities_template;
-		return apply_filters( 'bp_get_activity_unfavorite_link', wp_nonce_url( home_url( bp_get_activity_root_slug() . '/unfavorite/' . $activities_template->activity->id . '/' ), 'unmark_favorite' ) );
+		return apply_filters( 'bp_get_activity_unfavorite_link', wp_nonce_url( home_url( bp_get_activity_root_slug() . '/unstock/' . $activities_template->activity->id . '/' ), 'unmark_favorite' ) );
 	}
 
 /**
@@ -2579,7 +2626,7 @@ function bp_activity_delete_link() {
 			$class = 'delete-activity-single';
 		}
 
-		$link = '<a href="' . esc_url( $url ) . '" class="button item-button bp-secondary-action ' . $class . ' confirm" rel="nofollow">' . __( 'Delete', 'buddypress' ) . '</a>';
+		$link = '<a href="' . esc_url( $url ) . '" class="button item-button bp-secondary-action ' . $class . ' confirm" rel="nofollow"><i class="fa fa-trash-o"></i>' . __( 'Delete', 'buddypress' ) . '</a>';
 
 		return apply_filters( 'bp_get_activity_delete_link', $link );
 	}
@@ -2670,8 +2717,13 @@ function bp_activity_latest_update( $user_id = 0 ) {
 		if ( !$update = bp_get_user_meta( $user_id, 'bp_latest_update', true ) )
 			return false;
 
-		$latest_update = apply_filters( 'bp_get_activity_latest_update_excerpt', trim( strip_tags( bp_create_excerpt( $update['content'], 358 ) ) ) );
-		$latest_update .= ' <a href="' . bp_get_root_domain() . '/' . bp_get_activity_root_slug() . '/p/' . $update['id'] . '/"> ' . __( 'View', 'buddypress' ) . '</a>';
+		// choose excerpt length(ma-ito)
+		$length = apply_filters( 'cc_activity_excerpt_length', 160 );
+		// remove font style shortcodes(ma-ito)
+		$text = apply_filters( 'cc_remove_shortcode_font', $update['content'] );
+
+		$latest_update = apply_filters( 'bp_get_activity_latest_update_excerpt', trim( strip_tags( bp_create_excerpt( $text, $length, array( 'exact' => true ) ) ) ) );
+		$latest_update .= '<span class="activity-read-more"><a href="' . bp_get_root_domain() . '/' . bp_get_activity_root_slug() . '/p/' . $update['id'] . '/">' . __( 'View', 'buddypress' ) . '</a></span>';
 
 		return apply_filters( 'bp_get_activity_latest_update', $latest_update  );
 	}
@@ -3103,7 +3155,6 @@ function bp_send_public_message_button( $args = '' ) {
 			'block_self'        => true,
 			'wrapper_id'        => 'post-mention',
 			'link_href'         => bp_get_send_public_message_link(),
-			'link_title'        => __( 'Send a public message on your activity stream.', 'buddypress' ),
 			'link_text'         => __( 'Public Message', 'buddypress' ),
 			'link_class'        => 'activity-button mention'
 		) );

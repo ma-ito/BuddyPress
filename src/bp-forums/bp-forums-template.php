@@ -2013,7 +2013,7 @@ function bp_the_topic_post_poster_name() {
 		if ( empty( $topic_template->post->poster_name ) || ( !$link = bp_core_get_user_domain( $topic_template->post->poster_id ) ) )
 			return __( 'Deleted User', 'buddypress' );
 
-		return apply_filters( 'bp_get_the_topic_post_poster_name', '<a href="' . $link . '" title="' . $topic_template->post->poster_name . '">' . $topic_template->post->poster_name . '</a>' );
+		return apply_filters( 'bp_get_the_topic_post_poster_name', '<a href="' . $link . '">' . $topic_template->post->poster_name . '</a>' );
 	}
 
 /**

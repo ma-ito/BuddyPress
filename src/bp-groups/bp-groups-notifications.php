@@ -52,14 +52,15 @@ To view the group: %2$s
 ---------------------
 ', 'buddypress' ), $group->name, $group_link );
 
-		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
+		//$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 
 		/* Send the message */
 		$to      = apply_filters( 'groups_notification_group_updated_to', $to );
 		$subject = apply_filters_ref_array( 'groups_notification_group_updated_subject', array( $subject, &$group ) );
 		$message = apply_filters_ref_array( 'groups_notification_group_updated_message', array( $message, &$group, $group_link, $settings_link ) );
+		$header = apply_filters( 'cc_append_cc_email_address', $user_id );
 
-		wp_mail( $to, $subject, $message );
+		wp_mail( $to, $subject, $message, $header );
 
 		unset( $message, $to );
 	}
@@ -128,17 +129,20 @@ To view %4$s\'s profile: %5$s
 ---------------------
 ', 'buddypress' ), $requesting_user_name, $group->name, $group_requests, $requesting_user_name, $profile_link );
 
+	/*
 	// Only show the disable notifications line if the settings component is enabled
 	if ( bp_is_active( 'settings' ) ) {
 		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 	}
+	*/
 
 	// Send the message
 	$to      = apply_filters( 'groups_notification_new_membership_request_to', $to );
 	$subject = apply_filters_ref_array( 'groups_notification_new_membership_request_subject', array( $subject, &$group ) );
 	$message = apply_filters_ref_array( 'groups_notification_new_membership_request_message', array( $message, &$group, $requesting_user_name, $profile_link, $group_requests, $settings_link ) );
+	$header = apply_filters( 'cc_append_cc_email_address', $admin_id );
 
-	wp_mail( $to, $subject, $message );
+	wp_mail( $to, $subject, $message, $header );
 
 	do_action( 'bp_groups_sent_membership_request_email', $admin_id, $subject, $message, $requesting_user_id, $group_id, $membership_id );
 }
@@ -206,17 +210,20 @@ To submit another request please log in and visit: %2$s
 ', 'buddypress' ), $group->name, $group_link );
 	}
 
+	/*
 	// Only show the disable notifications line if the settings component is enabled
 	if ( bp_is_active( 'settings' ) ) {
 		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 	}
+	*/
 
 	// Send the message
 	$to      = apply_filters( 'groups_notification_membership_request_completed_to', $to );
 	$subject = apply_filters_ref_array( 'groups_notification_membership_request_completed_subject', array( $subject, &$group ) );
 	$message = apply_filters_ref_array( 'groups_notification_membership_request_completed_message', array( $message, &$group, $group_link, $settings_link ) );
+	$header = apply_filters( 'cc_append_cc_email_address', $requesting_user_id );
 
-	wp_mail( $to, $subject, $message );
+	wp_mail( $to, $subject, $message, $header );
 
 	do_action( 'bp_groups_sent_membership_approved_email', $requesting_user_id, $subject, $message, $group_id );
 }
@@ -267,7 +274,8 @@ function groups_notification_promoted_member( $user_id = 0, $group_id = 0 ) {
 	// Set up and send the message
 	$to       = $ud->user_email;
 	$subject  = bp_get_email_subject( array( 'text' => sprintf( __( 'You have been promoted in the group: "%s"', 'buddypress' ), $group->name ) ) );
-	$message  = sprintf( __(
+	$message  = bp_core_get_user_displayname( $user_id );
+	$message .= sprintf( __(
 'You have been promoted to %1$s for the group: "%2$s".
 
 To view the group please visit: %3$s
@@ -275,17 +283,20 @@ To view the group please visit: %3$s
 ---------------------
 ', 'buddypress' ), $promoted_to, $group->name, $group_link );
 
+	/*
 	// Only show the disable notifications line if the settings component is enabled
 	if ( bp_is_active( 'settings' ) ) {
 		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 	}
+	*/
 
 	// Send the message
 	$to      = apply_filters( 'groups_notification_promoted_member_to', $to );
 	$subject = apply_filters_ref_array( 'groups_notification_promoted_member_subject', array( $subject, &$group ) );
 	$message = apply_filters_ref_array( 'groups_notification_promoted_member_message', array( $message, &$group, $promoted_to, $group_link, $settings_link ) );
+	$header = apply_filters( 'cc_append_cc_email_address', $user_id );
 
-	wp_mail( $to, $subject, $message );
+	wp_mail( $to, $subject, $message, $header );
 
 	do_action( 'bp_groups_sent_promoted_email', $user_id, $subject, $message, $group_id );
 }
@@ -353,17 +364,20 @@ To view %5$s\'s profile visit: %6$s
 ---------------------
 ', 'buddypress' ), $inviter_name, $group->name, $invites_link, $group_link, $inviter_name, $inviter_link );
 
+	/*
 	// Only show the disable notifications line if the settings component is enabled
 	if ( bp_is_active( 'settings' ) ) {
 		$message .= sprintf( __( 'To disable these notifications please log in and go to: %s', 'buddypress' ), $settings_link );
 	}
+	*/
 
 	// Send the message
 	$to      = apply_filters( 'groups_notification_group_invites_to', $to );
 	$subject = apply_filters_ref_array( 'groups_notification_group_invites_subject', array( $subject, &$group ) );
 	$message = apply_filters_ref_array( 'groups_notification_group_invites_message', array( $message, &$group, $inviter_name, $inviter_link, $invites_link, $group_link, $settings_link ) );
+	$header = apply_filters( 'cc_append_cc_email_address', $invited_user_id );
 
-	wp_mail( $to, $subject, $message );
+	wp_mail( $to, $subject, $message, $header );
 
 	do_action( 'bp_groups_sent_invited_email', $invited_user_id, $subject, $message, $group );
 }

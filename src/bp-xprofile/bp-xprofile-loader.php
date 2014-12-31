@@ -167,7 +167,7 @@ class BP_XProfile_Component extends BP_Component {
 		$main_nav = array(
 			'name'                => _x( 'Profile', 'Profile header menu', 'buddypress' ),
 			'slug'                => $this->slug,
-			'position'            => 20,
+			'position'            => 0,
 			'screen_function'     => 'xprofile_screen_display_profile',
 			'default_subnav_slug' => 'public',
 			'item_css_id'         => $this->id
