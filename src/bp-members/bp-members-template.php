@@ -886,7 +886,7 @@ function bp_member_latest_update( $args = '' ) {
 		// remove font style shortcodes(ma-ito)
 		$text = apply_filters( 'cc_remove_shortcode_font', $update['content'] );
 
-		$update_content = apply_filters( 'bp_get_activity_latest_update_excerpt', trim( strip_tags( bp_create_excerpt( $text, $length, array( 'exact' => true ) ) ) );
+		$update_content = apply_filters( 'bp_get_activity_latest_update_excerpt', trim( strip_tags( bp_create_excerpt( $text, $length, array( 'exact' => true ) ) ) ) );
 
 		$update_content = sprintf( _x( '- &quot;%s&quot;', 'member latest update in member directory', 'buddypress' ), $update_content );
 
