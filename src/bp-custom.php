@@ -17,7 +17,7 @@ add_filter( 'show_admin_bar', '__return_false' );
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 
 /* rel="next"、rel="prev" */
-remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
+//remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
 
 /* recent_comments_style */
 function remove_recent_comments_style() {
