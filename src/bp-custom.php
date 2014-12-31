@@ -12,9 +12,6 @@ define('AUTOSAVE_INTERVAL', 300 );
 /* disable admin bar */
 add_filter( 'show_admin_bar', '__return_false' );
 
-/* enable old theme directory */
-add_filter( 'bp_do_register_theme_directory', '__return_true' );
-
 /* header cleanup */
 /* rel="shortlink" */
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
