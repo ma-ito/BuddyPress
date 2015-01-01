@@ -232,7 +232,9 @@ class BP_XProfile_Component extends BP_Component {
 	 * be loaded in time for BP_XProfile_Component::setup_nav().
 	 *
 	 * @since BuddyPress (2.1.0)
+	 */
 	public function setup_settings_nav() {
+		/*
 		if ( ! bp_is_active( 'settings' ) ) {
 			return;
 		}
@@ -258,8 +260,8 @@ class BP_XProfile_Component extends BP_Component {
 			'position'        => 30,
 			'user_has_access' => bp_core_can_edit_settings()
 		) );
+		*/
 	}
-	 */
 
 	/**
 	 * Set up the Toolbar
