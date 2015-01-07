@@ -258,4 +258,21 @@
 		// Dashbboard post 'visual' editor.
 		loadMentionsInTinyMCE();
 	});
+
+	$(document).ajaxComplete(function() {
+		var setCommentMentions = function() {
+			var loadMentionsInTinyMCE,
+				loadAttempts = 0,
+				users        = [];
+
+			if ( typeof window.BP_Suggestions === 'object' ) {
+				users = window.BP_Suggestions.friends || users;
+			}
+
+			$( '.bp-suggestions, #comments form textarea, .wp-editor-area' ).bp_mentions( users );
+		}
+
+		setTimeout( setCommentMentions, 500 );
+	});
+
 })( jQuery );

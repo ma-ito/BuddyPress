@@ -85,8 +85,8 @@ function bp_core_confirmation_js() {
 		jQuery( document ).ready( function() {
 			confirmEvent();
 		});
-		jQuery( document ).ready().ajaxComplete( function() {
-			setTimeout('confirmEvent()', 1000);
+		jQuery( document ).ajaxComplete( function() {
+			setTimeout('confirmEvent()', 500);
 		});
 		function confirmEvent() {
 			jQuery('a.confirm').unbind();
