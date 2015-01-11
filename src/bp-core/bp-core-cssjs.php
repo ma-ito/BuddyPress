@@ -75,32 +75,12 @@ function bp_core_confirmation_js() {
 		return false;
 	}
 
-	if ( !wp_script_is( 'jquery' ) )
-		wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'bp-confirm' );
 
-	if ( !wp_script_is( 'jquery', 'done' ) )
-		wp_print_scripts( 'jquery' ); ?>
+	wp_localize_script( 'bp-confirm', 'BP_Confirm', array(
+			'are_you_sure' => __( 'Are you sure?', 'buddypress' ),
+	) );
 
-	<script type="text/javascript">
-		jQuery( document ).ready( function() {
-			confirmEvent();
-		});
-		jQuery( document ).ajaxComplete( function() {
-			setTimeout('confirmEvent()', 500);
-		});
-		function confirmEvent() {
-			jQuery('a.confirm').unbind();
-			jQuery( 'a.confirm').click( function(e) {
-				if ( confirm( '<?php _e( 'Are you sure?', 'buddypress' ) ?>' ) ) {
-					return true;
-				} else {
-					e.stopImmediatePropagation();
-					return false;
-				}
-		});
-	}
-	</script>
-<?php
 }
 add_action( 'bp_enqueue_scripts',    'bp_core_confirmation_js' );
 add_action( 'admin_enqueue_scripts', 'bp_core_confirmation_js' );
