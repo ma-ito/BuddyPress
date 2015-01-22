@@ -2,7 +2,7 @@
 /* global BP_Confirm */
 
 jQuery( document ).ready( function() {
-	jQuery( 'a.confirm').click( function() {
+	jQuery( 'ul:not(#activity-stream) a.confirm').click( function() {
 		if ( confirm( BP_Confirm.are_you_sure ) ) {
 			return true;
 		} else {
