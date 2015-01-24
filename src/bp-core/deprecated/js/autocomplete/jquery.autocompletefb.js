@@ -57,7 +57,7 @@ jQuery.fn.autoCompletefb = function(options)
 		if( 0 === jQuery(settings.inputClass).siblings('#un-' + un).length ) {		
 			var ln = '#link-' + un;
 			var l = jQuery(ln).attr('href');
-			var v = '<li class="'+f+'" id="un-'+un+'"><span><a href="'+l+'">'+d[0]+'</a></span> <span class="p">X</span></li>';
+			var v = '<li class="'+f+'" id="un-'+un+'"><span><a href="'+l+'">'+d[0]+'</a></span> <span class="p"></span></li>';
 			
 			var x = jQuery(settings.inputClass,tmp).before(v);
 			jQuery('#send-to-usernames').addClass(un);
