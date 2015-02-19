@@ -42,9 +42,11 @@ class BP_Groups_Widget extends WP_Widget {
 	}
 
 	function widget( $args, $instance ) {
-		// 検索パラメータがあるとフィルタリングされてしまうため非表示にする
-		if ( !empty( $_GET['s'] ) )
+		// 検索パラメータがあるとフィルタリングされてしまうため非表示にする(ma-ito)
+		if ( isset( $_COOKIE['bp-activity-search-terms'] ) &&
+				!empty( $_COOKIE['bp-activity-search-terms'] ) ) {
 			return;
+		}
 
 		$user_id = apply_filters( 'bp_group_widget_user_id', '0' );
 
