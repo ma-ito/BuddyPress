@@ -272,7 +272,7 @@
 			$( '.bp-suggestions, #comments form textarea, .wp-editor-area' ).bp_mentions( users );
 		}
 
-		setTimeout( setCommentMentions, 500 );
+		setTimeout( setCommentMentions, 1000 );
 	});
 
 })( jQuery );
