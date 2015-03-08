@@ -16,9 +16,6 @@ add_filter( 'show_admin_bar', '__return_false' );
 /* rel="shortlink" */
 remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );
 
-/* rel="next"、rel="prev" */
-//remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
-
 /* recent_comments_style */
 function remove_recent_comments_style() {
 	global $wp_widget_factory;
@@ -117,7 +114,7 @@ function wp_notify_postauthor( $comment_id, $comment_type = '' ) {
 	if ('comment' == $comment_type) {
 		$message  = sprintf( '%sさんがブログにコメントを投稿しました。', $comment->comment_author ) . "\r\n\r\n";
 		//$message .= __('Comment: ') . "\r\n" . $comment->comment_content . "\r\n\r\n";
-		$message .= '▽コメントを表示する' . "\r\n";
+		$message .= 'コメントはこちらから確認できます。' . "\r\n";
 		$message .= get_permalink($comment->comment_post_ID) . '#comment-' . $comment_id . "\r\n";
 
 		$to = $author->user_email;
