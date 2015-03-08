@@ -162,10 +162,23 @@ function groups_action_create_group() {
 
 			$new_group_id = isset( $bp->groups->new_group_id ) ? $bp->groups->new_group_id : 0;
 
-			if ( !$bp->groups->new_group_id = groups_create_group( array( 'group_id' => $new_group_id, 'name' => $_POST['group-name'], 'description' => $_POST['group-desc'], 'slug' => groups_check_slug( sanitize_title( esc_attr( $_POST['group-name'] ) ) ), 'date_created' => bp_core_current_time(), 'status' => 'public' ) ) ) {
+			if ( !bp_are_previous_group_creation_steps_complete( 'group-settings' ) ) {
+				$param = array( 'group_id' => $new_group_id, 'name' => $_POST['group-name'], 'description' => $_POST['group-desc'], 'slug' => groups_check_slug( sanitize_title( esc_attr( $_POST['group-name'] ) ) ), 'date_created' => bp_core_current_time(), 'status' => 'public' );
+			} else {
+				// only change description where already created (ma-ito)
+				$group = groups_get_group( array( 'group_id' => $new_group_id ) );
+				if ( bp_get_group_name( $group ) == $_POST['group-name'] ) {
+					$param = array( 'group_id' => $new_group_id, 'description' => $_POST['group-desc'] );
+				} else {
+					$param = array( 'group_id' => $new_group_id, 'name' => $_POST['group-name'], 'description' => $_POST['group-desc'], 'slug' => groups_check_slug( sanitize_title( esc_attr( $_POST['group-name'] ) ) ), 'date_created' => bp_core_current_time() );
+				}
+			}
+
+			if ( !$bp->groups->new_group_id = groups_create_group( $param ) ) {
 				bp_core_add_message( __( 'There was an error saving group details, please try again.', 'buddypress' ), 'error' );
 				bp_core_redirect( bp_get_root_domain() . '/' . bp_get_groups_root_slug() . '/create/step/' . bp_get_groups_current_create_step() . '/' );
 			}
+
 		}
 
 		if ( 'group-settings' == bp_get_groups_current_create_step() ) {
