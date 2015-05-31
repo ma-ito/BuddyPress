@@ -1050,7 +1050,9 @@ function bp_group_description_excerpt( $group = false ) {
 			$group =& $groups_template->group;
 		}
 
-		return apply_filters( 'bp_get_group_description_excerpt', bp_create_excerpt( $group->description ), $group );
+		// modified excerpt length(ma-ito)
+		$length = apply_filters( 'cc_activity_excerpt_length', 400 );
+		return apply_filters( 'bp_get_group_description_excerpt', bp_create_excerpt( $group->description , $length, array( 'exact' => true ) ) );
 	}
 
 /**
