@@ -54,6 +54,7 @@ function groups_screen_group_invites() {
 		} else {
 			bp_core_add_message( __('Group invite accepted', 'buddypress') );
 
+			/* groups_accept_invite()に移動(ma-ito)
 			// Record this in activity streams
 			$group = groups_get_group( array( 'group_id' => $group_id ) );
 
@@ -61,6 +62,7 @@ function groups_screen_group_invites() {
 				'type'    => 'joined_group',
 				'item_id' => $group->id
 			) );
+			*/
 		}
 
 		if ( isset( $_GET['redirect_to'] ) ) {

@@ -979,6 +979,14 @@ function groups_accept_invite( $user_id, $group_id ) {
 	// Record this in activity streams
 	$group = groups_get_group( array( 'group_id' => $group_id ) );
 	if ( bp_get_group_name( $group ) != '社員会' ) {
+
+		// Record this in activity streams
+		groups_record_activity( array(
+			'type'    => 'joined_group',
+			'item_id' => $group_id,
+			'user_id' => $user_id,
+		) );
+
 		// Modify group meta
 		groups_update_groupmeta( $group_id, 'last_activity', bp_core_current_time() );
 	}
