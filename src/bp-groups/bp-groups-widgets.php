@@ -92,10 +92,15 @@ class BP_Groups_Widget extends WP_Widget {
 						<div class="item">
 							<div class="item-title"><a href="<?php bp_group_permalink() ?>"><?php bp_group_name() ?></a></div>
 							<div class="item-meta">
+								<?php if ( 'public' == bp_get_group_status() ) : ?>
+									<span class="public">公開</span>
+								<?php else : ?>
+									<span class="private">非公開</span>
+								<?php endif; ?>
 								<span class="activity">
 								<?php
 									if ( 'newest' == $instance['group_default'] )
-										printf( __( 'created %s', 'buddypress' ), bp_get_group_date_created() );
+										printf( __( '%s', 'buddypress' ), bp_get_group_date_created() );
 									if ( 'active' == $instance['group_default'] )
 										printf( __( 'active %s', 'buddypress' ), bp_get_group_last_active() );
 									else if ( 'popular' == $instance['group_default'] )
@@ -204,10 +209,15 @@ function groups_ajax_widget_groups_list() {
 				<div class="item">
 					<div class="item-title"><a href="<?php bp_group_permalink() ?>"><?php bp_group_name() ?></a></div>
 					<div class="item-meta">
+						<?php if ( 'public' == bp_get_group_status() ) : ?>
+							<span class="public">公開</span>
+						<?php else : ?>
+							<span class="private">非公開</span>
+						<?php endif; ?>
 						<span class="activity">
 							<?php
 							if ( 'newest-groups' == $_POST['filter'] ) {
-								printf( __( 'created %s', 'buddypress' ), bp_get_group_date_created() );
+								printf( __( '%s', 'buddypress' ), bp_get_group_date_created() );
 							} else if ( 'recently-active-groups' == $_POST['filter'] ) {
 								printf( __( 'active %s', 'buddypress' ), bp_get_group_last_active() );
 							} else if ( 'popular-groups' == $_POST['filter'] ) {
