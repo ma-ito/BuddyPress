@@ -187,6 +187,8 @@ function groups_edit_base_group_details( $group_id, $group_name, $group_desc, $n
 		return false;
 
 	$group              = groups_get_group( array( 'group_id' => $group_id ) );
+	$old_group = clone $group;
+
 	$group->name        = $group_name;
 	$group->description = $group_desc;
 
