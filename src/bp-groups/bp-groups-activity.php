@@ -86,7 +86,7 @@ function bp_groups_format_activity_action_created_group( $action, $activity ) {
 		'group_id'        => $activity->item_id,
 		'populate_extras' => false,
 	) );
-	$group_link = '<a class="' . $group->status . '" href="' . esc_url( bp_get_group_permalink( $group ) ) . '">' . esc_html( $group->name ) . '</a>';
+	$group_link = '<a class="' . cc_groups_get_group_status( $group ) . '" href="' . esc_url( bp_get_group_permalink( $group ) ) . '">' . esc_html( $group->name ) . '</a>';
 
 	$action = sprintf( __( '%1$s created the group %2$s', 'buddypress'), $user_link, $group_link );
 

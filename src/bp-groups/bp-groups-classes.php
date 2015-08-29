@@ -66,6 +66,13 @@ class BP_Groups_Group {
 	public $status;
 
 	/**
+	 * Official group?(ma-ito)
+	 *
+	 * @var bool
+	 */
+	public $official;
+
+	/**
 	 * Should (legacy) bbPress forums be enabled for this group?
 	 *
 	 * @access public
@@ -210,6 +217,7 @@ class BP_Groups_Group {
 		$this->status       = $group->status;
 		$this->enable_forum = $group->enable_forum;
 		$this->date_created = $group->date_created;
+		$this->official     = $group->official;
 
 		// Are we getting extra group data?
 		if ( ! empty( $this->args['populate_extras'] ) ) {
