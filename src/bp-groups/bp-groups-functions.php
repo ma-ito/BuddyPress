@@ -420,15 +420,17 @@ function groups_join_group( $group_id, $user_id = 0 ) {
 	else
 		$group = $bp->groups->current_group;
 
-	// Record this in activity streams
-	groups_record_activity( array(
-		'type'    => 'joined_group',
-		'item_id' => $group_id,
-		'user_id' => $user_id,
-	) );
+	if ( 'official' != cc_groups_get_group_status( $group ) ) {
+		// Record this in activity streams
+		groups_record_activity( array(
+			'type'    => 'joined_group',
+			'item_id' => $group_id,
+			'user_id' => $user_id,
+		) );
 
-	// Modify group meta
-	groups_update_groupmeta( $group_id, 'last_activity', bp_core_current_time() );
+		// Modify group meta
+		groups_update_groupmeta( $group_id, 'last_activity', bp_core_current_time() );
+	}
 
 	do_action( 'groups_join_group', $group_id, $user_id );
 
@@ -980,7 +982,7 @@ function groups_accept_invite( $user_id, $group_id ) {
 
 	// Record this in activity streams
 	$group = groups_get_group( array( 'group_id' => $group_id ) );
-	if ( bp_get_group_name( $group ) != '社員会' ) {
+	if ( 'official' != cc_groups_get_group_status( $group ) ) {
 
 		// Record this in activity streams
 		groups_record_activity( array(
